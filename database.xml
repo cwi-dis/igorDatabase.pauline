@@ -14,6 +14,10 @@
 			    
 			    Its late, you should be sleeping!</message><message>The time is now 0 hours and 19 minutes.
 			    
+			    Its late, you should be sleeping!</message><message>The time is now 21 hours and 4 minutes.
+			    
+			    Its late, you should be sleeping!</message><message>The time is now 21 hours and 7 minutes.
+			    
 			    Its late, you should be sleeping!</message></messages>
 		<devices><keys.jack/><keys.pauline>true</keys.pauline><keys.steven/></devices>
 		<lights/>
@@ -29,7 +33,7 @@
                 <lastsuccess>1515063013.83</lastsuccess>
                 <ignoreerrorsuntil/>
                 <errormessage/>
-            <lastActivity>1522102792.43</lastActivity><lastSuccess>1522102792.43</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core>
+            <lastActivity>1522609622.02</lastActivity><lastSuccess>1522609622.02</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core>
             <save>
                 <alive>true</alive>
                 <lastactivity>1515073813.81</lastactivity>
@@ -59,8 +63,8 @@
 		<services>
 		    <announceTime>
 		        <alive>true</alive>
-		        <lastActivity>1522102793.51</lastActivity>
-		        <lastSuccess>1522102793.51</lastSuccess>
+		        <lastActivity>1522609623.16</lastActivity>
+		        <lastSuccess>1522609623.16</lastSuccess>
 		        <ignoreErrorsUntil></ignoreErrorsUntil>
 		        <errorMessage></errorMessage>
 		    <lastFailure>1520512431.47</lastFailure></announceTime>
@@ -79,7 +83,7 @@
 	<devices>
 	</devices>
 	<services>
-	    <igor><protocol>https</protocol><url>https://boom.local:9333/data</url><host>boom.local</host><version>0.6</version><startTime>1522102792</startTime><fingerprint>D9:42:0D:B9:4C:11:20:C4:B4:D8:EC:EB:B0:25:57:FE:E7:A6:CE:D4</fingerprint><rebootCount>149</rebootCount><ticker>0</ticker><port>9333</port></igor>
+	    <igor><protocol>https</protocol><url>https://boom.local:9333/data</url><host>boom.local</host><version>0.6</version><startTime>1522609621</startTime><fingerprint>D9:42:0D:B9:4C:11:20:C4:B4:D8:EC:EB:B0:25:57:FE:E7:A6:CE:D4</fingerprint><rebootCount>151</rebootCount><ticker>0</ticker><port>9333</port></igor>
 	</services>
 	<people>
 	    <jack>
@@ -208,7 +212,7 @@
 	            <iss>https://igor.local:9333/issuer</iss>
 	            <aud>http://button.local</aud>
 	        </au:capability>
-	    <au:capability><child>token-9899967800444553538</child><obj>/action/bellbutton1pressed</obj><delegate>true</delegate><parent>id-admin-allactions</parent><cid>token-1332483321313593550</cid><get>self</get></au:capability></admin>
+	    <au:capability><obj>/action/bellbutton1pressed</obj><delegate>true</delegate><parent>id-admin-allactions</parent><cid>token-1332483321313593550</cid><get>self</get></au:capability></admin>
 	</identities>
 	<actions>
         <au:capability>
@@ -247,7 +251,7 @@
 	            <obj>/data/environment/messages</obj>
 	            <post>child</post>
 	        </au:capability>
-		    <notBefore>1522102792</notBefore>
+		    <notBefore>1522609621</notBefore>
 		</action>
 		<action>
             <xpath>/data/sensors/ble/bleDevice</xpath>
@@ -314,7 +318,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-		    <notBefore>1522102852</notBefore>
+		    <notBefore>1522609681</notBefore>
 		</action>
         <action>
             <name>cleanup</name>
@@ -327,7 +331,7 @@
 	            <obj>/data/environment/messages</obj>
 	            <delete>child</delete>
 	        </au:capability>
-            <notBefore>1522102792</notBefore>
+            <notBefore>1522609621</notBefore>
         </action>
 		<action>
 			<name>updateActions</name>
@@ -348,7 +352,7 @@
 	            <obj>/data/environment/night</obj>
 	            <put>self</put>
 	        </au:capability>
-		    <notBefore>1522102792</notBefore>
+		    <notBefore>1522609621</notBefore>
 		</action>
 		<action>
             <name>checkLate</name>
@@ -363,7 +367,7 @@
 	            <obj>/data/environment/latereminder</obj>
 	            <put>self</put>
 	        </au:capability>
-		    <notBefore>1522102792</notBefore>
+		    <notBefore>1522609621</notBefore>
 		</action>
 		<action>
             <name>checkMorning</name>
@@ -378,7 +382,7 @@
 	            <obj>/data/environment/morninggreeting</obj>
 	            <put>self</put>
 	        </au:capability>
-		    <notBefore>1522102792</notBefore>
+		    <notBefore>1522609621</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -429,20 +433,20 @@
 			<interval>60</interval>
 			<url>/plugin/lan?name=internet&amp;ip=google.com.</url>
 			<aggregate>true</aggregate>
-		    <notBefore>1522102792</notBefore>
+		    <notBefore>1522609621</notBefore>
 		</action>
 		<action>
 			<interval>60</interval>
 			<url>/plugin/lan?name=igor&amp;service=igor/web&amp;ip={/data/services/igor/host}&amp;port={/data/services/igor/port}</url>
 			<aggregate>true</aggregate>
-			<notBefore>1522102792</notBefore>
+			<notBefore>1522609621</notBefore>
 		</action>
 		<action>
 			<name>systemHealth</name>
 			<interval>60</interval>
 			<xpath>/data/status/*/*/errorMessage</xpath>
 			<url>/plugin/systemHealth</url>
-			<notBefore>1522102793</notBefore>
+			<notBefore>1522609623</notBefore>
 			<aggregate>true</aggregate>
 		</action>
         <action>
@@ -501,7 +505,7 @@
 			<url>/pluginscripts/ble/pull</url>
 			<representing>sensors/ble</representing>
 			<aggregate>true</aggregate>
-			<notBefore>1522102792</notBefore>
+			<notBefore>1522609621</notBefore>
 		</action>
 		<action>
 			<au:capability>
@@ -558,7 +562,7 @@
 			<url>/data/environment/people/count</url>
 			<mimetype>text/plain</mimetype>
 			<data>{count(/data/people/*[home='true'])}</data>
-			<notBefore>1522102792</notBefore>
+			<notBefore>1522609621</notBefore>
 			<au:capability>
 	            <comment>This allows counting people</comment>
                 <cid>id-action-countpeople-read</cid>
@@ -639,7 +643,8 @@
 	            <delete/>
 	        </au:capability>
 	    </au:defaultCapabilities>
-	    <au:exportedCapabilities><au:capability><comment/><obj>/action/bellbutton1pressed</obj><aud>https://igor.local:9333/data</aud><parent>token-17047046862903558384</parent><get>self</get><iss>https://igor.local:9333/issuer</iss><cid>token-6525156847752597847</cid><nvb>1521111183</nvb><nva>1552647184</nva></au:capability><au:capability><comment/><obj>/action/bellbutton1pressed</obj><aud>https://igor.local:9333/data</aud><parent>token-11621185643556649530</parent><get>self</get><iss>https://igor.local:9333/issuer</iss><cid>token-608204507389430824</cid><nvb>1522095772</nvb><nva>1553631773</nva></au:capability><au:capability><comment/><obj>/action/bellbutton1pressed</obj><aud>https://boom.local:9333/data</aud><parent>token-9225860713468332325</parent><get>self</get><iss>https://boom.local:9333/issuer</iss><cid>token-8676515075688434857</cid><nvb>1522096655</nvb><nva>1553632656</nva></au:capability><au:capability><comment/><obj>/action/bellbutton1pressed</obj><aud>https://boom.local:9333/data</aud><parent>token-12738700635269908656</parent><get>self</get><iss>https://boom.local:9333/issuer</iss><cid>token-4726289377388489738</cid><nvb>1522097009</nvb><nva>1553633010</nva></au:capability><au:capability><comment/><obj>/action/bellbutton1pressed</obj><aud>https://boom.local:9333/data</aud><parent>token-1332483321313593550</parent><get>self</get><iss>https://boom.local:9333/issuer</iss><cid>token-9899967800444553538</cid><nvb>1522098732</nvb><nva>1553634733</nva></au:capability></au:exportedCapabilities>
+	    <au:exportedCapabilities>
+		</au:exportedCapabilities>
 	    <au:revokedCapabilities/>
 	    <au:unusedCapabilities>
 	        <au:capability>
@@ -674,7 +679,27 @@
 	            <externalKey>ringersharedkey</externalKey>
 	    	</au:sharedKey>
 	    	<au:sharedKey>
+	            <iss>https://boom.local:9333/issuer</iss>
+	            <aud>http://ringer.local</aud>
+	            <externalKey>ringersharedkey</externalKey>
+	    	</au:sharedKey>
+	    	<au:sharedKey>
+	            <iss>https://flauwte.dis.cwi.nl:9333/issuer</iss>
+	            <aud>http://ringer.local</aud>
+	            <externalKey>ringersharedkey</externalKey>
+	    	</au:sharedKey>
+	    	<au:sharedKey>
 	            <iss>https://igor.local:9333/issuer</iss>
+	            <aud>http://button.local</aud>
+	            <externalKey>buttonsharedkey</externalKey>
+	    	</au:sharedKey>
+	    	<au:sharedKey>
+	            <iss>https://boom.local:9333/issuer</iss>
+	            <aud>http://button.local</aud>
+	            <externalKey>buttonsharedkey</externalKey>
+	    	</au:sharedKey>
+	    	<au:sharedKey>
+	            <iss>https://flauwte.dis.cwi.nl:9333/issuer</iss>
 	            <aud>http://button.local</aud>
 	            <externalKey>buttonsharedkey</externalKey>
 	    	</au:sharedKey>
