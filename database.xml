@@ -1,8 +1,8 @@
 <?xml version="1.0" ?><data xmlns:au="http://jackjansen.nl/igor/authentication">
 	<environment>
 		<morninggreeting/>
-		<latereminder>true</latereminder>
-		<night>true</night>
+		<latereminder/>
+		<night/>
 		<location/>
 		<energy/>
 		<weather/>
@@ -10,15 +10,15 @@
 		    <count>1</count>
 		</people>
         <messages>
-        <message>The time is now 23 hours and 54 minutes.
+        <message>The time is now 21 hours and 52 minutes.
 			    
-			    Its late, you should be sleeping!</message><message>The time is now 0 hours and 19 minutes.
+			    Its late, you should be sleeping!</message><message>The time is now 21 hours and 54 minutes.
 			    
-			    Its late, you should be sleeping!</message><message>The time is now 21 hours and 4 minutes.
+			    </message><message>The time is now 22 hours and 2 minutes.
 			    
-			    Its late, you should be sleeping!</message><message>The time is now 21 hours and 7 minutes.
+			    </message><message>The time is now 22 hours and 9 minutes.
 			    
-			    Its late, you should be sleeping!</message></messages>
+			    </message></messages>
 		<devices><keys.jack/><keys.pauline>true</keys.pauline><keys.steven/></devices>
 		<lights/>
 		<systemHealth>
@@ -33,7 +33,7 @@
                 <lastsuccess>1515063013.83</lastsuccess>
                 <ignoreerrorsuntil/>
                 <errormessage/>
-            <lastActivity>1522609622.02</lastActivity><lastSuccess>1522609622.02</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core>
+            <lastActivity>1530302959.42</lastActivity><lastSuccess>1530302959.42</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core>
             <save>
                 <alive>true</alive>
                 <lastactivity>1515073813.81</lastactivity>
@@ -47,10 +47,10 @@
                 <lastsuccess>1515076154.56</lastsuccess>
                 <ignoreerrorsuntil/>
                 <errormessage/>
-            <lastActivity>1522101326.63</lastActivity><lastSuccess>1522101326.63</lastSuccess><ignoreErrorsUntil/><errorMessage/><lastFailure>1522095555.96</lastFailure></web>
+            <lastActivity>1529869983.36</lastActivity><lastSuccess>1529869983.36</lastSuccess><ignoreErrorsUntil/><errorMessage/><lastFailure>1522095555.96</lastFailure></web>
         </igor>
 		<sensors>
-		    <ble><alive/><lastActivity>1522101327.28</lastActivity><lastFailure>1522101327.28</lastFailure><lastSuccess>1521111165.12</lastSuccess><ignoreErrorsUntil/><errorMessage>502 Command /Users/jack/.igor/plugins/ble/scripts/pull.sh exited with status code=1: /usr/local/bin/igorVar: http://localhost:8081/ble: Connection refused</errorMessage></ble>
+		    <ble><alive/><lastActivity>1529869982.04</lastActivity><lastFailure>1529869982.04</lastFailure><lastSuccess>1521111165.12</lastSuccess><ignoreErrorsUntil/><errorMessage>502 Command /Users/jack/.igor/plugins/ble/scripts/pull.sh exited with status code=1: /usr/local/bin/igorVar: http://localhost:8081/ble: Connection refused</errorMessage></ble>
             <button>
                 <alive>true</alive>
                 <lastActivity>1520865913.16</lastActivity>
@@ -63,15 +63,15 @@
 		<services>
 		    <announceTime>
 		        <alive>true</alive>
-		        <lastActivity>1522609623.16</lastActivity>
-		        <lastSuccess>1522609623.16</lastSuccess>
+		        <lastActivity>1530302960.56</lastActivity>
+		        <lastSuccess>1530302960.56</lastSuccess>
 		        <ignoreErrorsUntil></ignoreErrorsUntil>
 		        <errorMessage></errorMessage>
 		    <lastFailure>1520512431.47</lastFailure></announceTime>
 		    <internet>
 		        <alive>true</alive>
-		        <lastActivity>1522101326.4</lastActivity>
-		        <lastSuccess>1522101326.4</lastSuccess>
+		        <lastActivity>1529869982.73</lastActivity>
+		        <lastSuccess>1529869982.73</lastSuccess>
 		        <ignoreErrorsUntil/>
 		        <errorMessage/>
 		    </internet>
@@ -83,7 +83,7 @@
 	<devices>
 	</devices>
 	<services>
-	    <igor><protocol>https</protocol><url>https://boom.local:9333/data</url><host>boom.local</host><version>0.6</version><startTime>1522609621</startTime><fingerprint>D9:42:0D:B9:4C:11:20:C4:B4:D8:EC:EB:B0:25:57:FE:E7:A6:CE:D4</fingerprint><rebootCount>151</rebootCount><ticker>0</ticker><port>9333</port></igor>
+	    <igor><protocol>https</protocol><url>https://boom.local:9333/data</url><host>boom.local</host><version>0.6</version><startTime>1530302959</startTime><fingerprint>0C:4B:B2:FD:F7:D4:91:63:6C:88:AA:00:64:82:F0:95:C4:CB:E3:77</fingerprint><rebootCount>163</rebootCount><ticker>0</ticker><port>9333</port></igor>
 	</services>
 	<people>
 	    <jack>
@@ -190,8 +190,25 @@
 	    </steven>
 	    <admin>
             <encryptedPassword>$pbkdf2-sha256$29000$FKK0VsqZk3KOkTKmFEJISQ$TgZO5yhvrztQDtT2A0HQx5jzPvFcb.QFDPJuTNJUyO0</encryptedPassword>
-	        <au:capability><comment>This allows everything. Dangerous!</comment><obj>/data</obj><get>descendant-or-self</get><cid>id-admin-readall</cid><delegate>true</delegate><child>token-17388627758257581876</child><put>descendant-or-self</put><post>descendant</post><delete>descendant</delete></au:capability>
-	        <au:capability><comment>This allows all actions. Dangerous!</comment><obj>/action</obj><cid>id-admin-allactions</cid><get>descendant</get><delegate>true</delegate><child>token-1332483321313593550</child></au:capability>
+	        <au:capability>
+	        	<comment>This allows everything. Dangerous!</comment>
+	        	<obj>/data</obj>
+	        	<get>descendant-or-self</get>
+	        	<cid>id-admin-readall</cid>
+	        	<delegate>true</delegate>
+	        	<child>token-17388627758257581876</child>
+	        	<put>descendant-or-self</put>
+	        	<post>descendant</post>
+	        	<delete>descendant</delete>
+	        </au:capability>
+	        <au:capability>
+	        	<comment>This allows all actions. Dangerous!</comment>
+	        	<obj>/action</obj>
+	        	<cid>id-admin-allactions</cid>
+	        	<get>descendant</get>
+	        	<delegate>true</delegate>
+	        	<child>token-1332483321313593550</child>
+	        </au:capability>
 	        <au:capability>
 	            <comment>This allows all internal actions. Dangerous!</comment>
 	            <cid>id-admin-internalactions</cid>
@@ -199,7 +216,6 @@
 	            <get>descendant</get>
 	            <delegate>true</delegate>
 	        </au:capability>
-	        
 	        <au:capability>
 	        	<comment>Full access to button</comment>
 	        	<cid>id-button-fullaccess</cid>
@@ -212,7 +228,14 @@
 	            <iss>https://igor.local:9333/issuer</iss>
 	            <aud>http://button.local</aud>
 	        </au:capability>
-	    <au:capability><obj>/action/bellbutton1pressed</obj><delegate>true</delegate><parent>id-admin-allactions</parent><cid>token-1332483321313593550</cid><get>self</get></au:capability></admin>
+	    	<au:capability>
+	    		<obj>/action/bellbutton1pressed</obj>
+	    		<delegate>true</delegate>
+	    		<parent>id-admin-allactions</parent>
+	    		<cid>token-1332483321313593550</cid>
+	    		<get>self</get>
+	    	</au:capability>
+	    </admin>
 	</identities>
 	<actions>
         <au:capability>
@@ -251,7 +274,7 @@
 	            <obj>/data/environment/messages</obj>
 	            <post>child</post>
 	        </au:capability>
-		    <notBefore>1522609621</notBefore>
+		    <notBefore>1530302959</notBefore>
 		</action>
 		<action>
             <xpath>/data/sensors/ble/bleDevice</xpath>
@@ -292,7 +315,7 @@
 			<condition>not(string(/data/environment/night))</condition>
 			<url>/pluginscripts/say/message?args={.}</url>
 			<representing>services/say</representing>
-		    <notBefore>1522098613</notBefore>
+		    <notBefore>1530302960</notBefore>
 		</action>
 	    <action>
             <au:capability>
@@ -303,7 +326,7 @@
             </au:capability>
 	        <name>start</name>
 	        <url>/internal/started</url>
-	        <notBefore>1522101268</notBefore>
+	        <notBefore>1529869980</notBefore>
 	    </action>
 		<action>
             <au:capability>
@@ -318,7 +341,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-		    <notBefore>1522609681</notBefore>
+		    <notBefore>1530303019</notBefore>
 		</action>
         <action>
             <name>cleanup</name>
@@ -331,7 +354,7 @@
 	            <obj>/data/environment/messages</obj>
 	            <delete>child</delete>
 	        </au:capability>
-            <notBefore>1522609621</notBefore>
+            <notBefore>1530302959</notBefore>
         </action>
 		<action>
 			<name>updateActions</name>
@@ -352,7 +375,7 @@
 	            <obj>/data/environment/night</obj>
 	            <put>self</put>
 	        </au:capability>
-		    <notBefore>1522609621</notBefore>
+		    <notBefore>1530302959</notBefore>
 		</action>
 		<action>
             <name>checkLate</name>
@@ -367,7 +390,7 @@
 	            <obj>/data/environment/latereminder</obj>
 	            <put>self</put>
 	        </au:capability>
-		    <notBefore>1522609621</notBefore>
+		    <notBefore>1530302959</notBefore>
 		</action>
 		<action>
             <name>checkMorning</name>
@@ -382,7 +405,7 @@
 	            <obj>/data/environment/morninggreeting</obj>
 	            <put>self</put>
 	        </au:capability>
-		    <notBefore>1522609621</notBefore>
+		    <notBefore>1530302959</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -433,20 +456,20 @@
 			<interval>60</interval>
 			<url>/plugin/lan?name=internet&amp;ip=google.com.</url>
 			<aggregate>true</aggregate>
-		    <notBefore>1522609621</notBefore>
+		    <notBefore>1530302959</notBefore>
 		</action>
 		<action>
 			<interval>60</interval>
 			<url>/plugin/lan?name=igor&amp;service=igor/web&amp;ip={/data/services/igor/host}&amp;port={/data/services/igor/port}</url>
 			<aggregate>true</aggregate>
-			<notBefore>1522609621</notBefore>
+			<notBefore>1530302959</notBefore>
 		</action>
 		<action>
 			<name>systemHealth</name>
 			<interval>60</interval>
 			<xpath>/data/status/*/*/errorMessage</xpath>
 			<url>/plugin/systemHealth</url>
-			<notBefore>1522609623</notBefore>
+			<notBefore>1530302960</notBefore>
 			<aggregate>true</aggregate>
 		</action>
         <action>
@@ -505,7 +528,7 @@
 			<url>/pluginscripts/ble/pull</url>
 			<representing>sensors/ble</representing>
 			<aggregate>true</aggregate>
-			<notBefore>1522609621</notBefore>
+			<notBefore>1530302959</notBefore>
 		</action>
 		<action>
 			<au:capability>
@@ -562,7 +585,7 @@
 			<url>/data/environment/people/count</url>
 			<mimetype>text/plain</mimetype>
 			<data>{count(/data/people/*[home='true'])}</data>
-			<notBefore>1522609621</notBefore>
+			<notBefore>1530302959</notBefore>
 			<au:capability>
 	            <comment>This allows counting people</comment>
                 <cid>id-action-countpeople-read</cid>
