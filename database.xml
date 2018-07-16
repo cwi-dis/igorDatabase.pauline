@@ -12,6 +12,12 @@
         <messages>
         <message>The time is now 0 hours and 18 minutes.
 			    Good morning, you are early!
+			    Its late, you should be sleeping!</message><message>The time is now 21 hours and 25 minutes.
+			    Good morning, you are early!
+			    Its late, you should be sleeping!</message><message>The time is now 21 hours and 33 minutes.
+			    Good morning, you are early!
+			    Its late, you should be sleeping!</message><message>The time is now 21 hours and 38 minutes.
+			    Good morning, you are early!
 			    Its late, you should be sleeping!</message></messages>
 		<devices><keys.jack/><keys.pauline>true</keys.pauline><keys.steven/></devices>
 		<lights/>
@@ -27,24 +33,24 @@
                 <lastsuccess>1515063013.83</lastsuccess>
                 <ignoreerrorsuntil/>
                 <errormessage/>
-            <lastActivity>1531693128.47</lastActivity><lastSuccess>1531693128.47</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core>
+            <lastActivity>1531769911.35</lastActivity><lastSuccess>1531769911.35</lastSuccess><ignoreErrorsUntil/><errorMessage/></core>
             <save>
                 <alive>true</alive>
                 <lastactivity>1515073813.81</lastactivity>
                 <lastsuccess>1515073813.81</lastsuccess>
                 <ignoreerrorsuntil/>
                 <errormessage/>
-            <lastActivity>1531693136.69</lastActivity><lastSuccess>1531693136.69</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></save>
+            <lastActivity>1531693136.69</lastActivity><lastSuccess>1531693136.69</lastSuccess><ignoreErrorsUntil/><errorMessage/></save>
             <web>
                 <alive>true</alive>
                 <lastactivity>1515076154.56</lastactivity>
                 <lastsuccess>1515076154.56</lastsuccess>
                 <ignoreerrorsuntil/>
                 <errormessage/>
-            <lastActivity>1531693142.26</lastActivity><lastSuccess>1531693142.26</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage><lastFailure>1522095555.96</lastFailure></web>
+            <lastActivity>1531693142.26</lastActivity><lastSuccess>1531693142.26</lastSuccess><ignoreErrorsUntil/><errorMessage/><lastFailure>1522095555.96</lastFailure></web>
         </igor>
 		<sensors>
-		    <ble><alive></alive><lastActivity>1531693133.74</lastActivity><lastFailure>1531693133.74</lastFailure><lastSuccess>1521111165.12</lastSuccess><ignoreErrorsUntil/><errorMessage>401 Unauthorized
+		    <ble><alive/><lastActivity>1531769915.17</lastActivity><lastFailure>1531769915.17</lastFailure><lastSuccess>1521111165.12</lastSuccess><ignoreErrorsUntil/><errorMessage>401 Unauthorized
 
 </errorMessage></ble>
             <button>
@@ -59,17 +65,17 @@
 		<services>
 		    <announceTime>
 		        <alive>true</alive>
-		        <lastActivity>1531693132.59</lastActivity>
-		        <lastSuccess>1531693132.59</lastSuccess>
-		        <ignoreErrorsUntil></ignoreErrorsUntil>
-		        <errorMessage></errorMessage>
+		        <lastActivity>1531769914.3</lastActivity>
+		        <lastSuccess>1531769914.3</lastSuccess>
+		        <ignoreErrorsUntil/>
+		        <errorMessage/>
 		    <lastFailure>1520512431.47</lastFailure></announceTime>
 		    <internet>
 		        <alive>true</alive>
 		        <lastActivity>1531693141.24</lastActivity>
 		        <lastSuccess>1531693141.24</lastSuccess>
-		        <ignoreErrorsUntil></ignoreErrorsUntil>
-		        <errorMessage></errorMessage>
+		        <ignoreErrorsUntil/>
+		        <errorMessage/>
 		    </internet>
 		<say><alive>true</alive><lastActivity>1531688444.68</lastActivity><lastFailure>1516280253.03</lastFailure><errorMessage/><lastSuccess>1531688444.68</lastSuccess><ignoreErrorsUntil/></say><announceRinger><alive>true</alive><lastActivity>1519211259.38</lastActivity><lastSuccess>1519211259.38</lastSuccess><ignoreErrorsUntil/><errorMessage/></announceRinger></services>
 	</status>
@@ -79,7 +85,7 @@
 	<devices>
 	</devices>
 	<services>
-	    <igor><protocol>http</protocol><version>0.6</version><url>http://boom.local:9333/data</url><host>boom.local</host><rebootCount>241</rebootCount><startTime>1531693127</startTime><ticker>0</ticker><port>9333</port></igor>
+	    <igor><protocol>http</protocol><version>0.6</version><url>http://boom.local:9333/data</url><host>boom.local</host><rebootCount>244</rebootCount><startTime>1531769910</startTime><ticker>0</ticker><port>9333</port></igor>
 	</services>
 	<people>
 	    <jack>
@@ -98,7 +104,8 @@
             <cid>people-people</cid>
             <obj>/data/people</obj>
             <get>descendant-or-self</get>
-        <parent>0</parent></au:capability>
+            
+        <parent>root</parent></au:capability>
 	    <pauline>
 	        <au:capability>
 	            <comment>This allows all access to own data</comment>
@@ -108,7 +115,7 @@
 	            <put>descendant</put>
 	            <post>descendant</post>
 	            <delete>descendant</delete>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 	        <au:capability>
 	            <comment>This allows writing pauline people data</comment>
 	            <cid>id-pauline-writepeopleself</cid>
@@ -116,7 +123,7 @@
 	            <put>descendant</put>
 	            <post>descendant</post>
 	            <delete>descendant</delete>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 	        <au:capability>
 	            <comment>This allows reading identity existence, and adding or deleting users</comment>
 	            <cid>id-pauline-readidentities</cid>
@@ -124,7 +131,7 @@
 	            <get>self</get>
 	            <post>descendant</post>
 	            <delete>descendant</delete>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
             <encryptedPassword>$pbkdf2-sha256$29000$qTWmVCql9H6PUYqx9h4jhA$CMpYr3VTVFTlYLZ6Zihvhc/GnY1b1ZDc6q7d4HhZ3lA</encryptedPassword>
 	        <plugindata>
                 <ble>
@@ -142,7 +149,7 @@
                     </device>
                 </ble>
 	        </plugindata>
-	    <au:capability><comment>Full access to ringer</comment><obj>/api</obj><aud>http://ringer.local</aud><cid>id-ringer-fullaccess</cid><iss>https://igor.local:9333/issuer</iss><get>descendant-or-self</get><delegate>true</delegate><child>token-9042156036763686898</child><put>descendant-or-self</put><post>descendant-or-self</post><delete>descendant-or-self</delete><parent>0</parent></au:capability></pauline>
+	    <au:capability><comment>Full access to ringer</comment><obj>/api</obj><aud>http://ringer.local</aud><cid>id-ringer-fullaccess</cid><iss>https://igor.local:9333/issuer</iss><get>descendant-or-self</get><delegate>true</delegate><child>token-9042156036763686898</child><put>descendant-or-self</put><post>descendant-or-self</post><delete>descendant-or-self</delete><parent>root</parent></au:capability></pauline>
 	    <jack>
             <encryptedPassword>$pbkdf2-sha256$29000$WQvhHIPQei9F6P0fY8xZCw$KlxQnmW0.qclx0vLKuamweCRoo8b.1QMnLfZUM2yHI8</encryptedPassword>
 	        <au:capability>
@@ -153,7 +160,7 @@
 	            <put>descendant</put>
 	            <post>descendant</post>
 	            <delete>descendant</delete>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 	        <au:capability>
 	            <comment>This allows writing jack people data</comment>
 	            <cid>id-jack-writepeopleself</cid>
@@ -161,8 +168,8 @@
 	            <put>descendant</put>
 	            <post>descendant</post>
 	            <delete>descendant</delete>
-	        <parent>0</parent></au:capability>
-	        <au:capability><comment>This allows Jack running action/ringringer</comment><obj>/action/ringringer</obj><get>self</get><cid>id-jack-ringringer</cid><delegate>true</delegate><parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
+	        <au:capability><comment>This allows Jack running action/ringringer</comment><obj>/action/ringringer</obj><get>self</get><cid>id-jack-ringringer</cid><delegate>true</delegate><parent>root</parent></au:capability>
 
 	        <plugindata>
                 <ble>
@@ -183,25 +190,27 @@
                     </device>
                 </ble>
 	        </plugindata>
-	    <au:capability><obj>/data/identities/steven</obj><parent>0</parent><cid>c16862943354935462034</cid><get>descendant-or-self</get><put>descendant</put><post>descendant</post><delete>descendant</delete></au:capability><au:capability><obj>/data/people/steven</obj><parent>0</parent><cid>c8906208856775150794</cid><put>descendant</put><post>descendant</post><delete>descendant</delete></au:capability></steven>
+	    <au:capability><obj>/data/identities/steven</obj><cid>c16862943354935462034</cid><get>descendant-or-self</get><put>descendant</put><post>descendant</post><delete>descendant</delete><parent>root</parent></au:capability><au:capability><obj>/data/people/steven</obj><cid>c8906208856775150794</cid><put>descendant</put><post>descendant</post><delete>descendant</delete><parent>root</parent></au:capability></steven>
 	    <admin>
             <encryptedPassword>$pbkdf2-sha256$29000$FKK0VsqZk3KOkTKmFEJISQ$TgZO5yhvrztQDtT2A0HQx5jzPvFcb.QFDPJuTNJUyO0</encryptedPassword>
-	        <au:capability><comment>This allows everything. Dangerous!</comment><obj>/data</obj><cid>admin-data</cid><get>descendant-or-self</get><delegate>true</delegate><child>token-17388627758257581876</child><child>token-12961129867160302254</child><put>descendant</put><post>descendant</post><delete>descendant</delete></au:capability>
+	        <au:capability><comment>This allows everything. Dangerous!</comment><obj>/data</obj><cid>admin-data</cid><get>descendant-or-self</get><delegate>true</delegate><child>token-17388627758257581876</child><put>descendant</put><post>descendant</post><delete>descendant</delete><parent>root</parent></au:capability>
 	        <au:capability>
-	        	<comment>This allows all actions. Dangerous!</comment>
+	        	<comment>allows all actions</comment>
 	        	<obj>/action</obj>
 	        	<cid>admin-action</cid>
 	        	<get>descendant</get>
 	        	<delegate>true</delegate>
 	        	<child>token-1332483321313593550</child>
-	        <parent>0</parent></au:capability>
+	            
+	        <parent>root</parent></au:capability>
 	        <au:capability>
-	            <comment>This allows all internal actions. Dangerous!</comment>
+	            <comment>allows all internal commands</comment>
 	            <cid>admin-internal</cid>
 	            <obj>/internal</obj>
 	            <get>descendant</get>
 	            <delegate>true</delegate>
-	        <parent>0</parent></au:capability>
+	            
+	        <parent>root</parent></au:capability>
 	        <au:capability>
 	        	<comment>Full access to button</comment>
 	        	<cid>id-button-fullaccess</cid>
@@ -213,7 +222,7 @@
 	        	<obj>/api</obj>
 	            <iss>https://igor.local:9333/issuer</iss>
 	            <aud>http://button.local</aud>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 	    	<au:capability>
 	    		<obj>/action/bellbutton1pressed</obj>
 	    		<delegate>true</delegate>
@@ -221,68 +230,39 @@
 	    		<cid>token-1332483321313593550</cid>
 	    		<get>self</get>
 	    	</au:capability>
-	    	<au:capability><cid>0</cid><child>c14339286604474994798</child><child>c16862943354935462034</child><child>c8906208856775150794</child><child>c2561994330389705362</child><child>people-people</child><child>id-pauline-readself</child><child>id-pauline-writepeopleself</child><child>id-pauline-readidentities</child><child>id-ringer-fullaccess</child><child>id-jack-readself</child><child>id-jack-writepeopleself</child><child>id-jack-ringringer</child><child>admin-data</child><child>admin-action</child><child>admin-internal</child><child>id-button-fullaccess</child><child>action-plugin</child><child>action-pluginscript</child><child>action-action</child><child>id-action-setmessage</child><child>id-action-bledevice-setmessage</child><child>id-action-bledevice-pauline</child><child>id-action-bledevice-jack</child><child>id-action-bledevice-steven</child><child>id-action-started-fire</child><child>id-action-save-save</child><child>id-action-cleanup-delete</child><child>id-action-checknight-night</child><child>id-action-checklate-latereminder</child><child>id-action-checkmorngin-morning</child><child>id-action-updatepeople-read</child><child>id-action-updatepeople-peopledata</child><child>id-action-bellbutton-messages</child><child>id-action-turnbellbutton-messages</child><child>id-action-ringringer-readplugindata</child><child>id-action-bledata-devices</child><child>id-action-bledata-sensors</child><child>id-action-bledata-pauline</child><child>id-action-bledata-jack</child><child>id-action-bledata-steven</child><child>id-action-countpeople-read</child><child>id-action-countpeople-write</child><child>id-plugin-ble-self</child><child>default-environment</child><child>default-status</child><child>default-igor</child><child>default-static</child><child>default-accessControl</child><child>id-dangerous-everything</child></au:capability>
-	    	<au:capability><obj>/data/people</obj><parent>0</parent><cid>c14339286604474994798</cid><get>descendant-or-self</get><put>descendant-or-self</put><post>descendant</post><delete>descendant</delete></au:capability>
+	    	<au:capability><obj>/data/people</obj><cid>c14339286604474994798</cid><get>descendant-or-self</get><put>descendant-or-self</put><post>descendant</post><delete>descendant</delete><parent>root</parent></au:capability>
  
 <au:capability>
-	<cid>
-		root
-	</cid>
-	<child>
-		admin-data
-	</child>
-	<child>
-		admin-plugin
-	</child>
-	<child>
-		admin-pluginscript
-	</child>
-	<child>
-		c10023097117220873403
-	</child>
-	<child>
-		c4269021034118523031
-	</child>
-	<child>
-		c8220870273983715075
-	</child>
-	<child>
-		c12798676791578006235
-	</child>
-	<child>
-		c2072969238871829902
-	</child>
-	<child>
-		c12322301157645251437
-	</child>
+	<cid>root</cid>
+	<child>admin-plugin</child>
+	<child>admin-pluginscript</child>
+	<child>people-people</child>
+	<child>id-pauline-readself</child>
+	<child>id-pauline-writepeopleself</child>
+	<child>id-pauline-readidentities</child>
+	<child>id-ringer-fullaccess</child>
+	<child>id-jack-readself</child>
+	<child>id-jack-writepeopleself</child>
+	<child>id-jack-ringringer</child>
+	<child>c16862943354935462034</child>
+	<child>c8906208856775150794</child>
+	<child>admin-data</child>
+	<child>admin-action</child>
+	<child>admin-internal</child>
+	<child>id-button-fullaccess</child>
+	<child>c14339286604474994798</child>
+<child>action-plugin</child><child>action-pluginscript</child><child>action-action</child><child>id-action-setmessage</child><child>id-action-bledevice-setmessage</child><child>id-action-bledevice-pauline</child><child>id-action-bledevice-jack</child><child>id-action-bledevice-steven</child><child>id-action-started-fire</child><child>id-action-save-save</child><child>id-action-cleanup-delete</child><child>id-action-checknight-night</child><child>id-action-checklate-latereminder</child><child>id-action-checkmorngin-morning</child><child>id-action-updatepeople-read</child><child>id-action-updatepeople-peopledata</child><child>id-action-bellbutton-messages</child><child>id-action-turnbellbutton-messages</child><child>id-action-ringringer-readplugindata</child><child>id-action-bledata-devices</child><child>id-action-bledata-sensors</child><child>id-action-bledata-pauline</child><child>id-action-bledata-jack</child><child>id-action-bledata-steven</child><child>id-action-countpeople-read</child><child>id-action-countpeople-write</child><child>c2561994330389705362</child><child>id-plugin-ble-self</child><child>default-environment</child><child>default-status</child><child>default-igor</child><child>default-static</child><child>default-accessControl</child></au:capability>
+<au:capability>
+	<get>descendant</get>
+	<obj>/plugin</obj>
+	<parent>root</parent>
+	<cid>admin-plugin</cid>
 </au:capability>
 <au:capability>
-	<get>
-		descendant
-	</get>
-	<obj>
-		/plugin
-	</obj>
-	<parent>
-		root
-	</parent>
-	<cid>
-		admin-plugin
-	</cid>
-</au:capability>
-<au:capability>
-	<get>
-		descendant
-	</get>
-	<obj>
-		/pluginscript
-	</obj>
-	<parent>
-		root
-	</parent>
-	<cid>
-		admin-pluginscript
-	</cid>
+	<get>descendant</get>
+	<obj>/pluginscript</obj>
+	<parent>root</parent>
+	<cid>admin-pluginscript</cid>
 </au:capability>
 </admin>
 	</identities>
@@ -292,19 +272,22 @@
             <cid>action-plugin</cid>
             <obj>/plugin</obj>
             <get>descendant</get>
-        <parent>0</parent></au:capability>
+			
+        <parent>root</parent></au:capability>
         <au:capability>
             <comment>This allows running any pluginscript</comment>
             <cid>action-pluginscript</cid>
             <obj>/pluginscript</obj>
             <get>descendant</get>
-        <parent>0</parent></au:capability>
+			
+        <parent>root</parent></au:capability>
         <au:capability>
             <comment>This allows triggering any action</comment>
             <cid>action-action</cid>
             <obj>/action</obj>
             <get>child</get>
-        <parent>0</parent></au:capability>
+			
+        <parent>root</parent></au:capability>
 		<action>
 			<name>updateMessage</name>
 			<interval>500</interval>
@@ -322,8 +305,8 @@
                 <cid>id-action-setmessage</cid>
 	            <obj>/data/environment/messages</obj>
 	            <post>child</post>
-	        <parent>0</parent></au:capability>
-		    <notBefore>1531693127</notBefore>
+	        <parent>root</parent></au:capability>
+		    <notBefore>1531769910</notBefore>
 		</action>
 		<action>
             <xpath>/data/sensors/ble/bleDevice</xpath>
@@ -338,25 +321,25 @@
                 <cid>id-action-bledevice-setmessage</cid>
 	            <obj>/data/environment/messages</obj>
 	            <post>child</post>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 			<au:capability>
 	            <comment>This allows getting plguindata/ble for user pauline</comment>
                 <cid>id-action-bledevice-pauline</cid>
 	            <obj>/data/identities/pauline/plugindata/ble</obj>
 	            <get>descendant-or-self</get>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 			<au:capability>
 	            <comment>This allows getting plguindata/ble for user jack</comment>
                 <cid>id-action-bledevice-jack</cid>
 	            <obj>/data/identities/jack/plugindata/ble</obj>
 	            <get>descendant-or-self</get>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 			<au:capability>
 	            <comment>This allows getting plguindata/ble for user steven</comment>
                 <cid>id-action-bledevice-steven</cid>
 	            <obj>/data/identities/steven/plugindata/ble</obj>
 	            <get>descendant-or-self</get>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
             <notBefore>1520954503</notBefore>
         </action>
 	    <action>	  
@@ -372,7 +355,7 @@
                 <cid>id-action-started-fire</cid>
                 <obj>/internal/started</obj>
                 <get>self</get>
-            <parent>0</parent></au:capability>
+            <parent>root</parent></au:capability>
 	        <name>start</name>
 	        <url>/internal/started</url>
 	        <notBefore>1531693141</notBefore>
@@ -383,14 +366,14 @@
                 <cid>id-action-save-save</cid>
                 <obj>/internal/save</obj>
                 <get>self</get>
-            <parent>0</parent></au:capability>
+            <parent>root</parent></au:capability>
 			<name>save</name>
 			<interval>3600</interval>
 			<minInterval>60</minInterval>
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-		    <notBefore>1531693187</notBefore>
+		    <notBefore>1531769970</notBefore>
 		</action>
         <action>
             <name>cleanup</name>
@@ -402,8 +385,8 @@
                 <cid>id-action-cleanup-delete</cid>
 	            <obj>/data/environment/messages</obj>
 	            <delete>child</delete>
-	        <parent>0</parent></au:capability>
-            <notBefore>1531693127</notBefore>
+	        <parent>root</parent></au:capability>
+            <notBefore>1531769910</notBefore>
         </action>
 		<action>
 			<name>updateActions</name>
@@ -423,8 +406,8 @@
                 <cid>id-action-checknight-night</cid>
 	            <obj>/data/environment/night</obj>
 	            <put>self</put>
-	        <parent>0</parent></au:capability>
-		    <notBefore>1531693127</notBefore>
+	        <parent>root</parent></au:capability>
+		    <notBefore>1531769910</notBefore>
 		</action>
 		<action>
             <name>checkLate</name>
@@ -438,8 +421,8 @@
                 <cid>id-action-checklate-latereminder</cid>
 	            <obj>/data/environment/latereminder</obj>
 	            <put>self</put>
-	        <parent>0</parent></au:capability>
-		    <notBefore>1531693127</notBefore>
+	        <parent>root</parent></au:capability>
+		    <notBefore>1531769910</notBefore>
 		</action>
 		<action>
             <name>checkMorning</name>
@@ -453,8 +436,8 @@
                 <cid>id-action-checkmorngin-morning</cid>
 	            <obj>/data/environment/morninggreeting</obj>
 	            <put>self</put>
-	        <parent>0</parent></au:capability>
-		    <notBefore>1531693127</notBefore>
+	        <parent>root</parent></au:capability>
+		    <notBefore>1531769910</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -470,14 +453,14 @@
                 <cid>id-action-updatepeople-read</cid>
 	            <obj>/data/environment/devices</obj>
 	            <get>descendant-or-self</get>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 	        <au:capability>
 	            <comment>This allows getting and setting people data</comment>
                 <cid>id-action-updatepeople-peopledata</cid>
 	            <obj>/data/people</obj>
 	            <get>descendant</get>
 	            <put>descendant</put>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 		<notBefore>1520938465</notBefore></action>
 		<action>
 			<name>locationpauline</name>
@@ -505,20 +488,20 @@
 			<interval>60</interval>
 			<url>/plugin/lan?name=internet&amp;ip=google.com.</url>
 			<aggregate>true</aggregate>
-		    <notBefore>1531693128</notBefore>
+		    <notBefore>1531769910</notBefore>
 		</action>
 		<action>
 			<interval>60</interval>
 			<url>/plugin/lan?name=igor&amp;service=igor/web&amp;ip={/data/services/igor/host}&amp;port={/data/services/igor/port}</url>
 			<aggregate>true</aggregate>
-			<notBefore>1531693128</notBefore>
+			<notBefore>1531769911</notBefore>
 		</action>
 		<action>
 			<name>systemHealth</name>
 			<interval>60</interval>
 			<xpath>/data/status/*/*/errorMessage</xpath>
 			<url>/plugin/systemHealth</url>
-			<notBefore>1531693144</notBefore>
+			<notBefore>1531769915</notBefore>
 			<aggregate>true</aggregate>
 		</action>
         <action>
@@ -533,7 +516,7 @@
                 <cid>id-action-bellbutton-messages</cid>
 	            <obj>/data/environment/messages</obj>
 	            <post>child</post>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
             <notBefore>1520865911</notBefore>
         </action>
         <action>
@@ -554,7 +537,7 @@
                 <cid>id-action-turnbellbutton-messages</cid>
 	            <obj>/data/environment/messages</obj>
 	            <post>child</post>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
             <notBefore>1508419926</notBefore>
         </action>
         <action>
@@ -564,7 +547,7 @@
                 <cid>id-action-ringringer-readplugindata</cid>
 	            <obj>/data/plugindata/ringer</obj>
 	            <get>descendant-or-self</get>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
             <url>http://{/data/plugindata/ringer/host}/api/alarm</url>
             <data>{{&quot;alarm&quot;:5}}</data>
             <method>PUT</method>
@@ -577,7 +560,7 @@
 			<url>/pluginscripts/ble/pull</url>
 			<representing>sensors/ble</representing>
 			<aggregate>true</aggregate>
-			<notBefore>1531693128</notBefore>
+			<notBefore>1531769911</notBefore>
 		</action>
 		<action>
 			<au:capability>
@@ -588,31 +571,31 @@
 	            <put>descendant</put>
 	            <post/>
 	            <delete/>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 			<au:capability>
 	            <comment>This allows getting /data/sensors/ble</comment>
                 <cid>id-action-bledata-sensors</cid>
 	            <obj>/data/sensors/ble</obj>
 	            <get>descendant-or-self</get>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 			<au:capability>
 	            <comment>This allows getting plguindata/ble for user pauline</comment>
                 <cid>id-action-bledata-pauline</cid>
 	            <obj>/data/identities/pauline/plugindata/ble</obj>
 	            <get>descendant-or-self</get>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 			<au:capability>
 	            <comment>This allows getting plguindata/ble for user jack</comment>
                 <cid>id-action-bledata-jack</cid>
 	            <obj>/data/identities/jack/plugindata/ble</obj>
 	            <get>descendant-or-self</get>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 			<au:capability>
 	            <comment>This allows getting plguindata/ble for user steven</comment>
                 <cid>id-action-bledata-steven</cid>
 	            <obj>/data/identities/steven/plugindata/ble</obj>
 	            <get>descendant-or-self</get>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 			<xpath>/data/sensors/ble/bleDevice</xpath>
 			<condition>
 			/data/identities/*/plugindata/ble/device[id=string($originalContext/address)]/name
@@ -634,21 +617,21 @@
 			<url>/data/environment/people/count</url>
 			<mimetype>text/plain</mimetype>
 			<data>{count(/data/people/*[home='true'])}</data>
-			<notBefore>1531693128</notBefore>
+			<notBefore>1531769911</notBefore>
 			<au:capability>
 	            <comment>This allows counting people</comment>
                 <cid>id-action-countpeople-read</cid>
 	            <obj>/data/people</obj>
 	            <get>descendant-or-self</get>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 			<au:capability>
 	            <comment>This allows setting peoplecount</comment>
                 <cid>id-action-countpeople-write</cid>
 	            <obj>/data/environment/people/count</obj>
 	            <put>self</put>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 		</action>
-     <au:capability><cid>c2561994330389705362</cid><obj>/pluginscript</obj><parent>0</parent><get>descendant</get></au:capability></actions>
+     <au:capability><cid>c2561994330389705362</cid><obj>/pluginscript</obj><get>descendant</get><parent>root</parent></au:capability></actions>
 	<sandbox/>
 	<eventsources/>
 	<plugindata>
@@ -664,47 +647,51 @@
 	            <put>descendant</put>
 	            <post>descendant</post>
 	            <delete>descendant</delete>
-	        <parent>0</parent></au:capability>
+	        <parent>root</parent></au:capability>
 		</ble>
 	</plugindata>
 	<au:access>
 	    <au:defaultCapabilities>
 	        <au:capability>
-	            <comment>This allows reading environment</comment>
+	            <comment>allows reading environment to everyone</comment>
                 <cid>default-environment</cid>
 	            <obj>/data/environment</obj>
 	            <get>descendant-or-self</get>
 	            <put/>
 	            <post/>
 	            <delete/>
-	        <parent>0</parent></au:capability>
+				
+	        <parent>root</parent></au:capability>
 	        <au:capability>
-	            <comment>This allows reading status</comment>
+	            <comment>allows reading status to everyone</comment>
                 <cid>default-status</cid>
 	            <obj>/data/status</obj>
 	            <get>descendant-or-self</get>
 	            <put/>
 	            <post/>
 	            <delete/>
-	        <parent>0</parent></au:capability>
+				
+	        <parent>root</parent></au:capability>
 	        <au:capability>
-	            <comment>This allows reading igor data</comment>
+	            <comment>allows reading igor data to everyone</comment>
                 <cid>default-igor</cid>
 	            <obj>/data/services/igor</obj>
 	            <get>descendant-or-self</get>
 	            <put/>
 	            <post/>
 	            <delete/>
-	        <parent>0</parent></au:capability>
+				
+	        <parent>root</parent></au:capability>
 	        <au:capability>
-	            <comment>This allows reading static web pages</comment>
+	            <comment>allows reading static web pages to everyone</comment>
                 <cid>default-static</cid>
 	            <obj>/static</obj>
 	            <get>child</get>
 	            <put/>
 	            <post/>
 	            <delete/>
-	        <parent>0</parent></au:capability>
+				
+	        <parent>root</parent></au:capability>
 	        <au:capability>
 	            <comment>This allows accessing capability information</comment>
                 <cid>default-accessControl</cid>
@@ -713,21 +700,13 @@
 	            <put/>
 	            <post/>
 	            <delete/>
-	        <parent>0</parent></au:capability>
+				
+	        <parent>root</parent></au:capability>
 	    </au:defaultCapabilities>
 	    <au:exportedCapabilities>
 		</au:exportedCapabilities>
 	    <au:revokedCapabilities/>
 	    <au:unusedCapabilities>
-	        <au:capability>
-	            <comment>This capabiliy allows everything</comment>
-                <cid>id-dangerous-everything</cid>
-	            <obj>/data</obj>
-	            <get>descendant-or-self</get>
-	            <put>descendant</put>
-	            <post>descendant</post>
-	            <delete>descendant</delete>
-	        <parent>0</parent></au:capability>
 	    </au:unusedCapabilities>
 	    <au:sharedKeys>
 	    	<au:sharedKey>
