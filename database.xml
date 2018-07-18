@@ -251,20 +251,22 @@
 	<child>admin-internal</child>
 	<child>id-button-fullaccess</child>
 	<child>c14339286604474994798</child>
-<child>action-plugin</child><child>action-pluginscript</child><child>action-action</child><child>id-action-setmessage</child><child>id-action-bledevice-setmessage</child><child>id-action-bledevice-pauline</child><child>id-action-bledevice-jack</child><child>id-action-bledevice-steven</child><child>id-action-started-fire</child><child>id-action-save-save</child><child>id-action-cleanup-delete</child><child>id-action-checknight-night</child><child>id-action-checklate-latereminder</child><child>id-action-checkmorngin-morning</child><child>id-action-updatepeople-read</child><child>id-action-updatepeople-peopledata</child><child>id-action-bellbutton-messages</child><child>id-action-turnbellbutton-messages</child><child>id-action-ringringer-readplugindata</child><child>id-action-bledata-devices</child><child>id-action-bledata-sensors</child><child>id-action-bledata-pauline</child><child>id-action-bledata-jack</child><child>id-action-bledata-steven</child><child>id-action-countpeople-read</child><child>id-action-countpeople-write</child><child>c2561994330389705362</child><child>id-plugin-ble-self</child><child>default-environment</child><child>default-status</child><child>default-igor</child><child>default-static</child><child>default-accessControl</child></au:capability>
+<child>action-plugin</child><child>action-pluginscript</child><child>action-action</child><child>id-action-setmessage</child><child>id-action-bledevice-setmessage</child><child>id-action-bledevice-pauline</child><child>id-action-bledevice-jack</child><child>id-action-bledevice-steven</child><child>id-action-started-fire</child><child>id-action-save-save</child><child>id-action-cleanup-delete</child><child>id-action-checknight-night</child><child>id-action-checklate-latereminder</child><child>id-action-checkmorngin-morning</child><child>id-action-updatepeople-read</child><child>id-action-updatepeople-peopledata</child><child>id-action-bellbutton-messages</child><child>id-action-turnbellbutton-messages</child><child>id-action-ringringer-readplugindata</child><child>id-action-bledata-devices</child><child>id-action-bledata-sensors</child><child>id-action-bledata-pauline</child><child>id-action-bledata-jack</child><child>id-action-bledata-steven</child><child>id-action-countpeople-read</child><child>id-action-countpeople-write</child><child>c2561994330389705362</child><child>id-plugin-ble-self</child><child>default-environment</child><child>default-status</child><child>default-igor</child><child>default-static</child><child>default-accessControl</child><child>external</child></au:capability>
 <au:capability>
 	<get>descendant</get>
 	<obj>/plugin</obj>
 	<parent>root</parent>
 	<cid>admin-plugin</cid>
+	<delegate>true</delegate>
 </au:capability>
 <au:capability>
 	<get>descendant</get>
 	<obj>/pluginscript</obj>
 	<parent>root</parent>
 	<cid>admin-pluginscript</cid>
+	<delegate>true</delegate>
 </au:capability>
-</admin>
+<au:capability><delegate>external</delegate><parent>root</parent><cid>external</cid></au:capability></admin>
 	</identities>
 	<actions>
         <au:capability>
