@@ -1,6 +1,6 @@
 <?xml version="1.0" ?><data xmlns:au="http://jackjansen.nl/igor/authentication">
 	<environment>
-		<night/>
+		<night>true</night>
 		<location/>
 		<energy/>
 		<weather/>
@@ -13,7 +13,7 @@
 		</systemHealth>
 	</environment>
 	<status>
-		<igor><core><alive>true</alive><lastActivity>1532379711.96</lastActivity><lastSuccess>1532379711.96</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core><save><alive>true</alive><lastActivity>1532378833.14</lastActivity><lastSuccess>1532378833.14</lastSuccess><ignoreErrorsUntil/><errorMessage/></save></igor>
+		<igor><core><alive>true</alive><lastActivity>1532380440.62</lastActivity><lastSuccess>1532380440.62</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core><save><alive>true</alive><lastActivity>1532380440.74</lastActivity><lastSuccess>1532380440.74</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></save></igor>
 		<sensors><button/></sensors>
 		<devices><ringer/></devices>
 		<services/>
@@ -22,7 +22,7 @@
 	<devices>
 	<ringer/></devices>
 	<services>
-		<igor><protocol>https</protocol><url>https://boom.local:9333/data</url><host>boom.local</host><version>0.6</version><startTime>1532379711</startTime><fingerprint>D7:7A:EB:EF:82:A1:08:ED:54:14:03:4F:57:F3:67:66:84:0D:20:A7</fingerprint><rebootCount>2</rebootCount><ticker>0</ticker><port>9333</port></igor>
+		<igor><protocol>https</protocol><url>https://boom.local:9333/data</url><host>boom.local</host><version>0.6</version><startTime>1532380440</startTime><fingerprint>D7:7A:EB:EF:82:A1:08:ED:54:14:03:4F:57:F3:67:66:84:0D:20:A7</fingerprint><rebootCount>3</rebootCount><ticker>0</ticker><port>9333</port></igor>
 	</services>
 	<people/>
 	<identities>
@@ -57,13 +57,7 @@
 				<delete>descendant</delete>	
 				<delegate>true</delegate>
 			</au:capability>
-			<au:capability>
-				<get>descendant</get>
-				<obj>/action</obj>
-				<parent>root</parent>
-				<cid>admin-action</cid>
-				<delegate>true</delegate>
-			</au:capability>
+			<au:capability><obj>/action</obj><parent>root</parent><get>descendant</get><cid>admin-action</cid><delegate>true</delegate><child>c737486580052040841</child></au:capability>
 			<au:capability>
 				<get>descendant</get>
 				<obj>/internal</obj>
@@ -86,7 +80,7 @@
 				<delegate>true</delegate>
 			</au:capability>
             <au:capability><child>c8367703070584182310</child><delegate>external</delegate><parent>root</parent><cid>external</cid></au:capability>
-		<au:capability><delegate>true</delegate><obj>/api</obj><aud>ringer.local</aud><parent>external</parent><cid>c8367703070584182310</cid><put>descendant-or-self</put><post>descendant</post><get>descendant-or-self</get><delete>descendant</delete></au:capability></admin>
+		<au:capability><obj>/api</obj><aud>ringer.local</aud><parent>external</parent><cid>c8367703070584182310</cid><get>descendant-or-self</get><delegate>true</delegate><child>c4539053256114489748</child><put>descendant-or-self</put><post>descendant</post><delete>descendant</delete></au:capability><au:capability><obj>/action/button.pressed</obj><parent>admin-action</parent><get>self</get><cid>c737486580052040841</cid><delegate>true</delegate><child>c18200953248314046039</child></au:capability></admin>
 		<au:capability>
 			<get>descendant-or-self</get>
 			<obj>/data/people</obj>
@@ -98,7 +92,7 @@
 	    <action>
 	        <name>start</name>
 	        <url>/internal/started</url>
-	    <notBefore>1532379712</notBefore></action>
+	    <notBefore>1532380440</notBefore></action>
 		<action>
 			<name>save</name>
 			<interval>3600</interval>
@@ -106,7 +100,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore>1532379771</notBefore>
+			<notBefore>1532380500</notBefore>
 		</action>
         <action>
             <name>cleanup</name>
@@ -127,7 +121,7 @@
 			<url>/data/environment/night</url>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-			<notBefore>1532379711</notBefore>
+			<notBefore>1532380440</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -148,7 +142,7 @@
 			<url>/data/environment/people/count</url>
 			<mimetype>text/plain</mimetype>
 			<data>{count(/data/people/*[home='true'])}</data>
-			<notBefore>1532379711</notBefore>
+			<notBefore>1532380440</notBefore>
 		</action>
 		<action>
 			<name>button.pressed</name>
@@ -161,7 +155,7 @@
 			<url>https://ringer.local/api/alarm</url>
 			<data>{{&quot;alarm&quot;:5}}</data>
 			<method>PUT</method>
-		</action>
+		<au:capability><comment></comment><obj>/api/alarm</obj><aud>ringer.local</aud><parent>c8367703070584182310</parent><get></get><cid>c4539053256114489748</cid><put>self</put><post></post><delete></delete></au:capability></action>
 		<au:capability>
 			<get>descendant</get>
 			<obj>/plugin</obj>
@@ -234,7 +228,7 @@
 			</au:capability>
 		</au:defaultCapabilities>
 		<au:exportedCapabilities>
-		</au:exportedCapabilities>
+		<au:capability><obj>/action/button.pressed</obj><sub>/button.local</sub><parent>c737486580052040841</parent><get>self</get><iss>https://boom.local:9333/issuer</iss><cid>c18200953248314046039</cid><nvb>1532380582</nvb><nva>1563916583</nva><aud>https://boom.local:9333/data</aud></au:capability></au:exportedCapabilities>
 		<au:revokedCapabilities>
 		</au:revokedCapabilities>
 		<au:unusedCapabilities>
