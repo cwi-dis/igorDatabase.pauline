@@ -1,28 +1,28 @@
 <?xml version="1.0" ?><data xmlns:au="http://jackjansen.nl/igor/authentication">
 	<environment>
-		<night/>
+		<night></night>
 		<location/>
 		<energy/>
 		<weather/>
 		<messages/>
 		<devices/>
 		<lights/>
-		<people/>
+		<people><count>0</count></people>
 		<systemHealth>
 			<messages/>
 		</systemHealth>
 	</environment>
 	<status>
-		<igor/>
-		<sensors/>
-		<devices/>
+		<igor><core><alive>true</alive><lastActivity>1532378833.01</lastActivity><lastSuccess>1532378833.01</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core><save><alive>true</alive><lastActivity>1532378833.14</lastActivity><lastSuccess>1532378833.14</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></save></igor>
+		<sensors><button></button></sensors>
+		<devices><ringer></ringer></devices>
 		<services/>
 	</status>
-	<sensors/>
+	<sensors><button/></sensors>
 	<devices>
-	</devices>
+	<ringer/></devices>
 	<services>
-		<igor/>
+		<igor><protocol>https</protocol><url>https://boom.local:9333/data</url><host>boom.local</host><version>0.6</version><startTime>1532378832</startTime><fingerprint>D7:7A:EB:EF:82:A1:08:ED:54:14:03:4F:57:F3:67:66:84:0D:20:A7</fingerprint><rebootCount>0</rebootCount><ticker>0</ticker><port>9333</port></igor>
 	</services>
 	<people/>
 	<identities>
@@ -85,12 +85,8 @@
 				<cid>admin-pluginscript</cid>
 				<delegate>true</delegate>
 			</au:capability>
-            <au:capability>
-                <delegate>external</delegate>
-                <parent>root</parent>
-                <cid>external</cid>
-			</au:capability>
-		</admin>
+            <au:capability><child>c8367703070584182310</child><delegate>external</delegate><parent>root</parent><cid>external</cid></au:capability>
+		<au:capability><delegate>true</delegate><obj>/api</obj><aud>ringer.local</aud><parent>external</parent><cid>c8367703070584182310</cid><put>descendant-or-self</put><post>descendant</post><get>descendant-or-self</get><delete>descendant</delete></au:capability></admin>
 		<au:capability>
 			<get>descendant-or-self</get>
 			<obj>/data/people</obj>
@@ -102,7 +98,7 @@
 	    <action>
 	        <name>start</name>
 	        <url>/internal/started</url>
-	    </action>
+	    <notBefore>1532378833</notBefore></action>
 		<action>
 			<name>save</name>
 			<interval>3600</interval>
@@ -110,7 +106,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore/>
+			<notBefore>1532378892</notBefore>
 		</action>
         <action>
             <name>cleanup</name>
@@ -131,7 +127,7 @@
 			<url>/data/environment/night</url>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-			<notBefore/>
+			<notBefore>1532378832</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -152,7 +148,7 @@
 			<url>/data/environment/people/count</url>
 			<mimetype>text/plain</mimetype>
 			<data>{count(/data/people/*[home='true'])}</data>
-			<notBefore/>
+			<notBefore>1532378832</notBefore>
 		</action>
 		<au:capability>
 			<get>descendant</get>
@@ -232,6 +228,6 @@
 		<au:unusedCapabilities>
 		</au:unusedCapabilities>
 		<au:sharedKeys>
-		</au:sharedKeys>
+		<au:sharedKey><iss>https://boom.local:9333/issuer</iss><externalKey>k16389691029869126143</externalKey><aud>https://boom.local:9333/data</aud><sub>button.local</sub></au:sharedKey><au:sharedKey><iss>https://boom.local:9333/issuer</iss><externalKey>k8387214475669524776</externalKey><aud>ringer.local</aud></au:sharedKey></au:sharedKeys>
 	</au:access>
 </data>
