@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><data xmlns:au="http://jackjansen.nl/igor/authentication">
+<?xml version="1.0" ?><data xmlns:au="http://jackjansen.nl/igor/authentication" xmlns:own="http://jackjansen.nl/igor/owner">
 	<environment>
 		<night>true</night>
 		<location/>
@@ -13,7 +13,7 @@
 		</systemHealth>
 	</environment>
 	<status>
-		<igor><core><alive>true</alive><lastActivity>1532380440.62</lastActivity><lastSuccess>1532380440.62</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core><save><alive>true</alive><lastActivity>1532380440.74</lastActivity><lastSuccess>1532380440.74</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></save></igor>
+		<igor><core><alive>true</alive><lastActivity>1538834352.5</lastActivity><lastSuccess>1538834352.5</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core><save><alive>true</alive><lastActivity>1534498839.3</lastActivity><lastSuccess>1534498839.3</lastSuccess><ignoreErrorsUntil/><errorMessage/></save></igor>
 		<sensors><button/></sensors>
 		<devices><ringer/></devices>
 		<services/>
@@ -22,7 +22,7 @@
 	<devices>
 	<ringer/></devices>
 	<services>
-		<igor><protocol>https</protocol><url>https://boom.local:9333/data</url><host>boom.local</host><version>0.6</version><startTime>1532380440</startTime><fingerprint>D7:7A:EB:EF:82:A1:08:ED:54:14:03:4F:57:F3:67:66:84:0D:20:A7</fingerprint><rebootCount>3</rebootCount><ticker>0</ticker><port>9333</port></igor>
+		<igor><protocol>https</protocol><url>https://boom.local:9333/data</url><accessFailures></accessFailures><host>boom.local</host><version>0.85</version><startTime>1538834352</startTime><fingerprint>97:DF:BD:B7:71:6F:5C:B2:B1:0D:16:FE:81:1C:CA:04:2C:99:A6:B9</fingerprint><rebootCount>66</rebootCount><ticker>0</ticker><port>9333</port></igor>
 	</services>
 	<people/>
 	<identities>
@@ -46,7 +46,7 @@
 			    <child>external</child>
 			    <child>action-internal</child>
 			    <child>action-environment</child>
-			</au:capability>
+			<child>default-sandbox</child></au:capability>
 			<au:capability>
 				<obj>/data</obj>
 				<parent>root</parent>
@@ -92,7 +92,7 @@
 	    <action>
 	        <name>start</name>
 	        <url>/internal/started</url>
-	    <notBefore>1532380440</notBefore></action>
+	    <notBefore>1538774614</notBefore></action>
 		<action>
 			<name>save</name>
 			<interval>3600</interval>
@@ -100,7 +100,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore>1532380500</notBefore>
+			<notBefore>1538774704</notBefore>
 		</action>
         <action>
             <name>cleanup</name>
@@ -121,7 +121,7 @@
 			<url>/data/environment/night</url>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-			<notBefore>1532380440</notBefore>
+			<notBefore>1538774614</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -134,16 +134,7 @@
 			<multiple>true</multiple>
 			<notBefore/>
 		</action>
-		<action>
-			<name>countPeopleAtHome</name>
-			<interval>3600</interval>
-			<xpath>/data/people/*/home</xpath>
-			<method>PUT</method>
-			<url>/data/environment/people/count</url>
-			<mimetype>text/plain</mimetype>
-			<data>{count(/data/people/*[home='true'])}</data>
-			<notBefore>1532380440</notBefore>
-		</action>
+		
 		<action>
 			<name>button.pressed</name>
 			<representing>sensors/button</representing>
@@ -155,7 +146,7 @@
 			<url>https://ringer.local/api/alarm</url>
 			<data>{{&quot;alarm&quot;:5}}</data>
 			<method>PUT</method>
-		<au:capability><comment></comment><obj>/api/alarm</obj><aud>ringer.local</aud><parent>c8367703070584182310</parent><get></get><cid>c4539053256114489748</cid><put>self</put><post></post><delete></delete></au:capability></action>
+		<au:capability><comment/><obj>/api/alarm</obj><aud>ringer.local</aud><parent>c8367703070584182310</parent><get/><cid>c4539053256114489748</cid><put>self</put><post/><delete/></au:capability></action>
 		<au:capability>
 			<get>descendant</get>
 			<obj>/plugin</obj>
@@ -226,7 +217,7 @@
 				<parent>root</parent>
 				<cid>default-accessControl</cid>
 			</au:capability>
-		</au:defaultCapabilities>
+		<au:capability><obj>/data/sandbox</obj><parent>root</parent><get>descendant-or-self</get><cid>default-sandbox</cid><put>descendant</put><post>descendant</post><delete>descendant</delete></au:capability></au:defaultCapabilities>
 		<au:exportedCapabilities>
 		<au:capability><obj>/action/button.pressed</obj><sub>/button.local</sub><parent>c737486580052040841</parent><get>self</get><iss>https://boom.local:9333/issuer</iss><cid>c18200953248314046039</cid><nvb>1532380582</nvb><nva>1563916583</nva><aud>https://boom.local:9333/data</aud></au:capability></au:exportedCapabilities>
 		<au:revokedCapabilities>

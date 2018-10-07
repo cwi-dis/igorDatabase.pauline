@@ -1,0 +1,8 @@
+igor.log
+igor.log.*
+igor.key
+igor.crt
+igorSessions.db
+database.xml.*
+std-plugins
+ca
