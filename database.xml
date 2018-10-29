@@ -1,33 +1,33 @@
 <?xml version="1.0" ?><data xmlns:au="http://jackjansen.nl/igor/authentication" xmlns:own="http://jackjansen.nl/igor/owner">
 	<environment>
 		<morninggreeting>true</morninggreeting>
-		<latereminder></latereminder>
-		<night></night>
+		<latereminder/>
+		<night/>
 		<tokens><token/></tokens>
 		<location/>
 		<energy/>
 		<weather/>
-		<messages><message>'Good morning, you are early!'</message></messages>
+		<messages><message>'Good morning, you are early!'</message><message>'this is Igor. The time is now' 16'.'27</message><message>'Good morning, you are early!'</message></messages>
 		<devices/>
 		<lights/>
 		<systemHealth>
-			<messages><ringer>devices/ringer failed without error message</ringer><router>router is not available (timeout connecting to 192.168.1.1)</router></messages>
+			<messages><ringer>devices/ringer failed without error message</ringer></messages>
 		</systemHealth>
 		<introspection>
 		    <lastActivity><igor>2018-10-29T16:15:30.840794</igor><ble>2018-08-13T15:42:47.447873</ble></lastActivity>
 		</introspection>
 	</environment>
 	<status>
-		<igor><core><alive>true</alive><lastActivity>1540826130.5641723</lastActivity><lastSuccess>1540826130.5641723</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></core><save><alive>true</alive><lastActivity>1540826131.0964453</lastActivity><lastSuccess>1540826131.0964453</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></save><web><alive>true</alive><lastActivity>1540826146.118925</lastActivity><lastSuccess>1540826146.118925</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><lastFailure>1540826075.7393892</lastFailure><ignoreErrorUntil></ignoreErrorUntil></web></igor>
-		<sensors><ble><alive>true</alive><lastActivity>1540826148.4593623</lastActivity><lastSuccess>1540826148.4593623</lastSuccess><lastFailure>1540821090.8691442</lastFailure><errorMessage></errorMessage><ignoreErrorsUntil/><ignoreErrorUntil></ignoreErrorUntil></ble><button><alive>true</alive><lastActivity>1530621438.31</lastActivity><lastSuccess>1530621438.31</lastSuccess><ignoreErrorsUntil/><errorMessage/></button></sensors>
+		<igor><core><alive>true</alive><lastActivity>1540826872.1839318</lastActivity><lastSuccess>1540826872.1839318</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></core><save><alive>true</alive><lastActivity>1540826131.0964453</lastActivity><lastSuccess>1540826131.0964453</lastSuccess><ignoreErrorsUntil/><errorMessage/><ignoreErrorUntil/></save><web><alive>true</alive><lastActivity>1540826146.118925</lastActivity><lastSuccess>1540826146.118925</lastSuccess><ignoreErrorsUntil/><errorMessage/><lastFailure>1540826075.7393892</lastFailure><ignoreErrorUntil/></web></igor>
+		<sensors><ble><alive>true</alive><lastActivity>1540826148.4593623</lastActivity><lastSuccess>1540826148.4593623</lastSuccess><lastFailure>1540821090.8691442</lastFailure><errorMessage/><ignoreErrorsUntil/><ignoreErrorUntil/></ble><button><alive>true</alive><lastActivity>1530621438.31</lastActivity><lastSuccess>1530621438.31</lastSuccess><ignoreErrorsUntil/><errorMessage/></button></sensors>
 		<devices><ringer><alive/><lastActivity>1530621439.76</lastActivity><lastFailure>1530621439.76</lastFailure><errorMessage>devices/ringer failed without error message</errorMessage></ringer></devices>
-		<services><announceTime><alive>true</alive><lastActivity>1540826130.7774785</lastActivity><lastSuccess>1540826130.7774785</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></announceTime><internet><alive>true</alive><lastActivity>1540826145.802591</lastActivity><lastSuccess>1540826145.802591</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><lastFailure>1530629680.83</lastFailure><ignoreErrorUntil></ignoreErrorUntil></internet><router><alive></alive><lastActivity>1540826145.637571</lastActivity><lastFailure>1540826145.637571</lastFailure><errorMessage>router is not available (timeout connecting to 192.168.1.1)</errorMessage></router></services>
+		<services><announceTime><alive>true</alive><lastActivity>1540826872.3707304</lastActivity><lastSuccess>1540826872.3707304</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></announceTime><internet><alive>true</alive><lastActivity>1540826145.802591</lastActivity><lastSuccess>1540826145.802591</lastSuccess><ignoreErrorsUntil/><errorMessage/><lastFailure>1530629680.83</lastFailure><ignoreErrorUntil/></internet></services>
 	</status>
-	<sensors><ble><bleDevice><address>7a:d2:26:5d:bd:95</address><lastSeen>1540826044.8790603</lastSeen><raw_advertisements>02011a0aff4c001005031ca16b42</raw_advertisements><rssi>-97</rssi><available></available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>1005031ca16b42</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540821097.0209696</firstSeen><address>48:e6:5b:89:21:b3</address><lastSeen>1540826147.8567157</lastSeen><raw_advertisements>02010607ff4c0010020108</raw_advertisements><rssi>-53</rssi><available>true</available><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>10020108</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><address>45:c6:13:47:d3:d7</address><lastSeen>1540826065.1660564</lastSeen><raw_advertisements>02011a0aff4c0010050318337313</raw_advertisements><rssi>-94</rssi><available></available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>10050318337313</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540825856.7034132</firstSeen><address>09:59:04:5a:ca:f1</address><lastSeen>1540826147.8356514</lastSeen><raw_advertisements>1eff060001092002f92e21b194c8258447b2079513e69689af746cd1fb7df4</raw_advertisements><raw_evt_type>3</raw_evt_type><rssi>-87</rssi><available>true</available><advertisements><manufacturer_specific_data><raw>01092002f92e21b194c8258447b2079513e69689af746cd1fb7df4</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540825219.3509805</firstSeen><address>3a:ad:84:4b:0c:c2</address><lastSeen>1540826147.6807148</lastSeen><raw_advertisements>1eff06000109200221ff7aa3e71452cc74af443768cee7398c55c08f356f71</raw_advertisements><raw_evt_type>3</raw_evt_type><rssi>-94</rssi><available>true</available><advertisements><manufacturer_specific_data><raw>0109200221ff7aa3e71452cc74af443768cee7398c55c08f356f71</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540821096.9919884</firstSeen><address>73:e6:3d:2b:f8:b5</address><lastSeen>1540826147.8673828</lastSeen><raw_advertisements>02010613ff4c000c0e00c81daf96acb16e6daad829fa1e</raw_advertisements><rssi>-90</rssi><available>true</available><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>0c0e00c81daf96acb16e6daad829fa1e</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540824891.3345575</firstSeen><address>63:cf:a5:20:98:c5</address><lastSeen>1540826147.176156</lastSeen><raw_advertisements>02011a0aff4c001005031c41cb26</raw_advertisements><rssi>-91</rssi><available>true</available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>1005031c41cb26</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540825457.3139334</firstSeen><address>78:29:e3:9b:ad:90</address><lastSeen>1540826147.6096096</lastSeen><raw_advertisements>02011a0aff4c001005031ca3e110</raw_advertisements><rssi>-51</rssi><available>true</available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>1005031ca3e110</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540826122.97355</firstSeen><address>42:81:c6:eb:ac:82</address><lastSeen>1540826134.1137967</lastSeen><raw_advertisements>02011a0aff4c001005071c53d026</raw_advertisements><rssi>-96</rssi><available>true</available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>1005071c53d026</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540825971.1935322</firstSeen><address>04:52:c7:63:cd:18</address><lastSeen>1540826146.3246</lastSeen><raw_advertisements>02011a0303befe13ff1001400c0143784f4380667b38892c5ea3c3</raw_advertisements><rssi>-96</rssi><available>true</available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><unknown_0x03>befe</unknown_0x03><manufacturer_specific_data><raw>400c0143784f4380667b38892c5ea3c3</raw><manufacturerID>272</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>public</bdaddr_type></bleDevice><bleDevice><address>22:f6:0e:6e:3e:98</address><lastSeen>1540826051.657652</lastSeen><raw_advertisements>1eff060001092002ac49c13e309aa47000ddccbed2b08a90e5180e24571d73</raw_advertisements><raw_evt_type>3</raw_evt_type><rssi>-103</rssi><available></available><advertisements><manufacturer_specific_data><raw>01092002ac49c13e309aa47000ddccbed2b08a90e5180e24571d73</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540826142.2734542</firstSeen><address>68:f4:f6:b6:ec:e3</address><lastSeen>1540826142.2734308</lastSeen><raw_advertisements>02011a0aff4c0010050b1cf39de9</raw_advertisements><rssi>-104</rssi><available>true</available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>10050b1cf39de9</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540823964.637281</firstSeen><address>98:01:a7:b4:9f:fc</address><lastSeen>1540826147.8644478</lastSeen><raw_advertisements>02010607ff4c0010020b08</raw_advertisements><rssi>-90</rssi><available>true</available><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>10020b08</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>public</bdaddr_type></bleDevice><lastActivity>1540826147.8880663</lastActivity></ble></sensors>
+	<sensors><ble><bleDevice><address>7a:d2:26:5d:bd:95</address><lastSeen>1540826044.8790603</lastSeen><raw_advertisements>02011a0aff4c001005031ca16b42</raw_advertisements><rssi>-97</rssi><available/><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>1005031ca16b42</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540821097.0209696</firstSeen><address>48:e6:5b:89:21:b3</address><lastSeen>1540826147.8567157</lastSeen><raw_advertisements>02010607ff4c0010020108</raw_advertisements><rssi>-53</rssi><available>true</available><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>10020108</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><address>45:c6:13:47:d3:d7</address><lastSeen>1540826065.1660564</lastSeen><raw_advertisements>02011a0aff4c0010050318337313</raw_advertisements><rssi>-94</rssi><available/><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>10050318337313</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540825856.7034132</firstSeen><address>09:59:04:5a:ca:f1</address><lastSeen>1540826147.8356514</lastSeen><raw_advertisements>1eff060001092002f92e21b194c8258447b2079513e69689af746cd1fb7df4</raw_advertisements><raw_evt_type>3</raw_evt_type><rssi>-87</rssi><available>true</available><advertisements><manufacturer_specific_data><raw>01092002f92e21b194c8258447b2079513e69689af746cd1fb7df4</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540825219.3509805</firstSeen><address>3a:ad:84:4b:0c:c2</address><lastSeen>1540826147.6807148</lastSeen><raw_advertisements>1eff06000109200221ff7aa3e71452cc74af443768cee7398c55c08f356f71</raw_advertisements><raw_evt_type>3</raw_evt_type><rssi>-94</rssi><available>true</available><advertisements><manufacturer_specific_data><raw>0109200221ff7aa3e71452cc74af443768cee7398c55c08f356f71</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540821096.9919884</firstSeen><address>73:e6:3d:2b:f8:b5</address><lastSeen>1540826147.8673828</lastSeen><raw_advertisements>02010613ff4c000c0e00c81daf96acb16e6daad829fa1e</raw_advertisements><rssi>-90</rssi><available>true</available><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>0c0e00c81daf96acb16e6daad829fa1e</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540824891.3345575</firstSeen><address>63:cf:a5:20:98:c5</address><lastSeen>1540826147.176156</lastSeen><raw_advertisements>02011a0aff4c001005031c41cb26</raw_advertisements><rssi>-91</rssi><available>true</available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>1005031c41cb26</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540825457.3139334</firstSeen><address>78:29:e3:9b:ad:90</address><lastSeen>1540826147.6096096</lastSeen><raw_advertisements>02011a0aff4c001005031ca3e110</raw_advertisements><rssi>-51</rssi><available>true</available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>1005031ca3e110</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540826122.97355</firstSeen><address>42:81:c6:eb:ac:82</address><lastSeen>1540826134.1137967</lastSeen><raw_advertisements>02011a0aff4c001005071c53d026</raw_advertisements><rssi>-96</rssi><available>true</available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>1005071c53d026</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540825971.1935322</firstSeen><address>04:52:c7:63:cd:18</address><lastSeen>1540826146.3246</lastSeen><raw_advertisements>02011a0303befe13ff1001400c0143784f4380667b38892c5ea3c3</raw_advertisements><rssi>-96</rssi><available>true</available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><unknown_0x03>befe</unknown_0x03><manufacturer_specific_data><raw>400c0143784f4380667b38892c5ea3c3</raw><manufacturerID>272</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>public</bdaddr_type></bleDevice><bleDevice><address>22:f6:0e:6e:3e:98</address><lastSeen>1540826051.657652</lastSeen><raw_advertisements>1eff060001092002ac49c13e309aa47000ddccbed2b08a90e5180e24571d73</raw_advertisements><raw_evt_type>3</raw_evt_type><rssi>-103</rssi><available/><advertisements><manufacturer_specific_data><raw>01092002ac49c13e309aa47000ddccbed2b08a90e5180e24571d73</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540826142.2734542</firstSeen><address>68:f4:f6:b6:ec:e3</address><lastSeen>1540826142.2734308</lastSeen><raw_advertisements>02011a0aff4c0010050b1cf39de9</raw_advertisements><rssi>-104</rssi><available>true</available><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h><le_general_discoverable>true</le_general_discoverable></flags><manufacturer_specific_data><raw>10050b1cf39de9</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type></bleDevice><bleDevice><firstSeen>1540823964.637281</firstSeen><address>98:01:a7:b4:9f:fc</address><lastSeen>1540826147.8644478</lastSeen><raw_advertisements>02010607ff4c0010020b08</raw_advertisements><rssi>-90</rssi><available>true</available><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>10020b08</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>public</bdaddr_type></bleDevice><lastActivity>1540826147.8880663</lastActivity></ble></sensors>
 	<devices>
 	</devices>
 	<services>
-	<igor><rebootCount>21</rebootCount><fingerprint>10:4F:B8:17:83:4C:DF:CA:FC:43:84:F9:EC:2B:87:24:E6:80:42:0E</fingerprint><protocol>https</protocol><url>https://igor.local:9333/data</url><ticker>0</ticker><accessFailures></accessFailures><startTime>1540826130</startTime><host>igor.local</host><port>9333</port><version>0.95</version></igor><router/><internet/></services>
+	<igor><port>9333</port><protocol>https</protocol><url>https://igor.local:9333/data</url><accessFailures></accessFailures><host>igor.local</host><startTime>1540826872</startTime><rebootCount>22</rebootCount><ticker>0</ticker><version>0.95</version><fingerprint>10:4F:B8:17:83:4C:DF:CA:FC:43:84:F9:EC:2B:87:24:E6:80:42:0E</fingerprint></igor><internet/></services>
 	<people/>
 	<identities><admin><plugindata/></admin></identities>
 	<actions>
@@ -39,7 +39,7 @@
 			<method>POST</method>
 			<mimetype>text/plain</mimetype>
 			<data>'this is Igor. The time is now' {igor_hours_from_dateTime(igor_dateTime())}'.'{igor_minutes_from_dateTime(igor_dateTime())}</data>
-		<notBefore>1540826130</notBefore></action>
+		<notBefore>1540826872</notBefore></action>
 		<action>
 			<name>checkLate_reminder</name>
 			<interval>500</interval>
@@ -59,22 +59,22 @@
 			<mimetype>text/plain</mimetype>
 			<data>'Good morning, you are early!'</data>
 			<multiple>True</multiple>
-		<notBefore>1540826130</notBefore></action>
+		<notBefore>1540826872</notBefore></action>
 	    <action>
 			<xpath>/data/environment/messages/*</xpath>
 			<condition>not(data/environment/night)</condition>
 			<url>/pluginscript/say/message?args={.}</url>
-		<notBefore>1540826131</notBefore></action>
+		<notBefore>1540826872</notBefore></action>
 	    <action>
             <interval>60</interval>
             <url>/pluginscript/ble/pull</url>
 			<representing>sensors/ble</representing>
             <aggregate>true</aggregate>
-        <notBefore>1540826130</notBefore></action>
+        <notBefore>1540826872</notBefore></action>
 	    <action>
 	        <name>start</name>
 	        <url>/internal/started</url>
-	    <notBefore>1540826130</notBefore></action>
+	    <notBefore>1540826872</notBefore></action>
 		<action>
 			<name>save</name>
 			<interval>3600</interval>
@@ -82,13 +82,13 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-		<notBefore>1540826190</notBefore></action>
+		<notBefore>1540826932</notBefore></action>
         <action>
             <name>cleanup</name>
             <method>DELETE</method>
             <url>/data/environment/messages/message[position()&lt;last()]</url>
             <interval>900</interval>
-        <notBefore>1540826130</notBefore></action>
+        <notBefore>1540826872</notBefore></action>
 		<action>
 			<name>updateActions</name>
 			<xpath>/data/actions/*</xpath>
@@ -101,7 +101,7 @@
             <url>/data/environment/night</url>
             <mimetype>text/plain</mimetype>
             <data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-		<notBefore>1540826130</notBefore></action>
+		<notBefore>1540826872</notBefore></action>
 		<action>
             <name>checkLate</name>
             <interval>900</interval>
@@ -109,7 +109,7 @@
             <url>/data/environment/latereminder</url>
             <mimetype>text/plain</mimetype>
             <data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 2 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-		<notBefore>1540826130</notBefore></action>
+		<notBefore>1540826872</notBefore></action>
 		<action>
             <name>checkMorning</name>
             <interval>900</interval>
@@ -117,7 +117,7 @@
             <url>/data/environment/morninggreeting</url>
             <mimetype>text/plain</mimetype>
             <data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 9 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 5}</data>
-		<notBefore>1540826130</notBefore></action>
+		<notBefore>1540826872</notBefore></action>
 		<action>
 			<name>updatePeople</name>
 			<xpath>/data/environment/devices/*</xpath>
@@ -137,7 +137,7 @@
 			<method>PUT</method>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_dateTime()}</data>
-		<notBefore>1540826130</notBefore></action>
+		<notBefore>1540826872</notBefore></action>
 		<action>
 			<name>locationpauline</name>
 			<url>/data/plugindata/ringer/host</url>
@@ -202,35 +202,30 @@
                 <xpath>/data/environment/messages/*</xpath>
                 <condition>not(data/environment/night)</condition>
                 <url>/pluginscript/say/message?args={.}</url>
-            <notBefore>1540826131</notBefore></action>
-        <action own:plugin="lan">
-                <interval>60</interval>
-                <url>/plugin/lan?name=router&amp;ip=192.168.37.1</url>
-                <aggregate>true</aggregate>
-            <notBefore>1540826130</notBefore></action>
+            <notBefore>1540826872</notBefore></action>
         <action own:plugin="lan">
                 <interval>60</interval>
                 <url>/plugin/lan?name=internet&amp;ip=google.com.</url>
                 <aggregate>true</aggregate>
-            <notBefore>1540826130</notBefore></action>
+            <notBefore>1540826872</notBefore></action>
         <action own:plugin="lan">
                 <interval>60</interval>
                 <url>/plugin/lan?name=igor&amp;service=igor/web&amp;url={/data/services/igor/url}/services/igor/host</url>
                 <aggregate>true</aggregate>
-                <notBefore>1540826130</notBefore>
+                <notBefore>1540826872</notBefore>
             </action>
         <action own:plugin="systemHealth">
                 <name>systemHealth</name>
                 <interval>60</interval>
                 <xpath>/data/status/*/*/errorMessage</xpath>
                 <url>/plugin/systemHealth</url>
-            <notBefore>1540826146</notBefore></action>
+            <notBefore>1540826872</notBefore></action>
         <action own:plugin="ble">
                 <interval>60</interval>
                 <url>/pluginscript/ble/pull</url>
                 <representing>sensors/ble</representing>
                 <aggregate>true</aggregate>
-            <notBefore>1540826130</notBefore></action>
+            <notBefore>1540826872</notBefore></action>
         <action own:plugin="ble">
             <xpath>/data/sensors/ble/bleDevice</xpath>
             <condition>/data/plugindata/bleDevices/bleDevice[id=string($originalContext/address)]/name</condition>
