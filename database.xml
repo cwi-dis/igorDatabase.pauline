@@ -1,4 +1,4 @@
-<?xml version="1.0" ?><data>
+<?xml version="1.0" ?><data xmlns:au="http://jackjansen.nl/igor/authentication" xmlns:own="http://jackjansen.nl/igor/owner">
 	<environment>
 		<morninggreeting>true</morninggreeting>
 		<latereminder/>
@@ -7,32 +7,37 @@
 		<location/>
 		<energy/>
 		<weather/>
-		<messages><message>'Good morning, you are early!'</message><message>'this is Igor. The time is now' 13'.'20</message><message>'Good morning, you are early!'</message><message>'this is Igor. The time is now' 13'.'21</message><message>'Good morning, you are early!'</message></messages>
+		<messages><message>'Good morning, you are early!'</message><message>'this is Igor. The time is now' 12'.'27</message><message>'Good morning, you are early!'</message></messages>
 		<devices/>
 		<lights/>
 		<systemHealth>
-			<messages><ringer>ConnectionError: HTTPConnectionPool(host='ringer.fritz.box', port=80): Max retries exceeded with url: /alarm?alarm=1 (Caused by NewConnectionError('&lt;requests.packages.urllib3.connection.HTTPConnection object at 0x6e1ba050&gt;: Failed to establish a new connection: [Errno -2] Name or service not known',))</ringer></messages>
+			<messages><ringer>devices/ringer failed without error message</ringer></messages>
 		</systemHealth>
 		<introspection>
-		    <lastActivity><igor>2018-07-03T13:19:52.106096</igor><ble>2018-07-03T13:19:55.837760</ble></lastActivity>
+		    <lastActivity><igor>2018-08-13T15:43:45.324653</igor><ble>2018-08-13T15:42:47.447873</ble></lastActivity>
 		</introspection>
 	</environment>
 	<status>
-		<igor><core><alive>true</alive><lastActivity>1530616872.85</lastActivity><lastSuccess>1530616872.85</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></core><save><alive>true</alive><lastActivity>1530616432.15</lastActivity><lastSuccess>1530616432.15</lastSuccess><ignoreErrorsUntil/><errorMessage/></save><web><alive>true</alive><lastActivity>1530616796.41</lastActivity><lastSuccess>1530616796.41</lastSuccess><ignoreErrorsUntil/><errorMessage/></web></igor>
-		<sensors><ble><alive>true</alive><lastActivity>1530616796.11</lastActivity><lastSuccess>1530616796.11</lastSuccess><lastFailure>1530542917.03</lastFailure><errorMessage/><ignoreErrorsUntil/></ble><button><alive>true</alive><lastActivity>1530612867.31</lastActivity><lastSuccess>1530612867.31</lastSuccess><ignoreErrorsUntil/><errorMessage/></button></sensors>
-		<devices><ringer><alive/><lastActivity>1530612867.19</lastActivity><lastFailure>1530612867.19</lastFailure><errorMessage>ConnectionError: HTTPConnectionPool(host='ringer.fritz.box', port=80): Max retries exceeded with url: /alarm?alarm=1 (Caused by NewConnectionError('&lt;requests.packages.urllib3.connection.HTTPConnection object at 0x6e1ba050&gt;: Failed to establish a new connection: [Errno -2] Name or service not known',))</errorMessage></ringer></devices>
-		<services><announceTime><alive>true</alive><lastActivity>1530616873.16</lastActivity><lastSuccess>1530616873.16</lastSuccess><ignoreErrorsUntil></ignoreErrorsUntil><errorMessage></errorMessage></announceTime><internet><alive>true</alive><lastActivity>1530616796.29</lastActivity><lastSuccess>1530616796.29</lastSuccess><ignoreErrorsUntil/><errorMessage/></internet></services>
+		<igor><core><alive>true</alive><lastActivity>1540812425.8599634</lastActivity><lastSuccess>1540812425.8599634</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></core><save><alive>true</alive><lastActivity>1534167765.77</lastActivity><lastSuccess>1534167765.77</lastSuccess><ignoreErrorsUntil/><errorMessage/></save><web><alive>true</alive><lastActivity>1534167768.25</lastActivity><lastSuccess>1534167768.25</lastSuccess><ignoreErrorsUntil/><errorMessage/></web></igor>
+		<sensors><ble><alive></alive><lastActivity>1540812426.384932</lastActivity><lastSuccess>1534167767.56</lastSuccess><lastFailure>1540812426.384932</lastFailure><errorMessage>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;title&gt;404 Not Found&lt;/title&gt;
+&lt;h1&gt;Not Found&lt;/h1&gt;
+&lt;p&gt;The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.&lt;/p&gt;
+&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 3.2 Final//EN&quot;&gt;
+&lt;title&gt;404 Not Found&lt;/title&gt;
+&lt;h1&gt;Not Found&lt;/h1&gt;
+&lt;p&gt;The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again.&lt;/p&gt;
+</errorMessage><ignoreErrorsUntil/></ble><button><alive>true</alive><lastActivity>1530621438.31</lastActivity><lastSuccess>1530621438.31</lastSuccess><ignoreErrorsUntil/><errorMessage/></button></sensors>
+		<devices><ringer><alive/><lastActivity>1530621439.76</lastActivity><lastFailure>1530621439.76</lastFailure><errorMessage>devices/ringer failed without error message</errorMessage></ringer></devices>
+		<services><announceTime><alive>true</alive><lastActivity>1540812426.3576984</lastActivity><lastSuccess>1540812426.3576984</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></announceTime><internet><alive>true</alive><lastActivity>1534167767.76</lastActivity><lastSuccess>1534167767.76</lastSuccess><ignoreErrorsUntil/><errorMessage/><lastFailure>1530629680.83</lastFailure></internet></services>
 	</status>
-	<sensors>
-		<ble><lastActivity>1530616793.39</lastActivity><bleDevice><available>true</available><raw_advertisements>02010607ff4c0010020b00</raw_advertisements><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>10020b00</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>public</bdaddr_type><lastSeen>1530616793.28</lastSeen><address>ac:bc:32:bc:d3:08</address><rssi>-72</rssi><firstSeen>1530615951.64</firstSeen></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0401b361b014c50fc40263</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>0</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>6</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616683.55</lastSeen><address>c9:41:0b:ac:f0:8f</address><rssi>-93</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available>true</available><raw_advertisements>0201041aff4c000215d0d3fa86ca7645ec9bd96af48461402f5688e97fbc</raw_advertisements><advertisements><ibeacon><major>22152</major><minor>59775</minor><uuid>d0d3fa86-ca76-45ec-9bd9-6af48461402f</uuid><power>-68</power></ibeacon><flags><bredr_not_supported>true</bredr_not_supported></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616792.72</lastSeen><address>c9:3f:fd:ed:19:8f</address><rssi>-90</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530616792.72</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>0201041aff4c000215d0d3fa86ca7645ec9bd96af48461402f5688e97fbc</raw_advertisements><advertisements><ibeacon><major>22152</major><minor>59775</minor><uuid>d0d3fa86-ca76-45ec-9bd9-6af48461402f</uuid><power>-68</power></ibeacon><flags><bredr_not_supported>true</bredr_not_supported></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616782.32</lastSeen><address>c9:71:dd:18:93:8f</address><rssi>-84</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530616782.32</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>02010613ff4c000c0e08fb5abbdbce767e1f8f6563de3e</raw_advertisements><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>0c0e08fb5abbdbce767e1f8f6563de3e</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616792.03</lastSeen><address>55:e3:d2:b5:f8:ab</address><rssi>-91</rssi><firstSeen>1530616359.33</firstSeen></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0485b3713514c50fc40273</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>2.98768328446</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>7</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616748.54</lastSeen><address>c9:33:58:0f:74:8f</address><rssi>-83</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available>true</available><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0485b3713514c60fc40273</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.90625</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>2.98768328446</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>7</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616777.13</lastSeen><address>c9:51:9e:c9:29:8f</address><rssi>-84</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530616777.13</firstSeen></bleDevice><bleDevice><available/><raw_advertisements>0201041aff4c000215d0d3fa86ca7645ec9bd96af48461402f5688e97fbc</raw_advertisements><advertisements><ibeacon><major>22152</major><minor>59775</minor><uuid>d0d3fa86-ca76-45ec-9bd9-6af48461402f</uuid><power>-68</power></ibeacon><flags><bredr_not_supported>true</bredr_not_supported></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616730.33</lastSeen><address>c9:31:9b:6b:a6:8f</address><rssi>-84</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available>true</available><raw_advertisements>02011a</raw_advertisements><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><le_general_discoverable>true</le_general_discoverable><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616792.03</lastSeen><address>4f:1b:00:c8:d1:bc</address><rssi>-100</rssi><firstSeen>1530616682.53</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>02011a</raw_advertisements><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><le_general_discoverable>true</le_general_discoverable><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616773.25</lastSeen><address>43:8e:3a:bd:3f:ea</address><rssi>-102</rssi><firstSeen>1530616736.74</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0485b3713514c60fc40273</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.90625</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>2.98768328446</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>7</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616790.12</lastSeen><address>c9:40:cc:d6:81:8f</address><rssi>-84</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530616790.12</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>1eff06000109200038a32ce5de0ceb554e3af7baa92c2d2025ba18f9013cfb</raw_advertisements><advertisements><manufacturer_specific_data><raw>0109200038a32ce5de0ceb554e3af7baa92c2d2025ba18f9013cfb</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616793.09</lastSeen><address>11:8d:17:9a:ee:5c</address><rssi>-93</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530616073.73</firstSeen></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0485b3713514c50ec40253</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.21875</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>2.98768328446</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>5</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616714.74</lastSeen><address>c9:00:75:8e:24:8f</address><rssi>-90</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0485b3713514c50ec40263</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.21875</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>2.98768328446</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>6</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616727.74</lastSeen><address>c9:16:8f:b5:a8:8f</address><rssi>-89</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available>true</available><raw_advertisements>02010607ff4c0010020b00</raw_advertisements><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>10020b00</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>public</bdaddr_type><lastSeen>1530616793.24</lastSeen><address>6c:40:08:90:33:ed</address><rssi>-100</rssi><firstSeen>1530616359.33</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>02011a0303befe13ff1001400c0143784f4380667b38892c5ea3c3</raw_advertisements><advertisements><unknown_0x03>befe</unknown_0x03><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><le_general_discoverable>true</le_general_discoverable><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h></flags><manufacturer_specific_data><raw>400c0143784f4380667b38892c5ea3c3</raw><manufacturerID>272</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>public</bdaddr_type><lastSeen>1530616774.31</lastSeen><address>04:52:c7:63:cd:18</address><rssi>-103</rssi><firstSeen>1530616626.19</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>02010607ff4c0010020700</raw_advertisements><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>10020700</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616778.24</lastSeen><address>75:c2:dc:fc:c7:93</address><rssi>-99</rssi><firstSeen>1530616562.36</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>02010607ff4c0010020b00</raw_advertisements><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>10020b00</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>public</bdaddr_type><lastSeen>1530616782.35</lastSeen><address>78:4f:43:80:66:7b</address><rssi>-101</rssi><firstSeen>1530616782.35</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>02011a1aff4c000c0e004dcc8ebd317355852ea7e17ac010050b1083b2eb</raw_advertisements><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><le_general_discoverable>true</le_general_discoverable><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h></flags><manufacturer_specific_data><raw>0c0e004dcc8ebd317355852ea7e17ac010050b1083b2eb</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616790.05</lastSeen><address>6c:b6:eb:a9:8b:0e</address><rssi>-97</rssi><firstSeen>1530616756.24</firstSeen></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0401b361b014c50fc40263</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>0</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>6</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616732.93</lastSeen><address>c9:4c:66:e0:8f:8f</address><rssi>-90</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0485b3713514c50fc40253</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>2.98768328446</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>5</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616735.54</lastSeen><address>c9:31:f4:8a:5e:8f</address><rssi>-93</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0401b361b014c50fc40263</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>0</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>6</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616704.34</lastSeen><address>c9:5a:a0:54:f6:8f</address><rssi>-90</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available>true</available><raw_advertisements>02011a0aff4c001005019064eef6</raw_advertisements><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><le_general_discoverable>true</le_general_discoverable><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h></flags><manufacturer_specific_data><raw>1005019064eef6</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616791.33</lastSeen><address>48:0e:30:ce:88:f4</address><rssi>-96</rssi><firstSeen>1530616248.1</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>1eff06000109200078ee8a42a823d11f922ce0808be98404614dd1f05af6e1</raw_advertisements><advertisements><manufacturer_specific_data><raw>0109200078ee8a42a823d11f922ce0808be98404614dd1f05af6e1</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616780.21</lastSeen><address>04:28:7d:c7:69:d3</address><rssi>-96</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530615880.48</firstSeen></bleDevice><bleDevice><available/><raw_advertisements>0201041aff4c000215d0d3fa86ca7645ec9bd96af48461402f5688e97fbc</raw_advertisements><advertisements><ibeacon><major>22152</major><minor>59775</minor><uuid>d0d3fa86-ca76-45ec-9bd9-6af48461402f</uuid><power>-68</power></ibeacon><flags><bredr_not_supported>true</bredr_not_supported></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616719.95</lastSeen><address>c9:33:da:7b:00:8f</address><rssi>-84</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available>true</available><raw_advertisements>0201061106ba5689a6fabfa2bd01467d6e00fbabad08160a181104e68003</raw_advertisements><advertisements><unknown_0x16>0a181104e68003</unknown_0x16><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><unknown_0x06>ba5689a6fabfa2bd01467d6e00fbabad</unknown_0x06></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616790.89</lastSeen><address>d7:50:27:ef:0a:24</address><rssi>-96</rssi><firstSeen>1530616218.06</firstSeen></bleDevice><bleDevice><available/><raw_advertisements>0201041aff4c000215d0d3fa86ca7645ec9bd96af48461402f5688e97fbc</raw_advertisements><advertisements><ibeacon><major>22152</major><minor>59775</minor><uuid>d0d3fa86-ca76-45ec-9bd9-6af48461402f</uuid><power>-68</power></ibeacon><flags><bredr_not_supported>true</bredr_not_supported></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616699.14</lastSeen><address>c9:64:49:a1:ed:8f</address><rssi>-88</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><bdaddr_type>public</bdaddr_type><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>10020b00</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><raw_advertisements>02010607ff4c0010020b00</raw_advertisements><lastSeen>1530616686.38</lastSeen><address>f4:0f:24:2a:aa:75</address><rssi>-98</rssi></bleDevice><bleDevice><available>true</available><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0401b361b014c60fc40253</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.90625</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>0</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>5</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616787.52</lastSeen><address>c9:7c:27:d7:a1:8f</address><rssi>-94</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530616787.52</firstSeen></bleDevice><bleDevice><available/><raw_advertisements>0201041aff4c000215d0d3fa86ca7645ec9bd96af48461402f5688e97fbc</raw_advertisements><advertisements><ibeacon><major>22152</major><minor>59775</minor><uuid>d0d3fa86-ca76-45ec-9bd9-6af48461402f</uuid><power>-68</power></ibeacon><flags><bredr_not_supported>true</bredr_not_supported></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616709.55</lastSeen><address>c9:2b:e5:95:7d:8f</address><rssi>-84</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>0201041aff4c000215d0d3fa86ca7645ec9bd96af48461402f5688e97fbc</raw_advertisements><advertisements><ibeacon><major>22152</major><minor>59775</minor><uuid>d0d3fa86-ca76-45ec-9bd9-6af48461402f</uuid><power>-68</power></ibeacon><flags><bredr_not_supported>true</bredr_not_supported></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616678.37</lastSeen><address>c9:5e:77:0d:20:8f</address><rssi>-83</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>1eff060001092002cb30bf5be810c4bed9b16d146303a47e6de69ec31a1347</raw_advertisements><advertisements><manufacturer_specific_data><raw>01092002cb30bf5be810c4bed9b16d146303a47e6de69ec31a1347</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616705.15</lastSeen><address>21:80:8b:c2:ec:94</address><rssi>-98</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available>true</available><raw_advertisements>0201041aff4c000215d0d3fa86ca7645ec9bd96af48461402f5688e97fbc</raw_advertisements><advertisements><ibeacon><major>22152</major><minor>59775</minor><uuid>d0d3fa86-ca76-45ec-9bd9-6af48461402f</uuid><power>-68</power></ibeacon><flags><bredr_not_supported>true</bredr_not_supported></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616771.94</lastSeen><address>c9:5b:4c:07:4d:8f</address><rssi>-84</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530616771.94</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>1eff0600010920002e6cc9ca89498f709cea0eb1cee27ac40f70fddf8b5e52</raw_advertisements><advertisements><manufacturer_specific_data><raw>010920002e6cc9ca89498f709cea0eb1cee27ac40f70fddf8b5e52</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616793.19</lastSeen><address>37:e0:e1:60:e5:ab</address><rssi>-89</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530616333.08</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>02010613ff4c000c0e0074337bec1f75ddcb3b4d32f52d</raw_advertisements><advertisements><flags><le_general_discoverable>true</le_general_discoverable><bredr_not_supported>true</bredr_not_supported></flags><manufacturer_specific_data><raw>0c0e0074337bec1f75ddcb3b4d32f52d</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616793.28</lastSeen><address>7e:5a:13:3f:fe:a2</address><rssi>-74</rssi><firstSeen>1530615943.95</firstSeen></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0401b361b014c50fc40263</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>0</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>6</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616758.94</lastSeen><address>c9:0e:20:8f:57:8f</address><rssi>-90</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0401b361b014c50fc40263</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>0</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>6</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616696.54</lastSeen><address>c9:3e:05:0c:bf:8f</address><rssi>-95</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available>true</available><raw_advertisements>02011a0aff4c0010050a10c4dd9e</raw_advertisements><advertisements><flags><simultaneous_le_bredr_c>true</simultaneous_le_bredr_c><le_general_discoverable>true</le_general_discoverable><simultaneous_le_bredr_h>true</simultaneous_le_bredr_h></flags><manufacturer_specific_data><raw>10050a10c4dd9e</raw><manufacturerID>76</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616793.02</lastSeen><address>4b:40:85:c0:b0:63</address><rssi>-92</rssi><firstSeen>1530616242.57</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>1eff06000109200078ee8a42a823d11f922ce0808be98404614dd1f05af6e1</raw_advertisements><advertisements><manufacturer_specific_data><raw>0109200078ee8a42a823d11f922ce0808be98404614dd1f05af6e1</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616789.63</lastSeen><address>16:b9:04:73:77:43</address><rssi>-97</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530616781.71</firstSeen></bleDevice><bleDevice><available>true</available><raw_advertisements>1eff0600010920028da4bdcfc9c43ce29d80e03866523f13395450ee059184</raw_advertisements><advertisements><manufacturer_specific_data><raw>010920028da4bdcfc9c43ce29d80e03866523f13395450ee059184</raw><manufacturerID>6</manufacturerID></manufacturer_specific_data></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616792.46</lastSeen><address>11:0f:08:44:01:27</address><rssi>-102</rssi><raw_evt_type>3</raw_evt_type><firstSeen>1530616416.77</firstSeen></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0401b361b014c50ec40263</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.21875</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>0</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>6</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616712.14</lastSeen><address>c9:2a:4b:1f:07:8f</address><rssi>-88</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0401b361b014c50ec40253</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.21875</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>0</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>5</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616717.35</lastSeen><address>c9:70:50:76:94:8f</address><rssi>-92</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0485b3713514c50ec40263</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.21875</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>2.98768328446</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>6</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616722.55</lastSeen><address>c9:2b:2c:68:3e:8f</address><rssi>-90</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0401b361b014c50ec40273</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.21875</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>0</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>7</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616725.15</lastSeen><address>c9:75:b3:3e:7c:8f</address><rssi>-83</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>0201041aff4c000215d0d3fa86ca7645ec9bd96af48461402f5688e97fbc</raw_advertisements><advertisements><ibeacon><major>22152</major><minor>59775</minor><uuid>d0d3fa86-ca76-45ec-9bd9-6af48461402f</uuid><power>-68</power></ibeacon><flags><bredr_not_supported>true</bredr_not_supported></flags></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616761.54</lastSeen><address>c9:7f:cf:8b:a8:8f</address><rssi>-95</rssi><raw_evt_type>3</raw_evt_type></bleDevice><bleDevice><available/><raw_advertisements>02010403030f1817ff5d01018461402f5688e97f0485b3713514c50fc40263</raw_advertisements><advertisements><unknown_0x03>0f18</unknown_0x03><flags><bredr_not_supported>true</bredr_not_supported></flags><nearable><major>22152</major><accelerometer><y>-0.921875</y><x>0.3125</x><z>0.234375</z></accelerometer><is_moving/><temp>27.1875</temp><power>3</power><version>1</version><voltage>2.98768328446</voltage><current_motion_state>4</current_motion_state><previous_motion_state>2</previous_motion_state><minor>59775</minor><channel>6</channel><uuid>d0d3fa86ca7645ec9bd96af48461402f</uuid></nearable></advertisements><bdaddr_type>random</bdaddr_type><lastSeen>1530616743.34</lastSeen><address>c9:03:d5:04:3a:8f</address><rssi>-91</rssi><raw_evt_type>3</raw_evt_type></bleDevice></ble>
-	</sensors>
-	<sensors/>
+	<sensors><ble own:plugin="ble"/></sensors>
 	<devices>
 	</devices>
 	<services>
-	<igor><protocol>https</protocol><url>https://igor.local:9333/data</url><host>igor.local</host><version>0.6</version><startTime>1530616872</startTime><fingerprint>10:4F:B8:17:83:4C:DF:CA:FC:43:84:F9:EC:2B:87:24:E6:80:42:0E</fingerprint><rebootCount>11</rebootCount><ticker>0</ticker><port>9333</port></igor></services>
+	<igor><fingerprint>10:4F:B8:17:83:4C:DF:CA:FC:43:84:F9:EC:2B:87:24:E6:80:42:0E</fingerprint><host>192.168.37.166</host><version>0.95</version><protocol>https</protocol><startTime>1540812425</startTime><accessFailures></accessFailures><url>https://192.168.37.166:9333/data</url><ticker>0</ticker><rebootCount>15</rebootCount><port>9333</port></igor><router/><internet/></services>
 	<people/>
-	<identities/>
+	<identities><admin><plugindata/></admin></identities>
 	<actions>
 		<action>
 			<name>updateMessage</name>
@@ -42,7 +47,7 @@
 			<method>POST</method>
 			<mimetype>text/plain</mimetype>
 			<data>'this is Igor. The time is now' {igor_hours_from_dateTime(igor_dateTime())}'.'{igor_minutes_from_dateTime(igor_dateTime())}</data>
-		<notBefore>1530616872</notBefore></action>
+		<notBefore>1540812426</notBefore></action>
 		<action>
 			<name>checkLate_reminder</name>
 			<interval>500</interval>
@@ -62,47 +67,22 @@
 			<mimetype>text/plain</mimetype>
 			<data>'Good morning, you are early!'</data>
 			<multiple>True</multiple>
-		<notBefore>1530616872</notBefore></action>
-		<action>
-            <xpath>/data/sensors/ble/bleDevice</xpath>
-            <condition>/data/plugindata/bleDevices/bleDevice[id=string($originalContext/address)]/name</condition>
-            <url>/data/environment/messages/message</url>
-            <method>PUT</method>
-            <mimetype>text/plain</mimetype>
-            <data>'Igor has found'{/data/plugindata/bleDevices/bleDevice[id=string($originalContext/address)]/name}</data>
-            <multiple>True</multiple>
-        <notBefore>1504552101</notBefore></action>
+		<notBefore>1540812426</notBefore></action>
 	    <action>
 			<xpath>/data/environment/messages/*</xpath>
 			<condition>not(data/environment/night)</condition>
 			<url>/pluginscripts/say/message?args={.}</url>
-		<notBefore>1530616873</notBefore></action>
+		<notBefore>1540812426</notBefore></action>
 	    <action>
             <interval>60</interval>
             <url>/pluginscripts/ble/pull</url>
 			<representing>sensors/ble</representing>
             <aggregate>true</aggregate>
-        <notBefore>1530616872</notBefore></action>
-		<action>
-            <xpath>/data/sensors/ble/bleDevice</xpath>
-            <condition>/data/plugindata/bleDevices/bleDevice[id=string($originalContext/address)]/name</condition>
-            <url>/data/environment/devices/{/data/plugindata/bleDevices/bleDevice[id=string($originalContext/address)]/name}</url>
-            <method>PUT</method>
-            <mimetype>text/plain</mimetype>
-            <data>{available}</data>
-            <multiple>True</multiple>
-        <notBefore>1504552101</notBefore></action>
-        <action>
-            <xpath>/data/sensors/ble/bleDevice</xpath>
-            <url>/data/environment/introspection/lastActivity/ble</url>
-            <method>PUT</method>
-            <mimetype>text/plain</mimetype>
-            <data>{igor_dateTime()}</data>
-        <notBefore>1530616795</notBefore></action>
+        <notBefore>1540812426</notBefore></action>
 	    <action>
 	        <name>start</name>
 	        <url>/internal/started</url>
-	    <notBefore>1530616873</notBefore></action>
+	    <notBefore>1540812426</notBefore></action>
 		<action>
 			<name>save</name>
 			<interval>3600</interval>
@@ -110,13 +90,13 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-		<notBefore>1530616932</notBefore></action>
+		<notBefore>1540812486</notBefore></action>
         <action>
             <name>cleanup</name>
             <method>DELETE</method>
             <url>/data/environment/messages/message[position()&lt;last()]</url>
             <interval>900</interval>
-        <notBefore>1530616872</notBefore></action>
+        <notBefore>1540812426</notBefore></action>
 		<action>
 			<name>updateActions</name>
 			<xpath>/data/actions/*</xpath>
@@ -129,7 +109,7 @@
             <url>/data/environment/night</url>
             <mimetype>text/plain</mimetype>
             <data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-		<notBefore>1530616872</notBefore></action>
+		<notBefore>1540812426</notBefore></action>
 		<action>
             <name>checkLate</name>
             <interval>900</interval>
@@ -137,7 +117,7 @@
             <url>/data/environment/latereminder</url>
             <mimetype>text/plain</mimetype>
             <data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 2 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-		<notBefore>1530616872</notBefore></action>
+		<notBefore>1540812426</notBefore></action>
 		<action>
             <name>checkMorning</name>
             <interval>900</interval>
@@ -145,7 +125,7 @@
             <url>/data/environment/morninggreeting</url>
             <mimetype>text/plain</mimetype>
             <data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 9 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 5}</data>
-		<notBefore>1530616872</notBefore></action>
+		<notBefore>1540812426</notBefore></action>
 		<action>
 			<name>updatePeople</name>
 			<xpath>/data/environment/devices/*</xpath>
@@ -165,7 +145,7 @@
 			<method>PUT</method>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_dateTime()}</data>
-		<notBefore>1530616872</notBefore></action>
+		<notBefore>1540812426</notBefore></action>
 		<action>
 			<name>locationpauline</name>
 			<url>/data/plugindata/ringer/host</url>
@@ -187,25 +167,6 @@
 			<mimetype>text/plain</mimetype>
 			<data>ringer.local</data>
 		</action>
-		<action>
-			<interval>60</interval>
-			<url>/plugin/lan?name=internet&amp;ip=google.com.</url>
-			<aggregate>true</aggregate>
-		<notBefore>1530616872</notBefore></action>
-		<action>
-			<interval>60</interval>
-			<url>/plugin/lan?name=igor&amp;service=igor/web&amp;ip={/data/services/igor/host}&amp;port={/data/services/igor/port}</url>
-			<aggregate>true</aggregate>
-			<notBefore>1530616872</notBefore>
-		</action>
-		<action>
-			<name>systemHealth</name>
-			<interval>60</interval>
-			<xpath>/data/status/*/*/errorMessage</xpath>
-			<url>/plugin/systemHealth</url>
-			<notBefore>1530616873</notBefore>
-			<aggregate>true</aggregate>
-		</action>
 	<action>
         <name>bellbutton-alt</name>
         <url>/data/environment/messages/message</url>
@@ -220,7 +181,7 @@
         <url>/action/ringringer</url>
         <representing>sensors/button</representing>
         <method>GET</method>
-        <notBefore>1530612866</notBefore>
+        <notBefore>1530621438</notBefore>
     </action>
 	<action>
         <name>turnbellbutton</name>
@@ -243,9 +204,44 @@
         <name>ringringer</name>
         <url>http://{/data/plugindata/ringer/host}/alarm?alarm=1</url>
         <representing>devices/ringer</representing>
-        <notBefore>1530612867</notBefore>
+        <notBefore>1530621438</notBefore>
 	</action>
-	</actions>
+	<action own:plugin="say">
+			<xpath>/data/environment/messages/*</xpath>
+			<condition>not(data/environment/night)</condition>
+			<url>/pluginscript/say/message?args={.}</url>
+		<notBefore>1540812426</notBefore></action><action own:plugin="lan">
+			<interval>60</interval>
+			<url>/plugin/lan?name=router&amp;ip=192.168.1.1</url>
+			<aggregate>true</aggregate>
+		<notBefore>1540812426</notBefore></action><action own:plugin="lan">
+			<interval>60</interval>
+			<url>/plugin/lan?name=internet&amp;ip=google.com.</url>
+			<aggregate>true</aggregate>
+		<notBefore>1540812426</notBefore></action><action own:plugin="lan">
+			<interval>60</interval>
+			<url>/plugin/lan?name=igor&amp;service=igor/web&amp;url={/data/services/igor/url}/services/igor/host</url>
+			<aggregate>true</aggregate>
+			<notBefore>1540812426</notBefore>
+		</action><action own:plugin="systemHealth">
+			<name>systemHealth</name>
+			<interval>60</interval>
+			<xpath>/data/status/*/*/errorMessage</xpath>
+			<url>/plugin/systemHealth</url>
+		<notBefore>1540812426</notBefore></action><action own:plugin="ble">
+			<interval>60</interval>
+			<url>/pluginscript/ble/pull</url>
+			<representing>sensors/ble</representing>
+			<aggregate>true</aggregate>
+		<notBefore>1540812426</notBefore></action><action own:plugin="ble">
+            <xpath>/data/sensors/ble/bleDevice</xpath>
+            <condition>/data/plugindata/bleDevices/bleDevice[id=string($originalContext/address)]/name</condition>
+            <url>/data/environment/devices/{/data/plugindata/bleDevices/bleDevice[id=string($originalContext/address)]/name}</url>
+            <method>PUT</method>
+            <mimetype>text/plain</mimetype>
+            <data>{available}</data>
+            <multiple>True</multiple>
+        </action></actions>
 	<sandbox/>
 	<eventsources/>
 	<plugindata>
@@ -260,8 +256,24 @@
 			</bleDevice>
 		</bleDevices>
 		<ringer>
-			<host>ringer.fritz.box</host>
+			<host>ringer.local</host>
 		</ringer>
-	</plugindata>
+	<say own:plugin="say">
+		</say><device own:plugin="device">
+		</device><ca own:plugin="ca">
+		</ca><lan own:plugin="lan">
+		</lan><user own:plugin="user">
+		</user><systemHealth own:plugin="systemHealth">
+			<sensorMaxInterval/>
+		</systemHealth><ble own:plugin="ble">
+			<!-- needs capability for /data/sensors/ble -->
+			<!-- needs capability for /data/plugindata/bleDevices -->
+		</ble><bleDevices own:plugin="ble">
+			<!-- example: -->
+			<bleDevice>
+				<id>00:11:22:33:44:55</id>
+				<name>bleDeviceName</name>
+			</bleDevice>
+		</bleDevices></plugindata>
 	
 </data>
