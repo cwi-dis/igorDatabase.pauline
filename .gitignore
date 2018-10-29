@@ -1,0 +1,11 @@
+database.xml.[0-9]*
+igor.log
+igor.log.*
+igor.crt
+igor.csr
+igor.csrconfig
+igor.key
+igorSessions
+ca
+static/crl.pem
+std-plugins
