@@ -71,11 +71,11 @@
 	    <action>
 			<xpath>/data/environment/messages/*</xpath>
 			<condition>not(data/environment/night)</condition>
-			<url>/pluginscripts/say/message?args={.}</url>
+			<url>/pluginscript/say/message?args={.}</url>
 		<notBefore>1540812426</notBefore></action>
 	    <action>
             <interval>60</interval>
-            <url>/pluginscripts/ble/pull</url>
+            <url>/pluginscript/ble/pull</url>
 			<representing>sensors/ble</representing>
             <aggregate>true</aggregate>
         <notBefore>1540812426</notBefore></action>
