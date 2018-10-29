@@ -167,73 +167,79 @@
 			<mimetype>text/plain</mimetype>
 			<data>ringer.local</data>
 		</action>
-	<action>
-        <name>bellbutton-alt</name>
-        <url>/data/environment/messages/message</url>
-        <representing>sensors/button</representing>
-        <method>POST</method>
-        <mimetype>text/plain</mimetype>
-        <data>Someone pressed the bell button!</data>
-        <notBefore>1530612866</notBefore>
-    </action>
-	<action>
-        <name>bellbutton</name>
-        <url>/action/ringringer</url>
-        <representing>sensors/button</representing>
-        <method>GET</method>
-        <notBefore>1530621438</notBefore>
-    </action>
-	<action>
-        <name>turnbellbutton</name>
-        <url>/data/environment/messages/message</url>
-        <representing>sensors/button</representing>
-        <method>POST</method>
-        <mimetype>text/plain</mimetype>
-        <data>You just turned the bell button</data>
-        <notBefore>1508419926</notBefore>
-	</action>
-	<action>
-        <name>addtoken</name>
-        <url>/data/environment/tokens/token</url>
-        <method>POST</method>
-        <mimetype>text/plain</mimetype>
-        <data>1234</data>
-        <notBefore>1508419926</notBefore>
-	</action>
-	<action>
-        <name>ringringer</name>
-        <url>http://{/data/plugindata/ringer/host}/alarm?alarm=1</url>
-        <representing>devices/ringer</representing>
-        <notBefore>1530621438</notBefore>
-	</action>
-	<action own:plugin="say">
-			<xpath>/data/environment/messages/*</xpath>
-			<condition>not(data/environment/night)</condition>
-			<url>/pluginscript/say/message?args={.}</url>
-		<notBefore>1540812426</notBefore></action><action own:plugin="lan">
-			<interval>60</interval>
-			<url>/plugin/lan?name=router&amp;ip=192.168.1.1</url>
-			<aggregate>true</aggregate>
-		<notBefore>1540812426</notBefore></action><action own:plugin="lan">
-			<interval>60</interval>
-			<url>/plugin/lan?name=internet&amp;ip=google.com.</url>
-			<aggregate>true</aggregate>
-		<notBefore>1540812426</notBefore></action><action own:plugin="lan">
-			<interval>60</interval>
-			<url>/plugin/lan?name=igor&amp;service=igor/web&amp;url={/data/services/igor/url}/services/igor/host</url>
-			<aggregate>true</aggregate>
-			<notBefore>1540812426</notBefore>
-		</action><action own:plugin="systemHealth">
-			<name>systemHealth</name>
-			<interval>60</interval>
-			<xpath>/data/status/*/*/errorMessage</xpath>
-			<url>/plugin/systemHealth</url>
-		<notBefore>1540812426</notBefore></action><action own:plugin="ble">
-			<interval>60</interval>
-			<url>/pluginscript/ble/pull</url>
-			<representing>sensors/ble</representing>
-			<aggregate>true</aggregate>
-		<notBefore>1540812426</notBefore></action><action own:plugin="ble">
+        <action>
+            <name>bellbutton-alt</name>
+            <url>/data/environment/messages/message</url>
+            <representing>sensors/button</representing>
+            <method>POST</method>
+            <mimetype>text/plain</mimetype>
+            <data>Someone pressed the bell button!</data>
+            <notBefore>1530612866</notBefore>
+        </action>
+        <action>
+            <name>bellbutton</name>
+            <url>/action/ringringer</url>
+            <representing>sensors/button</representing>
+            <method>GET</method>
+            <notBefore>1530621438</notBefore>
+        </action>
+        <action>
+            <name>turnbellbutton</name>
+            <url>/data/environment/messages/message</url>
+            <representing>sensors/button</representing>
+            <method>POST</method>
+            <mimetype>text/plain</mimetype>
+            <data>You just turned the bell button</data>
+            <notBefore>1508419926</notBefore>
+        </action>
+        <action>
+            <name>addtoken</name>
+            <url>/data/environment/tokens/token</url>
+            <method>POST</method>
+            <mimetype>text/plain</mimetype>
+            <data>1234</data>
+            <notBefore>1508419926</notBefore>
+        </action>
+        <action>
+            <name>ringringer</name>
+            <url>http://{/data/plugindata/ringer/host}/alarm?alarm=1</url>
+            <representing>devices/ringer</representing>
+            <notBefore>1530621438</notBefore>
+        </action>
+        <action own:plugin="say">
+                <xpath>/data/environment/messages/*</xpath>
+                <condition>not(data/environment/night)</condition>
+                <url>/pluginscript/say/message?args={.}</url>
+            <notBefore>1540812426</notBefore></action>
+        <action own:plugin="lan">
+                <interval>60</interval>
+                <url>/plugin/lan?name=router&amp;ip=192.168.1.1</url>
+                <aggregate>true</aggregate>
+            <notBefore>1540812426</notBefore></action>
+        <action own:plugin="lan">
+                <interval>60</interval>
+                <url>/plugin/lan?name=internet&amp;ip=google.com.</url>
+                <aggregate>true</aggregate>
+            <notBefore>1540812426</notBefore></action>
+        <action own:plugin="lan">
+                <interval>60</interval>
+                <url>/plugin/lan?name=igor&amp;service=igor/web&amp;url={/data/services/igor/url}/services/igor/host</url>
+                <aggregate>true</aggregate>
+                <notBefore>1540812426</notBefore>
+            </action>
+        <action own:plugin="systemHealth">
+                <name>systemHealth</name>
+                <interval>60</interval>
+                <xpath>/data/status/*/*/errorMessage</xpath>
+                <url>/plugin/systemHealth</url>
+            <notBefore>1540812426</notBefore></action>
+        <action own:plugin="ble">
+                <interval>60</interval>
+                <url>/pluginscript/ble/pull</url>
+                <representing>sensors/ble</representing>
+                <aggregate>true</aggregate>
+            <notBefore>1540812426</notBefore></action>
+        <action own:plugin="ble">
             <xpath>/data/sensors/ble/bleDevice</xpath>
             <condition>/data/plugindata/bleDevices/bleDevice[id=string($originalContext/address)]/name</condition>
             <url>/data/environment/devices/{/data/plugindata/bleDevices/bleDevice[id=string($originalContext/address)]/name}</url>
@@ -241,11 +247,32 @@
             <mimetype>text/plain</mimetype>
             <data>{available}</data>
             <multiple>True</multiple>
-        </action></actions>
+        </action>
+    </actions>
 	<sandbox/>
 	<eventsources/>
 	<plugindata>
-	    <bleDevices>
+		<ringer>
+			<host>ringer.local</host>
+		</ringer>
+	    <say own:plugin="say">
+		</say>
+		<device own:plugin="device">
+		</device>
+		<ca own:plugin="ca">
+		</ca>
+		<lan own:plugin="lan">
+		</lan>
+		<user own:plugin="user">
+		</user>
+		<systemHealth own:plugin="systemHealth">
+			<sensorMaxInterval/>
+		</systemHealth>
+		<ble own:plugin="ble">
+			<!-- needs capability for /data/sensors/ble -->
+			<!-- needs capability for /data/plugindata/bleDevices -->
+		</ble>
+		<bleDevices own:plugin="ble">
 			<bleDevice>
 				<id>a4:77:33:c0:5d:8f</id>
 				<name>My_google_hardware</name>
@@ -255,25 +282,6 @@
 				<name>My_microsoft_hardware</name>
 			</bleDevice>
 		</bleDevices>
-		<ringer>
-			<host>ringer.local</host>
-		</ringer>
-	<say own:plugin="say">
-		</say><device own:plugin="device">
-		</device><ca own:plugin="ca">
-		</ca><lan own:plugin="lan">
-		</lan><user own:plugin="user">
-		</user><systemHealth own:plugin="systemHealth">
-			<sensorMaxInterval/>
-		</systemHealth><ble own:plugin="ble">
-			<!-- needs capability for /data/sensors/ble -->
-			<!-- needs capability for /data/plugindata/bleDevices -->
-		</ble><bleDevices own:plugin="ble">
-			<!-- example: -->
-			<bleDevice>
-				<id>00:11:22:33:44:55</id>
-				<name>bleDeviceName</name>
-			</bleDevice>
-		</bleDevices></plugindata>
+	</plugindata>
 	
 </data>
