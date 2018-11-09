@@ -1,6 +1,6 @@
 <?xml version="1.0" ?><data xmlns:au="http://jackjansen.nl/igor/authentication" xmlns:own="http://jackjansen.nl/igor/owner">
 	<environment>
-		<night></night>
+		<night/>
 		<location/>
 		<energy/>
 		<weather/>
@@ -9,13 +9,13 @@
 		<lights/>
 		<people><count>0</count></people>
 		<systemHealth>
-			<messages></messages>
+			<messages/>
 		</systemHealth>
 	</environment>
 	<status>
-		<igor><core><alive>true</alive><lastActivity>1541797239.8734431</lastActivity><lastSuccess>1541797239.8734431</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></core><save><alive>true</alive><lastActivity>1541797239.901524</lastActivity><lastSuccess>1541797239.901524</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil><lastFailure>1541795092.195476</lastFailure></save></igor>
+		<igor><core><alive>true</alive><lastActivity>1541797853.1929128</lastActivity><lastSuccess>1541797853.1929128</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></core><save><alive>true</alive><lastActivity>1541797239.901524</lastActivity><lastSuccess>1541797239.901524</lastSuccess><ignoreErrorsUntil/><errorMessage/><ignoreErrorUntil/><lastFailure>1541795092.195476</lastFailure></save></igor>
 		<sensors/>
-		<devices><ringer><alive></alive><lastActivity>1541797240.0314329</lastActivity><lastFailure>1541797240.0314329</lastFailure></ringer></devices>
+		<devices><ringer><alive/><lastActivity>1541797240.0314329</lastActivity><lastFailure>1541797240.0314329</lastFailure></ringer></devices>
 		<services/>
 	</status>
 	<sensors><button own:plugin="button">
@@ -26,7 +26,7 @@
 			<current/>
 		</ringer></devices>
 	<services>
-		<igor><host>boom.local</host><url>https://boom.local:9333/data</url><port>9333</port><protocol>https</protocol><startTime>1541797239</startTime><version>0.95</version><ticker>0</ticker><rebootCount>150</rebootCount><accessFailures></accessFailures><fingerprint>97:DF:BD:B7:71:6F:5C:B2:B1:0D:16:FE:81:1C:CA:04:2C:99:A6:B9</fingerprint></igor>
+		<igor><host>boom.local</host><url>https://boom.local:9333/data</url><port>9333</port><protocol>https</protocol><startTime>1541797853</startTime><version>0.95</version><ticker>0</ticker><rebootCount>151</rebootCount><accessFailures></accessFailures><fingerprint>97:DF:BD:B7:71:6F:5C:B2:B1:0D:16:FE:81:1C:CA:04:2C:99:A6:B9</fingerprint></igor>
 	<router/><internet/></services>
 	<people/>
 	<identities>
@@ -50,7 +50,7 @@
 			    <child>external</child>
 			    <child>action-internal</child>
 			    <child>action-environment</child>
-			<child>default-sandbox</child><child>c1999691798100904138</child><child>c9753928941680278051</child><child>c10886111020977100966</child><child>c2600792914107384861</child><child>c13232737044631859170</child></au:capability>
+			<child>default-sandbox</child><child>c1999691798100904138</child><child>c9753928941680278051</child><child>c10886111020977100966</child><child>c2600792914107384861</child><child>c13232737044631859170</child><child>admin-filesystem</child><child>c2017275020259693085</child><child>c4069934949444404720</child></au:capability>
 			<au:capability>
 				<obj>/data</obj>
 				<parent>root</parent>
@@ -84,7 +84,7 @@
 				<delegate>true</delegate>
 			</au:capability>
             <au:capability><child>c8367703070584182310</child><delegate>external</delegate><parent>root</parent><cid>external</cid></au:capability>
-		<au:capability><obj>/api</obj><aud>ringer.local</aud><parent>external</parent><cid>c8367703070584182310</cid><get>descendant-or-self</get><delegate>true</delegate><child>c4539053256114489748</child><put>descendant-or-self</put><post>descendant</post><delete>descendant</delete></au:capability><au:capability><obj>/action/button.pressed</obj><parent>admin-action</parent><get>self</get><cid>c737486580052040841</cid><delegate>true</delegate><child>c18200953248314046039</child></au:capability><plugindata/></admin>
+		<au:capability><obj>/api</obj><aud>ringer.local</aud><parent>external</parent><cid>c8367703070584182310</cid><get>descendant-or-self</get><delegate>true</delegate><child>c4539053256114489748</child><put>descendant-or-self</put><post>descendant</post><delete>descendant</delete></au:capability><au:capability><obj>/action/button.pressed</obj><parent>admin-action</parent><get>self</get><cid>c737486580052040841</cid><delegate>true</delegate><child>c18200953248314046039</child></au:capability><plugindata/><au:capability><cid>admin-filesystem</cid><obj>/filesystem</obj><get>self</get><delegate>true</delegate><parent>root</parent></au:capability></admin>
 		<au:capability>
 			<get>descendant-or-self</get>
 			<obj>/data/people</obj>
@@ -234,12 +234,12 @@
 			<host>ringer.local</host>
 			<protocol>https</protocol>
 			<endpoint>api</endpoint>
-		</ringer>
+		<au:capability><obj>/data/plugindata/ringer</obj><get>descendant-or-self</get><cid>c2017275020259693085</cid><parent>root</parent></au:capability></ringer>
 		<button own:plugin="button">
 			<host>button.local</host>
 			<protocol>https</protocol>
 			<endpoint>api</endpoint>
-		</button>
+		<au:capability><obj>/data/plugindata/button</obj><get>descendant-or-self</get><cid>c4069934949444404720</cid><parent>root</parent></au:capability></button>
 	</plugindata>
 	<au:access>
 		<au:defaultCapabilities>
