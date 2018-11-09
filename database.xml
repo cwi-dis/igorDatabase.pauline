@@ -1,6 +1,6 @@
 <?xml version="1.0" ?><data xmlns:au="http://jackjansen.nl/igor/authentication" xmlns:own="http://jackjansen.nl/igor/owner">
 	<environment>
-		<night/>
+		<night></night>
 		<location/>
 		<energy/>
 		<weather/>
@@ -9,20 +9,24 @@
 		<lights/>
 		<people><count>0</count></people>
 		<systemHealth>
-			<messages/>
+			<messages></messages>
 		</systemHealth>
 	</environment>
 	<status>
-		<igor><core><alive>true</alive><lastActivity>1541452837.7563531</lastActivity><lastSuccess>1541452837.7563531</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></core><save><alive>true</alive><lastActivity>1541452710.2515461</lastActivity><lastSuccess>1541452710.2515461</lastSuccess><ignoreErrorsUntil/><errorMessage/><ignoreErrorUntil/></save></igor>
-		<sensors><button><ignoreErrorUntil>1539649256.38</ignoreErrorUntil></button></sensors>
-		<devices><ringer/><foo4/></devices>
+		<igor><core><alive>true</alive><lastActivity>1541797239.8734431</lastActivity><lastSuccess>1541797239.8734431</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></core><save><alive>true</alive><lastActivity>1541797239.901524</lastActivity><lastSuccess>1541797239.901524</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil><lastFailure>1541795092.195476</lastFailure></save></igor>
+		<sensors/>
+		<devices><ringer><alive></alive><lastActivity>1541797240.0314329</lastActivity><lastFailure>1541797240.0314329</lastFailure></ringer></devices>
 		<services/>
 	</status>
-	<sensors><button/></sensors>
+	<sensors><button own:plugin="button">
+		</button></sensors>
 	<devices>
-	<ringer/><foo4/></devices>
+	<ringer own:plugin="ringer">
+			<target/>
+			<current/>
+		</ringer></devices>
 	<services>
-		<igor><host>boom.local</host><url>https://boom.local:9333/data</url><port>9333</port><protocol>https</protocol><startTime>1541452837</startTime><version>0.95</version><ticker>0</ticker><rebootCount>145</rebootCount><accessFailures></accessFailures><fingerprint>97:DF:BD:B7:71:6F:5C:B2:B1:0D:16:FE:81:1C:CA:04:2C:99:A6:B9</fingerprint></igor>
+		<igor><host>boom.local</host><url>https://boom.local:9333/data</url><port>9333</port><protocol>https</protocol><startTime>1541797239</startTime><version>0.95</version><ticker>0</ticker><rebootCount>150</rebootCount><accessFailures></accessFailures><fingerprint>97:DF:BD:B7:71:6F:5C:B2:B1:0D:16:FE:81:1C:CA:04:2C:99:A6:B9</fingerprint></igor>
 	<router/><internet/></services>
 	<people/>
 	<identities>
@@ -92,7 +96,7 @@
 	    <action>
 	        <name>start</name>
 	        <url>/internal/started</url>
-	    <notBefore>1541452816</notBefore></action>
+	    <notBefore>1541797239</notBefore></action>
 		<action>
 			<name>save</name>
 			<interval>3600</interval>
@@ -100,7 +104,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore>1541452876</notBefore>
+			<notBefore>1541797299</notBefore>
 		</action>
         <action>
             <name>cleanup</name>
@@ -112,7 +116,7 @@
 			<name>updateActions</name>
 			<xpath>/data/actions/*</xpath>
 			<url>/internal/updateActions</url>
-			<notBefore/>
+			<notBefore>1541795092</notBefore>
 		</action>
 		<action>
 			<name>checkNight</name>
@@ -121,7 +125,7 @@
 			<url>/data/environment/night</url>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-			<notBefore>1541452816</notBefore>
+			<notBefore>1541797239</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -180,26 +184,63 @@
             <post>descendant</post>
             <delete>descendant</delete>
         </au:capability>
-    <action own:plugin="systemHealth">
+	    <action own:plugin="systemHealth">
 			<name>systemHealth</name>
 			<interval>60</interval>
 			<xpath>/data/status/*/*/errorMessage</xpath>
 			<url>/plugin/systemHealth</url>
-		<notBefore>1541452816</notBefore></action><action own:plugin="say">
+		<notBefore>1541797240</notBefore></action>
+		<action own:plugin="say">
 			<xpath>/data/environment/messages/*</xpath>
 			<condition>not(data/environment/night)</condition>
 			<url>/pluginscript/say/message?args={.}</url>
-		</action></actions>
+		</action>
+		<action own:plugin="ringer">
+			<xpath>/data/devices/ringer/target</xpath>
+			<url>/plugin/ringer/push</url>
+			<!-- needs capability for /data/plugindata/ringer -->
+			<!-- needs capability for /data/devices/ringer -->
+			<representing>devices/ringer</representing>
+		</action>
+		<action own:plugin="ringer">
+			<name>action-ringer</name>
+			<interval>600</interval>
+			<url>/plugin/ringer/pull</url>
+			<representing>devices/ringer</representing>
+			<aggregate>true</aggregate>
+			<notBefore>1541797239</notBefore>
+		</action>
+	</actions>
 	<sandbox>
 	</sandbox>
 	<plugindata>
-	<systemHealth own:plugin="systemHealth">
+		<systemHealth own:plugin="systemHealth">
 			<sensorMaxInterval/>
-		<au:capability><obj>/data/plugindata/systemHealth</obj><get>descendant-or-self</get><cid>c1999691798100904138</cid><parent>root</parent></au:capability></systemHealth><user own:plugin="user">
-		<au:capability><obj>/data/plugindata/user</obj><get>descendant-or-self</get><cid>c9753928941680278051</cid><parent>root</parent></au:capability></user><device own:plugin="device">
-		<au:capability><obj>/data/plugindata/device</obj><get>descendant-or-self</get><cid>c10886111020977100966</cid><parent>root</parent></au:capability></device><ca own:plugin="ca">
-		<au:capability><obj>/data/plugindata/ca</obj><get>descendant-or-self</get><cid>c2600792914107384861</cid><parent>root</parent></au:capability></ca><say own:plugin="say">
-		<au:capability><obj>/data/plugindata/say</obj><get>descendant-or-self</get><cid>c13232737044631859170</cid><parent>root</parent></au:capability></say></plugindata>
+			<au:capability><obj>/data/plugindata/systemHealth</obj><get>descendant-or-self</get><cid>c1999691798100904138</cid><parent>root</parent></au:capability>
+		</systemHealth>
+		<user own:plugin="user">
+			<au:capability><obj>/data/plugindata/user</obj><get>descendant-or-self</get><cid>c9753928941680278051</cid><parent>root</parent></au:capability>
+		</user>
+		<device own:plugin="device">
+			<au:capability><obj>/data/plugindata/device</obj><get>descendant-or-self</get><cid>c10886111020977100966</cid><parent>root</parent></au:capability>
+		</device>
+		<ca own:plugin="ca">
+			<au:capability><obj>/data/plugindata/ca</obj><get>descendant-or-self</get><cid>c2600792914107384861</cid><parent>root</parent></au:capability>
+		</ca>
+		<say own:plugin="say">
+			<au:capability><obj>/data/plugindata/say</obj><get>descendant-or-self</get><cid>c13232737044631859170</cid><parent>root</parent></au:capability>
+		</say>
+		<ringer own:plugin="ringer">
+			<host>ringer.local</host>
+			<protocol>https</protocol>
+			<endpoint>api</endpoint>
+		</ringer>
+		<button own:plugin="button">
+			<host>button.local</host>
+			<protocol>https</protocol>
+			<endpoint>api</endpoint>
+		</button>
+	</plugindata>
 	<au:access>
 		<au:defaultCapabilities>
 			<au:capability>
