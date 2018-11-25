@@ -9,13 +9,14 @@
 		<lights/>
 		<people><count>0</count></people>
 		<systemHealth>
-			<messages/>
+			<messages><ringer>502 Error accessing https://ringer.local/api: cannot connect</ringer></messages>
 		</systemHealth>
 	</environment>
 	<status>
-		<igor><core><alive>true</alive><lastActivity>1541797946.110017</lastActivity><lastSuccess>1541797946.110017</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></core><save><alive>true</alive><lastActivity>1541797239.901524</lastActivity><lastSuccess>1541797239.901524</lastSuccess><ignoreErrorsUntil/><errorMessage/><ignoreErrorUntil/><lastFailure>1541795092.195476</lastFailure></save></igor>
+		<igor><core><alive>true</alive><lastActivity>1542576064.273798</lastActivity><lastSuccess>1542576064.273798</lastSuccess><ignoreErrorsUntil/><errorMessage></errorMessage><ignoreErrorUntil></ignoreErrorUntil></core><save><alive>true</alive><lastActivity>1542409563.114689</lastActivity><lastSuccess>1542409563.114689</lastSuccess><ignoreErrorsUntil/><errorMessage/><ignoreErrorUntil/><lastFailure>1541795092.195476</lastFailure></save></igor>
 		<sensors/>
-		<devices><ringer><alive/><lastActivity>1541797240.0314329</lastActivity><lastFailure>1541797240.0314329</lastFailure></ringer></devices>
+		<devices><ringer><alive/><lastActivity>1542575436.248588</lastActivity><lastFailure>1542575436.248588</lastFailure><errorMessage>502 Error accessing https://ringer.local/api: cannot connect
+</errorMessage></ringer></devices>
 		<services/>
 	</status>
 	<sensors><button own:plugin="button">
@@ -24,9 +25,10 @@
 	<ringer own:plugin="ringer">
 			<target/>
 			<current/>
-		</ringer></devices>
+		</ringer><iotsaDiscovery own:plugin="iotsaDiscovery">
+        <jackbutton.local.><config><hostName>jackbutton</hostName><modeTimeout>300</modeTimeout><iotsaVersion>2.0</iotsaVersion><iotsaFullVersion>2.0</iotsaFullVersion><program>Doorbell Button Server</program><board>PLATFORMIO_NODEMCUV2</board><bootCause>externalReset</bootCause><uptime>82</uptime><modules>config</modules><modules>wificonfig</modules><modules>buttons</modules><modules>capabilities</modules><modules>users</modules></config><wificonfig><ssid>Goudreinet</ssid></wificonfig><buttons><buttons><url/><fingerprint/><hasCredentials>0</hasCredentials><hasToken>0</hasToken><state/><onPress/><onRelease/></buttons><buttons><url/><fingerprint/><hasCredentials>0</hasCredentials><hasToken>0</hasToken><state/><onPress/><onRelease/></buttons></buttons><capabilities><trustedIssuer/><issuerKeyLength>0</issuerKeyLength></capabilities><users><users><username>owner</username></users></users></jackbutton.local.><lcd.local.><config><hostName>lcd</hostName><modeTimeout>400</modeTimeout><iotsaVersion>2.0</iotsaVersion><iotsaFullVersion>2.0</iotsaFullVersion><program>LCD Display Server</program><board>PLATFORMIO_NODEMCUV2</board><bootCause>softwareReboot</bootCause><uptime>1196</uptime><modules>config</modules><modules>wificonfig</modules><modules>buttons</modules><modules>display</modules></config><wificonfig><ssid>Goudreinet</ssid></wificonfig><buttons><buttons><url>https://192.168.1.3:9333/action/lcd.button1</url><fingerprint>42 26 D7 41 0D 8A CE 88 5A BF 79 37 71 8C F4 8E FA 2B 07 C0</fingerprint><hasCredentials>0</hasCredentials><hasToken>0</hasToken><state/><onPress>true</onPress><onRelease/></buttons><buttons><url>https://192.168.1.3:9333/action/lcd.button2</url><fingerprint>42 26 D7 41 0D 8A CE 88 5A BF 79 37 71 8C F4 8E FA 2B 07 C0</fingerprint><hasCredentials>0</hasCredentials><hasToken>0</hasToken><state/><onPress>true</onPress><onRelease/></buttons></buttons></lcd.local.></iotsaDiscovery></devices>
 	<services>
-		<igor><host>boom.local</host><url>https://boom.local:9333/data</url><port>9333</port><protocol>https</protocol><startTime>1541797946</startTime><version>0.95</version><ticker>0</ticker><rebootCount>153</rebootCount><accessFailures></accessFailures><fingerprint>97:DF:BD:B7:71:6F:5C:B2:B1:0D:16:FE:81:1C:CA:04:2C:99:A6:B9</fingerprint></igor>
+		<igor><host>boom.local</host><url>https://boom.local:9333/data</url><port>9333</port><protocol>https</protocol><startTime>1542576064</startTime><version>0.95</version><ticker>0</ticker><rebootCount>226</rebootCount><accessFailures></accessFailures><fingerprint>97:DF:BD:B7:71:6F:5C:B2:B1:0D:16:FE:81:1C:CA:04:2C:99:A6:B9</fingerprint></igor>
 	<router/><internet/></services>
 	<people/>
 	<identities>
@@ -96,7 +98,7 @@
 	    <action>
 	        <name>start</name>
 	        <url>/internal/started</url>
-	    <notBefore>1541797946</notBefore></action>
+	    <notBefore>1542576064</notBefore></action>
 		<action>
 			<name>save</name>
 			<interval>3600</interval>
@@ -104,7 +106,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore>1541798006</notBefore>
+			<notBefore>1542576124</notBefore>
 		</action>
         <action>
             <name>cleanup</name>
@@ -125,7 +127,7 @@
 			<url>/data/environment/night</url>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-			<notBefore>1541797946</notBefore>
+			<notBefore>1542576064</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -189,7 +191,7 @@
 			<interval>60</interval>
 			<xpath>/data/status/*/*/errorMessage</xpath>
 			<url>/plugin/systemHealth</url>
-		<notBefore>1541797946</notBefore></action>
+		<notBefore>1542576064</notBefore></action>
 		<action own:plugin="say">
 			<xpath>/data/environment/messages/*</xpath>
 			<condition>not(data/environment/night)</condition>
@@ -208,7 +210,7 @@
 			<url>/plugin/ringer/pull</url>
 			<representing>devices/ringer</representing>
 			<aggregate>true</aggregate>
-			<notBefore>1541797946</notBefore>
+			<notBefore>1542576064</notBefore>
 		</action>
 	</actions>
 	<sandbox>
@@ -240,7 +242,8 @@
 			<protocol>https</protocol>
 			<endpoint>api</endpoint>
 		<au:capability><obj>/data/plugindata/button</obj><get>descendant-or-self</get><cid>c4069934949444404720</cid><parent>root</parent></au:capability></button>
-	</plugindata>
+	<iotsaDiscovery own:plugin="iotsaDiscovery">
+		</iotsaDiscovery></plugindata>
 	<au:access>
 		<au:defaultCapabilities>
 			<au:capability>
