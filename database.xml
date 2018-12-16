@@ -21,28 +21,28 @@
 		<igor>
 			<core>
 				<alive>true</alive>
-				<lastActivity>1543181145.613306</lastActivity>
-				<lastSuccess>1543181145.613306</lastSuccess>
+				<lastActivity>1544980017.266036</lastActivity>
+				<lastSuccess>1544980017.266036</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
 			</core>
 			<save>
 				<alive>true</alive>
-				<lastActivity>1543181145.7063448</lastActivity>
-				<lastSuccess>1543181145.7063448</lastSuccess>
+				<lastActivity>1544969468.993842</lastActivity>
+				<lastSuccess>1544969468.993842</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
-				<lastFailure>1541795092.195476</lastFailure>
+				<lastFailure>1544968187.027458</lastFailure>
 			</save>
 		</igor>
 		<sensors/>
 		<devices>
 			<ringer>
 				<alive/>
-				<lastActivity>1543181150.822869</lastActivity>
-				<lastFailure>1543181150.822869</lastFailure>
+				<lastActivity>1544969402.6539211</lastActivity>
+				<lastFailure>1544969402.6539211</lastFailure>
 				<errorMessage>502 Error accessing https://ringer.local/api: cannot connect</errorMessage>
 			</ringer>
 		</devices>
@@ -56,108 +56,19 @@
 			<target/>
 			<current/>
 		</ringer>
-		<iotsaDiscovery own:plugin="iotsaDiscovery">
-			<jackbutton.local.>
-				<config>
-					<hostName>jackbutton</hostName>
-					<modeTimeout>300</modeTimeout>
-					<iotsaVersion>2.0</iotsaVersion>
-					<iotsaFullVersion>2.0</iotsaFullVersion>
-					<program>Doorbell Button Server</program>
-					<board>PLATFORMIO_NODEMCUV2</board>
-					<bootCause>externalReset</bootCause>
-					<uptime>82</uptime>
-					<modules>config</modules>
-					<modules>wificonfig</modules>
-					<modules>buttons</modules>
-					<modules>capabilities</modules>
-					<modules>users</modules>
-				</config>
-				<wificonfig>
-					<ssid>Goudreinet</ssid>
-				</wificonfig>
-				<buttons>
-					<buttons>
-						<url/>
-						<fingerprint/>
-						<hasCredentials>0</hasCredentials>
-						<hasToken>0</hasToken>
-						<state/>
-						<onPress/>
-						<onRelease/>
-					</buttons>
-					<buttons>
-						<url/>
-						<fingerprint/>
-						<hasCredentials>0</hasCredentials>
-						<hasToken>0</hasToken>
-						<state/>
-						<onPress/>
-						<onRelease/>
-					</buttons>
-				</buttons>
-				<capabilities>
-					<trustedIssuer/>
-					<issuerKeyLength>0</issuerKeyLength>
-				</capabilities>
-				<users>
-					<users>
-						<username>owner</username>
-					</users>
-				</users>
-			</jackbutton.local.>
-			<lcd.local.>
-				<config>
-					<hostName>lcd</hostName>
-					<modeTimeout>400</modeTimeout>
-					<iotsaVersion>2.0</iotsaVersion>
-					<iotsaFullVersion>2.0</iotsaFullVersion>
-					<program>LCD Display Server</program>
-					<board>PLATFORMIO_NODEMCUV2</board>
-					<bootCause>softwareReboot</bootCause>
-					<uptime>1196</uptime>
-					<modules>config</modules>
-					<modules>wificonfig</modules>
-					<modules>buttons</modules>
-					<modules>display</modules>
-				</config>
-				<wificonfig>
-					<ssid>Goudreinet</ssid>
-				</wificonfig>
-				<buttons>
-					<buttons>
-						<url>https://192.168.1.3:9333/action/lcd.button1</url>
-						<fingerprint>42 26 D7 41 0D 8A CE 88 5A BF 79 37 71 8C F4 8E FA 2B 07 C0</fingerprint>
-						<hasCredentials>0</hasCredentials>
-						<hasToken>0</hasToken>
-						<state/>
-						<onPress>true</onPress>
-						<onRelease/>
-					</buttons>
-					<buttons>
-						<url>https://192.168.1.3:9333/action/lcd.button2</url>
-						<fingerprint>42 26 D7 41 0D 8A CE 88 5A BF 79 37 71 8C F4 8E FA 2B 07 C0</fingerprint>
-						<hasCredentials>0</hasCredentials>
-						<hasToken>0</hasToken>
-						<state/>
-						<onPress>true</onPress>
-						<onRelease/>
-					</buttons>
-				</buttons>
-			</lcd.local.>
-		</iotsaDiscovery>
 	</devices>
 	<services>
 		<igor>
 			<host>boom.local</host>
-			<url>http://boom.local:9333/data</url>
+			<url>https://boom.local:9333/data</url>
 			<port>9333</port>
-			<protocol>http</protocol>
-			<startTime>1543181145</startTime>
+			<protocol>https</protocol>
+			<startTime>1544980017</startTime>
 			<version>0.96</version>
 			<ticker>0</ticker>
-			<rebootCount>234</rebootCount>
+			<rebootCount>247</rebootCount>
 			<accessFailures/>
+			<fingerprint>7B:2A:24:86:21:7A:16:B2:BA:CB:C6:90:D3:95:6E:9C:B8:DD:5E:87</fingerprint>
 		</igor>
 		<router/>
 		<internet/>
@@ -185,14 +96,21 @@
 				<child>action-internal</child>
 				<child>action-environment</child>
 				<child>default-sandbox</child>
-				<child>c1999691798100904138</child>
-				<child>c9753928941680278051</child>
-				<child>c10886111020977100966</child>
-				<child>c2600792914107384861</child>
-				<child>c13232737044631859170</child>
 				<child>admin-filesystem</child>
-				<child>c2017275020259693085</child>
-				<child>c4069934949444404720</child>
+				<child>c3116458110720915337</child>
+				<child>c9856380205407942577</child>
+				<child>c11718295286384816623</child>
+				<child>c3094949845543084243</child>
+				<child>c14055047746818228646</child>
+				<child>c18369751744402352767</child>
+				<child>c12562999194184782076</child>
+				<child>c11466082693727893071</child>
+				<child>c11047526651634581959</child>
+				<child>c8935960075032716977</child>
+				<child>c6135667828313447122</child>
+				<child>c14937153422353910262</child>
+				<child>c14883440579046834888</child>
+				<child>c15460381113857202778</child>
 			</au:capability>
 			<au:capability>
 				<obj>/data</obj>
@@ -279,7 +197,7 @@
 		<action>
 			<name>start</name>
 			<url>/internal/started</url>
-			<notBefore>1543181145</notBefore>
+			<notBefore>1544969583</notBefore>
 		</action>
 		<action>
 			<name>save</name>
@@ -288,7 +206,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore>1543181205</notBefore>
+			<notBefore>1544969643</notBefore>
 		</action>
 		<action>
 			<name>cleanup</name>
@@ -300,7 +218,7 @@
 			<name>updateActions</name>
 			<xpath>/data/actions/*</xpath>
 			<url>/internal/updateActions</url>
-			<notBefore>1541795092</notBefore>
+			<notBefore>1544969514</notBefore>
 		</action>
 		<action>
 			<name>checkNight</name>
@@ -309,7 +227,7 @@
 			<url>/data/environment/night</url>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-			<notBefore>1543181145</notBefore>
+			<notBefore>1544969583</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -378,24 +296,10 @@
 			<post>descendant</post>
 			<delete>descendant</delete>
 		</au:capability>
-		<action own:plugin="systemHealth">
-			<name>systemHealth</name>
-			<interval>60</interval>
-			<xpath>/data/status/*/*/errorMessage</xpath>
-			<url>/plugin/systemHealth</url>
-			<notBefore>1543181150</notBefore>
-		</action>
 		<action own:plugin="say">
 			<xpath>/data/environment/messages/*</xpath>
 			<condition>not(data/environment/night)</condition>
 			<url>/pluginscript/say/message?args={.}</url>
-		</action>
-		<action own:plugin="ringer">
-			<xpath>/data/devices/ringer/target</xpath>
-			<url>/plugin/ringer/push</url>
-			<!-- needs capability for /data/plugindata/ringer -->
-			<!-- needs capability for /data/devices/ringer -->
-			<representing>devices/ringer</representing>
 		</action>
 		<action own:plugin="ringer">
 			<name>action-ringer</name>
@@ -403,75 +307,169 @@
 			<url>/plugin/ringer/pull</url>
 			<representing>devices/ringer</representing>
 			<aggregate>true</aggregate>
-			<notBefore>1543181145</notBefore>
+			<notBefore>1544969583</notBefore>
 		</action>
 	</actions>
 	<sandbox/>
 	<plugindata>
-		<systemHealth own:plugin="systemHealth">
-			<sensorMaxInterval/>
+		<iotsaDiscovery own:plugin="iotsaDiscovery">
 			<au:capability>
-				<obj>/data/plugindata/systemHealth</obj>
+				<obj>/data/plugindata/iotsaDiscovery</obj>
 				<get>descendant-or-self</get>
-				<cid>c1999691798100904138</cid>
+				<cid>c3116458110720915337</cid>
 				<parent>root</parent>
 			</au:capability>
-		</systemHealth>
-		<user own:plugin="user">
-			<au:capability>
-				<obj>/data/plugindata/user</obj>
-				<get>descendant-or-self</get>
-				<cid>c9753928941680278051</cid>
-				<parent>root</parent>
-			</au:capability>
-		</user>
-		<device own:plugin="device">
-			<au:capability>
-				<obj>/data/plugindata/device</obj>
-				<get>descendant-or-self</get>
-				<cid>c10886111020977100966</cid>
-				<parent>root</parent>
-			</au:capability>
-		</device>
-		<ca own:plugin="ca">
-			<au:capability>
-				<obj>/data/plugindata/ca</obj>
-				<get>descendant-or-self</get>
-				<cid>c2600792914107384861</cid>
-				<parent>root</parent>
-			</au:capability>
-		</ca>
+		</iotsaDiscovery>
 		<say own:plugin="say">
 			<au:capability>
 				<obj>/data/plugindata/say</obj>
 				<get>descendant-or-self</get>
-				<cid>c13232737044631859170</cid>
+				<cid>c9856380205407942577</cid>
 				<parent>root</parent>
 			</au:capability>
 		</say>
-		<ringer own:plugin="ringer">
-			<host>ringer.local</host>
-			<protocol>https</protocol>
-			<endpoint>api</endpoint>
+		<ca own:plugin="ca">
 			<au:capability>
-				<obj>/data/plugindata/ringer</obj>
+				<obj>/data/plugindata/ca</obj>
 				<get>descendant-or-self</get>
-				<cid>c2017275020259693085</cid>
+				<cid>c11718295286384816623</cid>
 				<parent>root</parent>
 			</au:capability>
-		</ringer>
+		</ca>
+		<user own:plugin="user">
+			<au:capability>
+				<obj>/data/plugindata/user</obj>
+				<get>descendant-or-self</get>
+				<cid>c3094949845543084243</cid>
+				<parent>root</parent>
+			</au:capability>
+		</user>
+		<systemHealth own:plugin="systemHealth">
+			<sensorMaxInterval/>
+			<action>
+				<name>systemHealth</name>
+				<interval>60</interval>
+				<xpath>/data/status/*/*/errorMessage</xpath>
+				<url>/plugin/systemHealth</url>
+				<aggregate>true</aggregate>
+				<notBefore>1544969583</notBefore>
+			</action>
+			<au:needCapability>
+				<obj>/data/environment</obj>
+				<get>descendant</get>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:needCapability>
+			<au:capability>
+				<obj>/data/plugindata/systemHealth</obj>
+				<get>descendant-or-self</get>
+				<cid>c14055047746818228646</cid>
+				<parent>root</parent>
+			</au:capability>
+			<au:capability>
+				<obj>/data/environment</obj>
+				<get>descendant</get>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+				<cid>c18369751744402352767</cid>
+				<parent>root</parent>
+			</au:capability>
+			<au:capability>
+				<obj>/plugin/systemHealth</obj>
+				<get>self</get>
+				<cid>c15460381113857202778</cid>
+				<parent>root</parent>
+			</au:capability>
+		</systemHealth>
+		<device own:plugin="device">
+			<au:capability>
+				<obj>/data/plugindata/device</obj>
+				<get>descendant-or-self</get>
+				<cid>c12562999194184782076</cid>
+				<parent>root</parent>
+			</au:capability>
+		</device>
 		<button own:plugin="button">
 			<host>button.local</host>
 			<protocol>https</protocol>
 			<endpoint>api</endpoint>
+			<au:needCapability>
+				<obj>/data/sensors/button</obj>
+				<get>descendant-or-self</get>
+				<put>descendant-or-self</put>
+			</au:needCapability>
+			<au:mayNeedCapability>
+				<obj>/api</obj>
+				<get>descendant-or-self</get>
+				<put>descendant-or-self</put>
+				<aud>button.local</aud>
+			</au:mayNeedCapability>
 			<au:capability>
 				<obj>/data/plugindata/button</obj>
 				<get>descendant-or-self</get>
-				<cid>c4069934949444404720</cid>
+				<cid>c11466082693727893071</cid>
+				<parent>root</parent>
+			</au:capability>
+			<au:capability>
+				<obj>/data/sensors/button</obj>
+				<get>descendant-or-self</get>
+				<put>descendant-or-self</put>
+				<cid>c11047526651634581959</cid>
+				<parent>root</parent>
+			</au:capability>
+			<au:capability>
+				<obj>/api</obj>
+				<get>descendant-or-self</get>
+				<put>descendant-or-self</put>
+				<aud>button.local</aud>
+				<cid>c8935960075032716977</cid>
 				<parent>root</parent>
 			</au:capability>
 		</button>
-		<iotsaDiscovery own:plugin="iotsaDiscovery"/>
+		<ringer own:plugin="ringer">
+			<host>ringer.local</host>
+			<protocol>https</protocol>
+			<endpoint>api</endpoint>
+			<action>
+				<xpath>/data/devices/ringer/target</xpath>
+				<url>/plugin/ringer/push</url>
+				<representing>devices/ringer</representing>
+			</action>
+			<au:needCapability>
+				<obj>/data/devices/ringer</obj>
+				<get>descendant-or-self</get>
+				<put>descendant-or-self</put>
+			</au:needCapability>
+			<au:mayNeedCapability>
+				<obj>/api</obj>
+				<get>descendant-or-self</get>
+				<put>descendant-or-self</put>
+				<aud>ringer.local</aud>
+			</au:mayNeedCapability>
+			<au:capability>
+				<obj>/data/plugindata/ringer</obj>
+				<get>descendant-or-self</get>
+				<cid>c6135667828313447122</cid>
+				<parent>root</parent>
+			</au:capability>
+			<au:capability>
+				<obj>/data/devices/ringer</obj>
+				<get>descendant-or-self</get>
+				<put>descendant-or-self</put>
+				<cid>c14937153422353910262</cid>
+				<parent>root</parent>
+			</au:capability>
+			<au:capability>
+				<obj>/api</obj>
+				<get>descendant-or-self</get>
+				<put>descendant-or-self</put>
+				<aud>ringer.local</aud>
+				<cid>c14883440579046834888</cid>
+				<parent>root</parent>
+			</au:capability>
+		</ringer>
 	</plugindata>
 	<au:access>
 		<au:defaultCapabilities>
