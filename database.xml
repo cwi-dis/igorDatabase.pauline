@@ -14,6 +14,8 @@
 		<systemHealth>
 			<messages>
 				<ringer>502 Error accessing https://ringer.local/api: cannot connect</ringer>
+				<button>502 Error accessing https://button.local/api: cannot connect</button>
+				<ble>502 Error accessing http://localhost:8081/ble: cannot connect</ble>
 			</messages>
 		</systemHealth>
 	</environment>
@@ -21,16 +23,16 @@
 		<igor>
 			<core>
 				<alive>true</alive>
-				<lastActivity>1544980017.266036</lastActivity>
-				<lastSuccess>1544980017.266036</lastSuccess>
+				<lastActivity>1545487263.913335</lastActivity>
+				<lastSuccess>1545487263.913335</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
 			</core>
 			<save>
 				<alive>true</alive>
-				<lastActivity>1544969468.993842</lastActivity>
-				<lastSuccess>1544969468.993842</lastSuccess>
+				<lastActivity>1545486826.573729</lastActivity>
+				<lastSuccess>1545486826.573729</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
@@ -38,35 +40,21 @@
 			</save>
 		</igor>
 		<sensors/>
-		<devices>
-			<ringer>
-				<alive/>
-				<lastActivity>1544969402.6539211</lastActivity>
-				<lastFailure>1544969402.6539211</lastFailure>
-				<errorMessage>502 Error accessing https://ringer.local/api: cannot connect</errorMessage>
-			</ringer>
-		</devices>
+		<devices/>
 		<services/>
 	</status>
-	<sensors>
-		<button own:plugin="button"/>
-	</sensors>
-	<devices>
-		<ringer own:plugin="ringer">
-			<target/>
-			<current/>
-		</ringer>
-	</devices>
+	<sensors/>
+	<devices/>
 	<services>
 		<igor>
 			<host>boom.local</host>
 			<url>https://boom.local:9333/data</url>
 			<port>9333</port>
 			<protocol>https</protocol>
-			<startTime>1544980017</startTime>
+			<startTime>1545487263</startTime>
 			<version>0.96</version>
 			<ticker>0</ticker>
-			<rebootCount>247</rebootCount>
+			<rebootCount>296</rebootCount>
 			<accessFailures/>
 			<fingerprint>7B:2A:24:86:21:7A:16:B2:BA:CB:C6:90:D3:95:6E:9C:B8:DD:5E:87</fingerprint>
 		</igor>
@@ -97,20 +85,6 @@
 				<child>action-environment</child>
 				<child>default-sandbox</child>
 				<child>admin-filesystem</child>
-				<child>c3116458110720915337</child>
-				<child>c9856380205407942577</child>
-				<child>c11718295286384816623</child>
-				<child>c3094949845543084243</child>
-				<child>c14055047746818228646</child>
-				<child>c18369751744402352767</child>
-				<child>c12562999194184782076</child>
-				<child>c11466082693727893071</child>
-				<child>c11047526651634581959</child>
-				<child>c8935960075032716977</child>
-				<child>c6135667828313447122</child>
-				<child>c14937153422353910262</child>
-				<child>c14883440579046834888</child>
-				<child>c15460381113857202778</child>
 			</au:capability>
 			<au:capability>
 				<obj>/data</obj>
@@ -128,7 +102,6 @@
 				<get>descendant</get>
 				<cid>admin-action</cid>
 				<delegate>true</delegate>
-				<child>c737486580052040841</child>
 			</au:capability>
 			<au:capability>
 				<get>descendant</get>
@@ -153,6 +126,8 @@
 			</au:capability>
 			<au:capability>
 				<child>c8367703070584182310</child>
+				<child>c2132354705836579396</child>
+				<child>c4539958137849481958</child>
 				<delegate>external</delegate>
 				<parent>root</parent>
 				<cid>external</cid>
@@ -169,14 +144,6 @@
 				<post>descendant</post>
 				<delete>descendant</delete>
 			</au:capability>
-			<au:capability>
-				<obj>/action/button.pressed</obj>
-				<parent>admin-action</parent>
-				<get>self</get>
-				<cid>c737486580052040841</cid>
-				<delegate>true</delegate>
-				<child>c18200953248314046039</child>
-			</au:capability>
 			<plugindata/>
 			<au:capability>
 				<cid>admin-filesystem</cid>
@@ -184,6 +151,28 @@
 				<get>self</get>
 				<delegate>true</delegate>
 				<parent>root</parent>
+			</au:capability>
+			<au:capability>
+				<cid>c2132354705836579396</cid>
+				<obj>/api</obj>
+				<parent>external</parent>
+				<get>descendant-or-self</get>
+				<put>descendant-or-self</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+				<delegate>true</delegate>
+				<aud>button.local</aud>
+			</au:capability>
+			<au:capability>
+				<cid>c4539958137849481958</cid>
+				<obj>/api</obj>
+				<parent>external</parent>
+				<get>descendant-or-self</get>
+				<put>descendant-or-self</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+				<delegate>true</delegate>
+				<aud>ringer.local</aud>
 			</au:capability>
 		</admin>
 		<au:capability>
@@ -197,7 +186,7 @@
 		<action>
 			<name>start</name>
 			<url>/internal/started</url>
-			<notBefore>1544969583</notBefore>
+			<notBefore>1545486766</notBefore>
 		</action>
 		<action>
 			<name>save</name>
@@ -206,7 +195,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore>1544969643</notBefore>
+			<notBefore>1545486886</notBefore>
 		</action>
 		<action>
 			<name>cleanup</name>
@@ -218,7 +207,7 @@
 			<name>updateActions</name>
 			<xpath>/data/actions/*</xpath>
 			<url>/internal/updateActions</url>
-			<notBefore>1544969514</notBefore>
+			<notBefore>1544995432</notBefore>
 		</action>
 		<action>
 			<name>checkNight</name>
@@ -227,7 +216,7 @@
 			<url>/data/environment/night</url>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-			<notBefore>1544969583</notBefore>
+			<notBefore>1545486766</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -240,12 +229,12 @@
 			<multiple>true</multiple>
 			<notBefore/>
 		</action>
-		<action>
+		<disabled-action>
 			<name>button.pressed</name>
 			<representing>sensors/button</representing>
 			<url>/action/ringer.ring</url>
-		</action>
-		<action>
+		</disabled-action>
+		<disabled-action>
 			<name>ringer.ring</name>
 			<representing>devices/ringer</representing>
 			<url>https://ringer.local/api/alarm</url>
@@ -262,7 +251,7 @@
 				<post/>
 				<delete/>
 			</au:capability>
-		</action>
+		</disabled-action>
 		<au:capability>
 			<get>descendant</get>
 			<obj>/plugin</obj>
@@ -296,181 +285,9 @@
 			<post>descendant</post>
 			<delete>descendant</delete>
 		</au:capability>
-		<action own:plugin="say">
-			<xpath>/data/environment/messages/*</xpath>
-			<condition>not(data/environment/night)</condition>
-			<url>/pluginscript/say/message?args={.}</url>
-		</action>
-		<action own:plugin="ringer">
-			<name>action-ringer</name>
-			<interval>600</interval>
-			<url>/plugin/ringer/pull</url>
-			<representing>devices/ringer</representing>
-			<aggregate>true</aggregate>
-			<notBefore>1544969583</notBefore>
-		</action>
 	</actions>
 	<sandbox/>
-	<plugindata>
-		<iotsaDiscovery own:plugin="iotsaDiscovery">
-			<au:capability>
-				<obj>/data/plugindata/iotsaDiscovery</obj>
-				<get>descendant-or-self</get>
-				<cid>c3116458110720915337</cid>
-				<parent>root</parent>
-			</au:capability>
-		</iotsaDiscovery>
-		<say own:plugin="say">
-			<au:capability>
-				<obj>/data/plugindata/say</obj>
-				<get>descendant-or-self</get>
-				<cid>c9856380205407942577</cid>
-				<parent>root</parent>
-			</au:capability>
-		</say>
-		<ca own:plugin="ca">
-			<au:capability>
-				<obj>/data/plugindata/ca</obj>
-				<get>descendant-or-self</get>
-				<cid>c11718295286384816623</cid>
-				<parent>root</parent>
-			</au:capability>
-		</ca>
-		<user own:plugin="user">
-			<au:capability>
-				<obj>/data/plugindata/user</obj>
-				<get>descendant-or-self</get>
-				<cid>c3094949845543084243</cid>
-				<parent>root</parent>
-			</au:capability>
-		</user>
-		<systemHealth own:plugin="systemHealth">
-			<sensorMaxInterval/>
-			<action>
-				<name>systemHealth</name>
-				<interval>60</interval>
-				<xpath>/data/status/*/*/errorMessage</xpath>
-				<url>/plugin/systemHealth</url>
-				<aggregate>true</aggregate>
-				<notBefore>1544969583</notBefore>
-			</action>
-			<au:needCapability>
-				<obj>/data/environment</obj>
-				<get>descendant</get>
-				<put>descendant</put>
-				<post>descendant</post>
-				<delete>descendant</delete>
-			</au:needCapability>
-			<au:capability>
-				<obj>/data/plugindata/systemHealth</obj>
-				<get>descendant-or-self</get>
-				<cid>c14055047746818228646</cid>
-				<parent>root</parent>
-			</au:capability>
-			<au:capability>
-				<obj>/data/environment</obj>
-				<get>descendant</get>
-				<put>descendant</put>
-				<post>descendant</post>
-				<delete>descendant</delete>
-				<cid>c18369751744402352767</cid>
-				<parent>root</parent>
-			</au:capability>
-			<au:capability>
-				<obj>/plugin/systemHealth</obj>
-				<get>self</get>
-				<cid>c15460381113857202778</cid>
-				<parent>root</parent>
-			</au:capability>
-		</systemHealth>
-		<device own:plugin="device">
-			<au:capability>
-				<obj>/data/plugindata/device</obj>
-				<get>descendant-or-self</get>
-				<cid>c12562999194184782076</cid>
-				<parent>root</parent>
-			</au:capability>
-		</device>
-		<button own:plugin="button">
-			<host>button.local</host>
-			<protocol>https</protocol>
-			<endpoint>api</endpoint>
-			<au:needCapability>
-				<obj>/data/sensors/button</obj>
-				<get>descendant-or-self</get>
-				<put>descendant-or-self</put>
-			</au:needCapability>
-			<au:mayNeedCapability>
-				<obj>/api</obj>
-				<get>descendant-or-self</get>
-				<put>descendant-or-self</put>
-				<aud>button.local</aud>
-			</au:mayNeedCapability>
-			<au:capability>
-				<obj>/data/plugindata/button</obj>
-				<get>descendant-or-self</get>
-				<cid>c11466082693727893071</cid>
-				<parent>root</parent>
-			</au:capability>
-			<au:capability>
-				<obj>/data/sensors/button</obj>
-				<get>descendant-or-self</get>
-				<put>descendant-or-self</put>
-				<cid>c11047526651634581959</cid>
-				<parent>root</parent>
-			</au:capability>
-			<au:capability>
-				<obj>/api</obj>
-				<get>descendant-or-self</get>
-				<put>descendant-or-self</put>
-				<aud>button.local</aud>
-				<cid>c8935960075032716977</cid>
-				<parent>root</parent>
-			</au:capability>
-		</button>
-		<ringer own:plugin="ringer">
-			<host>ringer.local</host>
-			<protocol>https</protocol>
-			<endpoint>api</endpoint>
-			<action>
-				<xpath>/data/devices/ringer/target</xpath>
-				<url>/plugin/ringer/push</url>
-				<representing>devices/ringer</representing>
-			</action>
-			<au:needCapability>
-				<obj>/data/devices/ringer</obj>
-				<get>descendant-or-self</get>
-				<put>descendant-or-self</put>
-			</au:needCapability>
-			<au:mayNeedCapability>
-				<obj>/api</obj>
-				<get>descendant-or-self</get>
-				<put>descendant-or-self</put>
-				<aud>ringer.local</aud>
-			</au:mayNeedCapability>
-			<au:capability>
-				<obj>/data/plugindata/ringer</obj>
-				<get>descendant-or-self</get>
-				<cid>c6135667828313447122</cid>
-				<parent>root</parent>
-			</au:capability>
-			<au:capability>
-				<obj>/data/devices/ringer</obj>
-				<get>descendant-or-self</get>
-				<put>descendant-or-self</put>
-				<cid>c14937153422353910262</cid>
-				<parent>root</parent>
-			</au:capability>
-			<au:capability>
-				<obj>/api</obj>
-				<get>descendant-or-self</get>
-				<put>descendant-or-self</put>
-				<aud>ringer.local</aud>
-				<cid>c14883440579046834888</cid>
-				<parent>root</parent>
-			</au:capability>
-		</ringer>
-	</plugindata>
+	<plugindata/>
 	<au:access>
 		<au:defaultCapabilities>
 			<au:capability>
@@ -513,33 +330,9 @@
 				<delete>descendant</delete>
 			</au:capability>
 		</au:defaultCapabilities>
-		<au:exportedCapabilities>
-			<au:capability>
-				<obj>/action/button.pressed</obj>
-				<sub>/button.local</sub>
-				<parent>c737486580052040841</parent>
-				<get>self</get>
-				<iss>https://boom.local:9333/issuer</iss>
-				<cid>c18200953248314046039</cid>
-				<nvb>1532380582</nvb>
-				<nva>1563916583</nva>
-				<aud>https://boom.local:9333/data</aud>
-			</au:capability>
-		</au:exportedCapabilities>
+		<au:exportedCapabilities/>
 		<au:revokedCapabilities/>
 		<au:unusedCapabilities/>
-		<au:sharedKeys>
-			<au:sharedKey>
-				<iss>https://boom.local:9333/issuer</iss>
-				<externalKey>k16389691029869126143</externalKey>
-				<aud>https://boom.local:9333/data</aud>
-				<sub>button.local</sub>
-			</au:sharedKey>
-			<au:sharedKey>
-				<iss>https://boom.local:9333/issuer</iss>
-				<externalKey>k8387214475669524776</externalKey>
-				<aud>ringer.local</aud>
-			</au:sharedKey>
-		</au:sharedKeys>
+		<au:sharedKeys/>
 	</au:access>
 </data>
