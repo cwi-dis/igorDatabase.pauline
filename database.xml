@@ -23,16 +23,16 @@
 		<igor>
 			<core>
 				<alive>true</alive>
-				<lastActivity>1545487263.913335</lastActivity>
-				<lastSuccess>1545487263.913335</lastSuccess>
+				<lastActivity>1545487349.885201</lastActivity>
+				<lastSuccess>1545487349.885201</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
 			</core>
 			<save>
 				<alive>true</alive>
-				<lastActivity>1545486826.573729</lastActivity>
-				<lastSuccess>1545486826.573729</lastSuccess>
+				<lastActivity>1545487419.2726982</lastActivity>
+				<lastSuccess>1545487419.2726982</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
@@ -51,10 +51,10 @@
 			<url>https://boom.local:9333/data</url>
 			<port>9333</port>
 			<protocol>https</protocol>
-			<startTime>1545487263</startTime>
+			<startTime>1545487349</startTime>
 			<version>0.96</version>
 			<ticker>0</ticker>
-			<rebootCount>296</rebootCount>
+			<rebootCount>297</rebootCount>
 			<accessFailures/>
 			<fingerprint>7B:2A:24:86:21:7A:16:B2:BA:CB:C6:90:D3:95:6E:9C:B8:DD:5E:87</fingerprint>
 		</igor>
@@ -95,6 +95,12 @@
 				<post>descendant</post>
 				<delete>descendant</delete>
 				<delegate>true</delegate>
+				<child>c3095456662335883107</child>
+				<child>c4813827863539821592</child>
+				<child>c12809742775912103636</child>
+				<child>c13448017261906847293</child>
+				<child>c11998817790927061024</child>
+				<child>c5211015988998594053</child>
 			</au:capability>
 			<au:capability>
 				<obj>/action</obj>
@@ -116,6 +122,7 @@
 				<parent>root</parent>
 				<cid>admin-plugin</cid>
 				<delegate>true</delegate>
+				<child>c9095273028965685114</child>
 			</au:capability>
 			<au:capability>
 				<get>descendant</get>
@@ -123,6 +130,7 @@
 				<parent>root</parent>
 				<cid>admin-pluginscript</cid>
 				<delegate>true</delegate>
+				<child>c268074172658126549</child>
 			</au:capability>
 			<au:capability>
 				<child>c8367703070584182310</child>
@@ -186,7 +194,7 @@
 		<action>
 			<name>start</name>
 			<url>/internal/started</url>
-			<notBefore>1545486766</notBefore>
+			<notBefore>1545487349</notBefore>
 		</action>
 		<action>
 			<name>save</name>
@@ -195,7 +203,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore>1545486886</notBefore>
+			<notBefore>1545487479</notBefore>
 		</action>
 		<action>
 			<name>cleanup</name>
@@ -207,7 +215,7 @@
 			<name>updateActions</name>
 			<xpath>/data/actions/*</xpath>
 			<url>/internal/updateActions</url>
-			<notBefore>1544995432</notBefore>
+			<notBefore>1545487406</notBefore>
 		</action>
 		<action>
 			<name>checkNight</name>
@@ -216,7 +224,7 @@
 			<url>/data/environment/night</url>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-			<notBefore>1545486766</notBefore>
+			<notBefore>1545487349</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -285,9 +293,135 @@
 			<post>descendant</post>
 			<delete>descendant</delete>
 		</au:capability>
+		<action own:plugin="say">
+			<xpath>/data/environment/messages/*</xpath>
+			<condition>not(data/environment/night)</condition>
+			<url>/pluginscript/say/message?args={.}</url>
+			<au:needCapability>
+				<obj>/pluginscript/say</obj>
+				<get>child</get>
+			</au:needCapability>
+			<au:capability>
+				<cid>c268074172658126549</cid>
+				<obj>/pluginscript/say</obj>
+				<parent>admin-pluginscript</parent>
+				<get>child</get>
+			</au:capability>
+		</action>
 	</actions>
 	<sandbox/>
-	<plugindata/>
+	<plugindata>
+		<ca own:plugin="ca">
+			<au:needCapability>
+				<obj>/data/plugindata/ca</obj>
+				<get>descendant-or-self</get>
+			</au:needCapability>
+			<au:capability>
+				<cid>c3095456662335883107</cid>
+				<obj>/data/plugindata/ca</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+		</ca>
+		<device own:plugin="device">
+			<au:needCapability>
+				<obj>/data/plugindata/device</obj>
+				<get>descendant-or-self</get>
+			</au:needCapability>
+			<au:capability>
+				<cid>c4813827863539821592</cid>
+				<obj>/data/plugindata/device</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+		</device>
+		<say own:plugin="say">
+			<au:needCapability>
+				<obj>/data/plugindata/say</obj>
+				<get>descendant-or-self</get>
+			</au:needCapability>
+			<au:capability>
+				<cid>c12809742775912103636</cid>
+				<obj>/data/plugindata/say</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+		</say>
+		<systemHealth own:plugin="systemHealth">
+			<sensorMaxInterval/>
+			<action>
+				<name>systemHealth</name>
+				<interval>60</interval>
+				<xpath>/data/status/*/*/errorMessage</xpath>
+				<url>/plugin/systemHealth</url>
+				<aggregate>true</aggregate>
+				<notBefore>1545487419</notBefore>
+			</action>
+			<au:needCapability>
+				<obj>/data/environment</obj>
+				<get>descendant</get>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:needCapability>
+			<au:needCapability>
+				<obj>/data/plugindata/systemHealth</obj>
+				<get>descendant-or-self</get>
+			</au:needCapability>
+			<au:needCapability>
+				<obj>/plugin/systemHealth</obj>
+				<get>descendant-or-self</get>
+			</au:needCapability>
+			<au:capability>
+				<cid>c13448017261906847293</cid>
+				<obj>/data/environment</obj>
+				<parent>admin-data</parent>
+				<get>descendant</get>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+			<au:capability>
+				<cid>c11998817790927061024</cid>
+				<obj>/data/plugindata/systemHealth</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+			<au:capability>
+				<cid>c9095273028965685114</cid>
+				<obj>/plugin/systemHealth</obj>
+				<parent>admin-plugin</parent>
+				<get>descendant-or-self</get>
+			</au:capability>
+		</systemHealth>
+		<user own:plugin="user">
+			<au:needCapability>
+				<obj>/data/plugindata/user</obj>
+				<get>descendant-or-self</get>
+			</au:needCapability>
+			<au:capability>
+				<cid>c5211015988998594053</cid>
+				<obj>/data/plugindata/user</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+		</user>
+	</plugindata>
 	<au:access>
 		<au:defaultCapabilities>
 			<au:capability>
