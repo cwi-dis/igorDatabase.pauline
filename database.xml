@@ -23,16 +23,16 @@
 		<igor>
 			<core>
 				<alive>true</alive>
-				<lastActivity>1545487349.885201</lastActivity>
-				<lastSuccess>1545487349.885201</lastSuccess>
+				<lastActivity>1545488128.7864</lastActivity>
+				<lastSuccess>1545488128.7864</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
 			</core>
 			<save>
 				<alive>true</alive>
-				<lastActivity>1545487419.2726982</lastActivity>
-				<lastSuccess>1545487419.2726982</lastSuccess>
+				<lastActivity>1545488128.866316</lastActivity>
+				<lastSuccess>1545488128.866316</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
@@ -51,10 +51,10 @@
 			<url>https://boom.local:9333/data</url>
 			<port>9333</port>
 			<protocol>https</protocol>
-			<startTime>1545487349</startTime>
+			<startTime>1545488128</startTime>
 			<version>0.96</version>
 			<ticker>0</ticker>
-			<rebootCount>297</rebootCount>
+			<rebootCount>299</rebootCount>
 			<accessFailures/>
 			<fingerprint>7B:2A:24:86:21:7A:16:B2:BA:CB:C6:90:D3:95:6E:9C:B8:DD:5E:87</fingerprint>
 		</igor>
@@ -101,6 +101,7 @@
 				<child>c13448017261906847293</child>
 				<child>c11998817790927061024</child>
 				<child>c5211015988998594053</child>
+				<child>c8856036201108616815</child>
 			</au:capability>
 			<au:capability>
 				<obj>/action</obj>
@@ -194,7 +195,7 @@
 		<action>
 			<name>start</name>
 			<url>/internal/started</url>
-			<notBefore>1545487349</notBefore>
+			<notBefore>1545488128</notBefore>
 		</action>
 		<action>
 			<name>save</name>
@@ -203,7 +204,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore>1545487479</notBefore>
+			<notBefore>1545488188</notBefore>
 		</action>
 		<action>
 			<name>cleanup</name>
@@ -224,7 +225,7 @@
 			<url>/data/environment/night</url>
 			<mimetype>text/plain</mimetype>
 			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-			<notBefore>1545487349</notBefore>
+			<notBefore>1545488128</notBefore>
 		</action>
 		<action>
 			<name>updatePeople</name>
@@ -364,7 +365,7 @@
 				<xpath>/data/status/*/*/errorMessage</xpath>
 				<url>/plugin/systemHealth</url>
 				<aggregate>true</aggregate>
-				<notBefore>1545487419</notBefore>
+				<notBefore>1545488128</notBefore>
 			</action>
 			<au:needCapability>
 				<obj>/data/environment</obj>
@@ -421,6 +422,21 @@
 				<delete>descendant</delete>
 			</au:capability>
 		</user>
+		<iotsaDiscovery own:plugin="iotsaDiscovery">
+			<au:needCapability>
+				<obj>/data/plugindata/iotsaDiscovery</obj>
+				<get>descendant-or-self</get>
+			</au:needCapability>
+			<au:capability>
+				<cid>c8856036201108616815</cid>
+				<obj>/data/plugindata/iotsaDiscovery</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+		</iotsaDiscovery>
 	</plugindata>
 	<au:access>
 		<au:defaultCapabilities>
