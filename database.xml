@@ -23,8 +23,8 @@
 		<igor>
 			<core>
 				<alive>true</alive>
-				<lastActivity>1545518084.201385</lastActivity>
-				<lastSuccess>1545518084.201385</lastSuccess>
+				<lastActivity>1545753007.2381172</lastActivity>
+				<lastSuccess>1545753007.2381172</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
@@ -51,10 +51,10 @@
 			<url>https://boom.local:9333/data</url>
 			<port>9333</port>
 			<protocol>https</protocol>
-			<startTime>1545518084</startTime>
+			<startTime>1545753007</startTime>
 			<version>0.96</version>
 			<ticker>0</ticker>
-			<rebootCount>300</rebootCount>
+			<rebootCount>301</rebootCount>
 			<accessFailures/>
 			<fingerprint>7B:2A:24:86:21:7A:16:B2:BA:CB:C6:90:D3:95:6E:9C:B8:DD:5E:87</fingerprint>
 		</igor>
@@ -100,7 +100,6 @@
 				<child>c12809742775912103636</child>
 				<child>c13448017261906847293</child>
 				<child>c11998817790927061024</child>
-				<child>c5211015988998594053</child>
 				<child>c8856036201108616815</child>
 				<child>c13714270904827287375</child>
 			</au:capability>
@@ -136,24 +135,9 @@
 				<child>c268074172658126549</child>
 			</au:capability>
 			<au:capability>
-				<child>c8367703070584182310</child>
-				<child>c2132354705836579396</child>
-				<child>c4539958137849481958</child>
 				<delegate>external</delegate>
 				<parent>root</parent>
 				<cid>external</cid>
-			</au:capability>
-			<au:capability>
-				<obj>/api</obj>
-				<aud>ringer.local</aud>
-				<parent>external</parent>
-				<cid>c8367703070584182310</cid>
-				<get>descendant-or-self</get>
-				<delegate>true</delegate>
-				<child>c4539053256114489748</child>
-				<put>descendant-or-self</put>
-				<post>descendant</post>
-				<delete>descendant</delete>
 			</au:capability>
 			<plugindata/>
 			<au:capability>
@@ -162,28 +146,6 @@
 				<get>self</get>
 				<delegate>true</delegate>
 				<parent>root</parent>
-			</au:capability>
-			<au:capability>
-				<cid>c2132354705836579396</cid>
-				<obj>/api</obj>
-				<parent>external</parent>
-				<get>descendant-or-self</get>
-				<put>descendant-or-self</put>
-				<post>descendant</post>
-				<delete>descendant</delete>
-				<delegate>true</delegate>
-				<aud>button.local</aud>
-			</au:capability>
-			<au:capability>
-				<cid>c4539958137849481958</cid>
-				<obj>/api</obj>
-				<parent>external</parent>
-				<get>descendant-or-self</get>
-				<put>descendant-or-self</put>
-				<post>descendant</post>
-				<delete>descendant</delete>
-				<delegate>true</delegate>
-				<aud>ringer.local</aud>
 			</au:capability>
 		</admin>
 		<au:capability>
@@ -261,17 +223,6 @@
 			<url>https://ringer.local/api/alarm</url>
 			<data>{{&quot;alarm&quot;:5}}</data>
 			<method>PUT</method>
-			<au:capability>
-				<comment/>
-				<obj>/api/alarm</obj>
-				<aud>ringer.local</aud>
-				<parent>c8367703070584182310</parent>
-				<get/>
-				<cid>c4539053256114489748</cid>
-				<put>self</put>
-				<post/>
-				<delete/>
-			</au:capability>
 		</disabled-action>
 		<au:capability>
 			<get>descendant</get>
