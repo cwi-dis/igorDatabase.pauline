@@ -21,16 +21,16 @@
 		<igor>
 			<core>
 				<alive>true</alive>
-				<lastActivity>1546199636.932127</lastActivity>
-				<lastSuccess>1546199636.932127</lastSuccess>
+				<lastActivity>1546894408.07</lastActivity>
+				<lastSuccess>1546894408.07</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
 			</core>
 			<save>
 				<alive>true</alive>
-				<lastActivity>1546368837.274094</lastActivity>
-				<lastSuccess>1546368837.274094</lastSuccess>
+				<lastActivity>1546894408.91</lastActivity>
+				<lastSuccess>1546894408.91</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
@@ -70,21 +70,41 @@
 	</devices>
 	<services>
 		<igor>
-			<host>boom.local</host>
-			<url>https://boom.local:9333/data</url>
-			<port>9333</port>
 			<protocol>https</protocol>
-			<startTime>1546199636</startTime>
-			<version>0.96</version>
-			<ticker>0</ticker>
-			<rebootCount>357</rebootCount>
-			<accessFailures/>
+			<url>https://boom.local:9333/data</url>
+			<accessFailures>
+				<accessFailure>
+					<requestPath>/plugins.html</requestPath>
+					<timestamp>1546894414.64</timestamp>
+					<capID>c17352675940521299593</capID>
+					<capID>c1337062740988367663</capID>
+					<capID>people-people</capID>
+					<capID>c10730752857952010789</capID>
+					<capID>default-static</capID>
+					<capID>default-environment</capID>
+					<capID>default-status</capID>
+					<capID>default-igor</capID>
+					<capID>default-accessControl</capID>
+					<capID>default-sandbox</capID>
+					<path>/data/plugindata/iotsaDiscovery</path>
+					<operation>get</operation>
+				</accessFailure>
+			</accessFailures>
+			<host>boom.local</host>
+			<version>0.97</version>
+			<startTime>1546894408</startTime>
 			<fingerprint>7B:2A:24:86:21:7A:16:B2:BA:CB:C6:90:D3:95:6E:9C:B8:DD:5E:87</fingerprint>
+			<rebootCount>376</rebootCount>
+			<ticker>0</ticker>
+			<port>9333</port>
 		</igor>
 		<router/>
 		<internet/>
 	</services>
-	<people/>
+	<people>
+		<testtwo/>
+		<testthree/>
+	</people>
 	<identities>
 		<admin>
 			<au:capability>
@@ -108,15 +128,13 @@
 				<child>action-environment</child>
 				<child>default-sandbox</child>
 				<child>admin-filesystem</child>
+				<child>c4430134355695423589</child>
 			</au:capability>
 			<au:capability>
 				<obj>/data</obj>
 				<parent>root</parent>
 				<get>descendant-or-self</get>
 				<cid>admin-data</cid>
-				<put>descendant</put>
-				<post>descendant</post>
-				<delete>descendant</delete>
 				<delegate>true</delegate>
 				<child>c3095456662335883107</child>
 				<child>c4813827863539821592</child>
@@ -129,6 +147,13 @@
 				<child>c4997020779744843724</child>
 				<child>c9061205774956367714</child>
 				<child>c13856217273266765064</child>
+				<child>c17352675940521299593</child>
+				<child>c1337062740988367663</child>
+				<child>c6076632956256025429</child>
+				<child>c6955629429946418250</child>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
 			</au:capability>
 			<au:capability>
 				<obj>/action</obj>
@@ -244,53 +269,85 @@
 			<parent>admin-plugin</parent>
 			<get>descendant-or-self</get>
 		</au:capability>
+		<testtwo>
+			<au:capability>
+				<obj>/data/identities/testtwo</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<iss>https://boom.local:9333/issuer</iss>
+				<cid>c17352675940521299593</cid>
+				<delegate>true</delegate>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+			<au:capability>
+				<obj>/data/people/testtwo</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<iss>https://boom.local:9333/issuer</iss>
+				<cid>c1337062740988367663</cid>
+				<delegate>true</delegate>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+			<encryptedPassword>$pbkdf2-sha256$29000$eG.tdW6tlZLy3nuPUeodow$.J8lnbBLYxxlIxN4hxHOQy2696IvMbWnjVStqoErM6s</encryptedPassword>
+			<plugindata/>
+		</testtwo>
+		<testthree>
+			<encryptedPassword>$pbkdf2-sha256$29000$W8s5R0jJWctZy1lrjRFCaA$j7MxP7hpx3y3OLrDwOQP0m32PLQ/2Cyeyv2pieeKak4</encryptedPassword>
+			<au:capability>
+				<obj>/data/identities/testthree</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<iss>https://boom.local:9333/issuer</iss>
+				<cid>c6076632956256025429</cid>
+				<delegate>true</delegate>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+			<au:capability>
+				<obj>/data/people/testthree</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<iss>https://boom.local:9333/issuer</iss>
+				<cid>c6955629429946418250</cid>
+				<delegate>true</delegate>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+			<plugindata/>
+		</testthree>
 	</identities>
 	<actions>
-		<action>
-			<name>start</name>
+		<action own:igor="igor">
+			<name>_start</name>
 			<url>/internal/started</url>
-			<notBefore>1546199636</notBefore>
+			<notBefore>1546894408</notBefore>
 		</action>
-		<action>
+		<action own:igor="igor">
 			<name>save</name>
 			<interval>3600</interval>
 			<minInterval>60</minInterval>
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore>1546372497</notBefore>
+			<notBefore>1546894468</notBefore>
 		</action>
-		<action>
+		<action own:igor="igor">
 			<name>cleanup</name>
 			<method>DELETE</method>
 			<url>/data/environment/messages/message[position()&lt;last()]</url>
 			<notBefore/>
 		</action>
-		<action>
+		<action own:igor="igor">
 			<name>updateActions</name>
 			<xpath>/data/actions/*</xpath>
 			<url>/internal/updateActions</url>
-			<notBefore>1545487406</notBefore>
-		</action>
-		<action>
-			<name>checkNight</name>
-			<interval>900</interval>
-			<method>PUT</method>
-			<url>/data/environment/night</url>
-			<mimetype>text/plain</mimetype>
-			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
-			<notBefore>1546371538</notBefore>
-		</action>
-		<action>
-			<name>updatePeople</name>
-			<xpath>/data/environment/devices/*</xpath>
-			<condition>/data/identities/*[device=name($originalContext)]</condition>
-			<url>/data/people/{name(/data/identities/*[device=name($originalContext)])}/home</url>
-			<method>PUT</method>
-			<mimetype>text/plain</mimetype>
-			<data>{.}</data>
-			<multiple>true</multiple>
-			<notBefore/>
+			<notBefore>1546894449</notBefore>
 		</action>
 		<action>
 			<name>button.pressed</name>
@@ -346,8 +403,46 @@
 				<get>child</get>
 			</au:capability>
 		</action>
+		<action own:plugin="home">
+			<name>checkNight</name>
+			<interval>900</interval>
+			<method>PUT</method>
+			<url>/data/environment/night</url>
+			<mimetype>text/plain</mimetype>
+			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
+			<representing>igor/std</representing>
+			<notBefore/>
+		</action>
+		<action own:plugin="home">
+			<name>updatePeople</name>
+			<xpath>/data/environment/devices/*</xpath>
+			<condition>/data/identities/*[device=name($originalContext)]</condition>
+			<url>/data/people/{name(/data/identities/*[device=name($originalContext)])}/home</url>
+			<method>PUT</method>
+			<mimetype>text/plain</mimetype>
+			<data>{.}</data>
+			<multiple>true</multiple>
+			<representing>igor/std</representing>
+			<notBefore/>
+		</action>
+		<action own:plugin="home">
+			<name>countPeopleAtHome</name>
+			<interval>3600</interval>
+			<xpath>/data/people/*/home</xpath>
+			<method>PUT</method>
+			<url>/data/environment/people/count</url>
+			<mimetype>text/plain</mimetype>
+			<data>{count(/data/people/*[home='true'])}</data>
+			<representing>igor/std</representing>
+			<notBefore/>
+		</action>
 	</actions>
-	<sandbox/>
+	<sandbox>
+		<jacktest>
+			<empty/>
+			<full>moderately full</full>
+		</jacktest>
+	</sandbox>
 	<plugindata>
 		<ca own:plugin="ca">
 			<ca>https://framboos.local:9333/data</ca>
@@ -403,7 +498,7 @@
 				<xpath>/data/status/*/*/errorMessage</xpath>
 				<url>/plugin/systemHealth</url>
 				<aggregate>true</aggregate>
-				<notBefore>1546372377</notBefore>
+				<notBefore>1546894410</notBefore>
 			</action>
 			<au:needCapability>
 				<obj>/data/environment</obj>
@@ -622,6 +717,19 @@
 				<child>c16531284960029307307</child>
 			</au:capability>
 		</button>
+		<editData own:plugin="editData">
+			<au:needCapability>
+				<obj>/data/plugindata/editData</obj>
+				<get>descendant-or-self</get>
+			</au:needCapability>
+			<au:capability>
+				<cid>c4430134355695423589</cid>
+				<obj>/data/plugindata/editData</obj>
+				<parent>root</parent>
+				<get>descendant-or-self</get>
+			</au:capability>
+		</editData>
+		<home own:plugin="home"/>
 	</plugindata>
 	<au:access>
 		<au:defaultCapabilities>
@@ -691,23 +799,6 @@
 		</au:exportedCapabilities>
 		<au:revokedCapabilities/>
 		<au:unusedCapabilities/>
-		<au:sharedKeys>
-			<au:sharedKey>
-				<iss>https://boom.local:9333/issuer</iss>
-				<aud>ringer.local</aud>
-				<externalKey>k12092224196825539862</externalKey>
-			</au:sharedKey>
-			<au:sharedKey>
-				<iss>https://boom.local:9333/issuer</iss>
-				<aud>button.local</aud>
-				<externalKey>k11705471087746289116</externalKey>
-			</au:sharedKey>
-			<au:sharedKey>
-				<iss>https://boom.local:9333/issuer</iss>
-				<aud>https://boom.local:9333/</aud>
-				<externalKey>k360638263040917064</externalKey>
-				<sub>button.local</sub>
-			</au:sharedKey>
-		</au:sharedKeys>
+		<au:sharedKeys/>
 	</au:access>
 </data>
