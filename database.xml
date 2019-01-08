@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <data xmlns:au="http://jackjansen.nl/igor/authentication" xmlns:own="http://jackjansen.nl/igor/owner">
 	<environment>
-		<night/>
+		<night>true</night>
 		<location/>
 		<energy/>
 		<weather/>
@@ -21,21 +21,28 @@
 		<igor>
 			<core>
 				<alive>true</alive>
-				<lastActivity>1546894408.07</lastActivity>
-				<lastSuccess>1546894408.07</lastSuccess>
+				<lastActivity>1546903203.24</lastActivity>
+				<lastSuccess>1546903203.24</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
 			</core>
 			<save>
 				<alive>true</alive>
-				<lastActivity>1546894408.91</lastActivity>
-				<lastSuccess>1546894408.91</lastSuccess>
+				<lastActivity>1546896445.75</lastActivity>
+				<lastSuccess>1546896445.75</lastSuccess>
 				<ignoreErrorsUntil/>
 				<errorMessage/>
 				<ignoreErrorUntil/>
 				<lastFailure>1544968187.027458</lastFailure>
 			</save>
+			<std>
+				<alive>true</alive>
+				<lastActivity>1546903046.42</lastActivity>
+				<lastSuccess>1546903046.42</lastSuccess>
+				<ignoreErrorUntil/>
+				<errorMessage/>
+			</std>
 		</igor>
 		<sensors/>
 		<devices>
@@ -72,29 +79,12 @@
 		<igor>
 			<protocol>https</protocol>
 			<url>https://boom.local:9333/data</url>
-			<accessFailures>
-				<accessFailure>
-					<requestPath>/plugins.html</requestPath>
-					<timestamp>1546894414.64</timestamp>
-					<capID>c17352675940521299593</capID>
-					<capID>c1337062740988367663</capID>
-					<capID>people-people</capID>
-					<capID>c10730752857952010789</capID>
-					<capID>default-static</capID>
-					<capID>default-environment</capID>
-					<capID>default-status</capID>
-					<capID>default-igor</capID>
-					<capID>default-accessControl</capID>
-					<capID>default-sandbox</capID>
-					<path>/data/plugindata/iotsaDiscovery</path>
-					<operation>get</operation>
-				</accessFailure>
-			</accessFailures>
+			<accessFailures/>
 			<host>boom.local</host>
 			<version>0.97</version>
-			<startTime>1546894408</startTime>
+			<startTime>1546903203</startTime>
 			<fingerprint>7B:2A:24:86:21:7A:16:B2:BA:CB:C6:90:D3:95:6E:9C:B8:DD:5E:87</fingerprint>
-			<rebootCount>376</rebootCount>
+			<rebootCount>385</rebootCount>
 			<ticker>0</ticker>
 			<port>9333</port>
 		</igor>
@@ -129,12 +119,13 @@
 				<child>default-sandbox</child>
 				<child>admin-filesystem</child>
 				<child>c4430134355695423589</child>
+				<child>c11385764360252735464</child>
 			</au:capability>
 			<au:capability>
 				<obj>/data</obj>
 				<parent>root</parent>
-				<get>descendant-or-self</get>
 				<cid>admin-data</cid>
+				<get>descendant-or-self</get>
 				<delegate>true</delegate>
 				<child>c3095456662335883107</child>
 				<child>c4813827863539821592</child>
@@ -151,6 +142,7 @@
 				<child>c1337062740988367663</child>
 				<child>c6076632956256025429</child>
 				<child>c6955629429946418250</child>
+				<child>c3433449670611631030</child>
 				<put>descendant</put>
 				<post>descendant</post>
 				<delete>descendant</delete>
@@ -172,15 +164,16 @@
 				<delegate>true</delegate>
 			</au:capability>
 			<au:capability>
-				<get>descendant</get>
-				<obj>/plugin</obj>
-				<parent>root</parent>
-				<cid>admin-plugin</cid>
-				<delegate>true</delegate>
 				<child>c9095273028965685114</child>
 				<child>c10730752857952010789</child>
 				<child>c251562655221376451</child>
 				<child>c2823541172300477856</child>
+				<child>c13055606335686226247</child>
+				<obj>/plugin</obj>
+				<delegate>true</delegate>
+				<parent>root</parent>
+				<cid>admin-plugin</cid>
+				<get>descendant</get>
 			</au:capability>
 			<au:capability>
 				<get>descendant</get>
@@ -321,12 +314,19 @@
 			</au:capability>
 			<plugindata/>
 		</testthree>
+		<au:capability>
+			<obj>/plugin/actions</obj>
+			<parent>admin-plugin</parent>
+			<get>descendant-or-self</get>
+			<iss>https://boom.local:9333/issuer</iss>
+			<cid>c13055606335686226247</cid>
+		</au:capability>
 	</identities>
 	<actions>
 		<action own:igor="igor">
 			<name>_start</name>
 			<url>/internal/started</url>
-			<notBefore>1546894408</notBefore>
+			<notBefore>1546903044</notBefore>
 		</action>
 		<action own:igor="igor">
 			<name>save</name>
@@ -335,7 +335,7 @@
 			<url>/internal/save</url>
 			<representing>igor/save</representing>
 			<xpath>/data/plugindata//* | /data/actions/* | /data/triggers/* | /data/identities//* | /data/sandbox/*</xpath>
-			<notBefore>1546894468</notBefore>
+			<notBefore>1546903263</notBefore>
 		</action>
 		<action own:igor="igor">
 			<name>cleanup</name>
@@ -347,7 +347,7 @@
 			<name>updateActions</name>
 			<xpath>/data/actions/*</xpath>
 			<url>/internal/updateActions</url>
-			<notBefore>1546894449</notBefore>
+			<notBefore>1546903049</notBefore>
 		</action>
 		<action>
 			<name>button.pressed</name>
@@ -411,7 +411,7 @@
 			<mimetype>text/plain</mimetype>
 			<data>{igor_hours_from_dateTime(igor_dateTime()) &lt; 8 or igor_hours_from_dateTime(igor_dateTime()) &gt;= 23}</data>
 			<representing>igor/std</representing>
-			<notBefore/>
+			<notBefore>1546903203</notBefore>
 		</action>
 		<action own:plugin="home">
 			<name>updatePeople</name>
@@ -434,7 +434,7 @@
 			<mimetype>text/plain</mimetype>
 			<data>{count(/data/people/*[home='true'])}</data>
 			<representing>igor/std</representing>
-			<notBefore/>
+			<notBefore>1546903203</notBefore>
 		</action>
 	</actions>
 	<sandbox>
@@ -498,7 +498,7 @@
 				<xpath>/data/status/*/*/errorMessage</xpath>
 				<url>/plugin/systemHealth</url>
 				<aggregate>true</aggregate>
-				<notBefore>1546894410</notBefore>
+				<notBefore>1546903203</notBefore>
 			</action>
 			<au:needCapability>
 				<obj>/data/environment</obj>
@@ -729,7 +729,30 @@
 				<get>descendant-or-self</get>
 			</au:capability>
 		</editData>
-		<home own:plugin="home"/>
+		<home own:plugin="home">
+			<au:capability>
+				<cid>c11385764360252735464</cid>
+				<obj>/data/plugindata/home</obj>
+				<parent>root</parent>
+				<get>descendant-or-self</get>
+			</au:capability>
+		</home>
+		<actions own:plugin="actions">
+			<au:needCapability>
+				<obj>/data/plugindata/actions</obj>
+				<get>descendant-or-self</get>
+			</au:needCapability>
+			<au:capability>
+				<obj>/data/plugindata/actions</obj>
+				<parent>admin-data</parent>
+				<get>descendant-or-self</get>
+				<iss>https://boom.local:9333/issuer</iss>
+				<cid>c3433449670611631030</cid>
+				<put>descendant</put>
+				<post>descendant</post>
+				<delete>descendant</delete>
+			</au:capability>
+		</actions>
 	</plugindata>
 	<au:access>
 		<au:defaultCapabilities>
